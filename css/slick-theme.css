@@ -50,8 +50,8 @@
 
 .slick-prev:hover,
 .slick-next:hover {
-	background-color: #1ebc52;
-	color: #fff;
+	background-color: #1ebc52 !important;
+	color: #fff !important;
 }
 
 .slick-prev:before,
@@ -188,6 +188,21 @@
     
 }
 
+.top-left-arrow .slick-prev, 
+.top-left-arrow .slick-next{
+	top: -47px;
+	background-color: #deeee3;
+}
+.top-left-arrow .slick-prev{
+	left: inherit;
+	right: calc(38px + 18px + 16px);
+}
+.top-left-arrow .slick-next{
+	right: 16px;
+}
+
+
+
 @media (max-width: 1280px) {
     .plot-slider .slick-prev{
         left: 0;
@@ -206,6 +221,11 @@
         background-position: center;
         background-repeat: no-repeat;
     }
+		.top-left-arrow .slick-prev, 
+		.top-left-arrow .slick-next{
+			top: -33px;
+			background-color: #deeee3;
+		}
 }
 @media (max-width: 567px) {
     .plot-slider .slick-prev{
@@ -216,4 +236,17 @@
         right: calc(50% - 40px);
         top: calc(100% + 15px);
     }
+		.top-left-arrow .slick-prev, 
+		.top-left-arrow .slick-next{
+			top: -33px;
+			background-color: #deeee3;
+		}
+		.top-left-arrow .slick-prev{
+			left: inherit;
+			right: calc(38px);
+		}
+		.top-left-arrow .slick-next{
+			right: 2px;
+		}
+
 }

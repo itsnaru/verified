@@ -9,6 +9,16 @@ a{
   color: #222b2f;
 }
 
+.color-blue{
+  color: #032251;
+}
+.color-2x{
+  color: #222b2f;
+}
+.bg-light-blue{
+  background-color: #e7f1ea;
+}
+
 .fw-1{font-weight: 100;}
 .fw-2{font-weight: 200;}
 .fw-3{font-weight: 300;}
@@ -155,6 +165,28 @@ header.header-scrolled{
 }
 
 
+.slider-box-2-inner,
+.slider-box-3-inner{
+  width: calc(100% - 35px);
+}
+.plotting-img{
+	height: 300px;
+  border-radius: 10px;
+	object-fit: cover;
+}
+.location-name{
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  background: transparent;
+}
+
+.popular-location-img{
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
 
 @media (min-width: 991px) {
   .animate-to-top-2{animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s both;}
@@ -207,6 +239,43 @@ header.header-scrolled{
   }
   .plot-slider h5{
     font-size: 16px;
+  }
+  .slider-box-2-inner{
+    width: calc(100% - 6px);
+  }
+  .slider-box-2[aria-hidden="false"]{
+    justify-content: flex-start !important;
+  }
+  .slider-box-2[aria-hidden="false"] + .slider-box-2[aria-hidden="false"]{
+    justify-content: flex-end !important;
+  }
+
+  .slider-box-3-inner{
+    width: calc(100% - 6px);
+  }
+}
+@media (max-width: 768px) {
+  .hot-deals-slider img{
+    height: 200px;
+  }
+  .hot-deals-slider h4{
+    font-size: 18px;
+  }
+  .hot-deals-slider .fs-20{
+    font-size: 16px;
+  }
+  .popular-location-img{
+    height: 200px;
+  }
+
+  
+
+  
+  .slider-box-3[aria-hidden="false"]{
+    justify-content: flex-start !important;
+  }
+  .slider-box-3[aria-hidden="false"] + .slider-box-3[aria-hidden="false"]{
+    justify-content: flex-end !important;
   }
 }
 @media (max-width: 576px) {
@@ -264,6 +333,12 @@ header.header-scrolled{
     background-color: #051936ad;
     width: 100%;
     height: 100%;
+  }
+  .hot-deals-slider .slider-box-2-inner{
+    width: calc(100%);
+  }
+  .slider-box-3-inner{
+    width: calc(100% - 6px);
   }
 }
 

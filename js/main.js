@@ -72,4 +72,55 @@ $(document).ready(function(){
 
   });
 
+
+  $('.hot-deals-slider').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 2000,
+
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+
+
+  });
+
+  $('.popular-neighbour-slider').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 2000,
+
+    responsive: [
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2
+        }
+      }
+    ]
+
+
+  });
+
 })
