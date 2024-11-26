@@ -123,4 +123,31 @@ $(document).ready(function(){
 
   });
 
+  $('.testimonial-slider').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 2000,
+    dots: true,
+    dotsClass: 'testimonial-slider-dots slick-dots',
+
+    responsive: [
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+
+
+  });
+
 })
