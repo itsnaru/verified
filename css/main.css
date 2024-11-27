@@ -576,3 +576,33 @@ header.header-scrolled{
     opacity: 1;
   }
 }
+
+/* =============footer css start============ */
+
+.footer-outer-bg{
+  background-color: #032251;
+}
+.ft-logo{
+  height: 20px;
+  width: auto;
+  margin: 10px 15px;
+}
+.ml-0{
+  margin-left: 0px;
+}
+.ft-links, .ft-links{
+  display: block;
+  text-decoration: none;
+  color: #999;
+  font-size: 16px;
+  margin: 10px 0px;
+}
+.border-light-grey{
+  border-color: #94979b99 !important;
+}
+.bg-light-grey{
+  background-color: #354f74 !important;
+}
+.shadow-0{
+  box-shadow: unset;
+}
