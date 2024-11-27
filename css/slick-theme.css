@@ -184,8 +184,7 @@
 .plot-slider-dots li.slick-active button{
     background-color: #1ebc52;
     width: 10px;
-    height: 5px;
-    
+    height: 5px;   
 }
 
 .top-left-arrow .slick-prev, 
@@ -201,6 +200,39 @@
 	right: 16px;
 }
 
+
+
+
+.testimonial-slider-dots{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	bottom: -50px;
+}
+.testimonial-slider-dots li{
+	padding: 0;
+	margin: 0 10px;
+	width: 30px;
+	height: 4px;
+}
+.testimonial-slider-dots li button:before{
+	display: none;
+}
+.testimonial-slider-dots li button{
+	background-color: #8190a8;
+
+	width: 30px;
+	height: 4px;
+	border-radius: 0px;
+	transition: width 0.2s ease-in;
+}
+.testimonial-slider-dots li.slick-active{
+	width: 30px;
+	height: 4px;
+}
+.testimonial-slider-dots li.slick-active button{
+	background-color: #032251;  
+}
 
 
 @media (max-width: 1280px) {

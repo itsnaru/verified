@@ -31,6 +31,17 @@ $(document).ready(function(){
     $('.top-menu').removeClass('show-menu');
   })
 
+  $('.buying-btn').click(function(){
+    $('.switch-btn-outer').removeClass('lease-active').addClass('buy-active');
+    $('.plot-list-outer').removeClass('show-plot-group');
+    $('.buy-plot-group').addClass('show-plot-group');
+  })
+  $('.lease-btn').click(function(){
+    $('.switch-btn-outer').removeClass('buy-active').addClass('lease-active');
+    $('.plot-list-outer').removeClass('show-plot-group');
+    $('.lease-plot-group').addClass('show-plot-group');
+  })
+
 })
 
 
@@ -126,23 +137,28 @@ $(document).ready(function(){
   $('.testimonial-slider').slick({
     infinite: true,
     slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToScroll: 3,
     autoplay: false,
     autoplaySpeed: 2000,
+    arrows: false,
     dots: true,
     dotsClass: 'testimonial-slider-dots slick-dots',
 
     responsive: [
       {
-        breakpoint: 1400,
+        breakpoint: 991,
         settings: {
-          slidesToShow: 3
+          slidesToShow: 2,
+          slidesToScroll: 2
         }
       },
       {
         breakpoint: 769,
         settings: {
-          slidesToShow: 1
+          dots: false,
+          arrows: true,
+          slidesToShow: 1,
+          slidesToScroll: 1
         }
       }
     ]
@@ -151,3 +167,9 @@ $(document).ready(function(){
   });
 
 })
+
+
+function showExtraLi(_plotType){
+  $(_plotType).toggleClass('show-extra-li');
+  $(_plotType+'-show-more').toggleClass('active-show-more');
+}
