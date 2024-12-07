@@ -488,9 +488,33 @@ select:focus-visible{
 .filter-icon-outer {
   background-color: #e7f1ea;
 }
+.nearby-location-outer{
+  border-radius: 15px;
+}
+.nearby-location-items{
+  border-radius: 5px;
+  cursor: pointer;
+}
+.show-extra-location .extra-locations{
+  display: block !important;
+  animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+.show-extra-location .extra-location-btn{
+  display: none;
+}
+.active-location{
+  background-color: #e7f1ea !important;
+}
 
 
-
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @media (max-width: 1400px) {
   .listing-plot-img{
     width: 350px;
@@ -720,6 +744,10 @@ select:focus-visible{
   .list-price-box-outer .list-details-start-from{
     font-size: 12px;
     line-height: 12px;
+  }
+  .nearby-location-items,
+  .nearby-location-outer .btn{
+    font-size: 12px;
   }
 }
 

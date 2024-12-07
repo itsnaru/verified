@@ -45,6 +45,18 @@ $(document).ready(function(){
     $(this).parent().addClass($(this).data('btn-pos'))
   })
 
+  $('.extra-location-btn').click(function(){
+    $(this).closest('.nearby-location-outer').addClass('show-extra-location');
+  })
+
+  $('.nearby-location-items').click(function(){
+    $(this).toggleClass('active-location');
+  })
+  $('.clear-location-btn').click(function(){
+    $(this).closest('.nearby-location-outer').children('.nearby-location-items').removeClass('active-location');
+    $()
+  })
+
 })
 
 
