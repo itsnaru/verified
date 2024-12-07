@@ -432,7 +432,7 @@ select:focus-visible{
 }
 
 .listing-plot-img{
-  width: 420px;
+  width: 500px;
   height: 100%;
   object-fit: cover;
   object-position: center;
@@ -493,7 +493,7 @@ select:focus-visible{
 
 @media (max-width: 1400px) {
   .listing-plot-img{
-    width: 320px;
+    width: 350px;
     height: 100%;
   }
 }
@@ -709,6 +709,17 @@ select:focus-visible{
   .filter-icon{
     height: 20px;
     width: auto;
+  }
+  .list-price-box-outer .list-price-box{
+    align-items: center;
+    background-color: #c1e8ce;
+  }
+  .list-price-box-outer{
+    border: 1px solid #e7f1ea;
+  }
+  .list-price-box-outer .list-details-start-from{
+    font-size: 12px;
+    line-height: 12px;
   }
 }
 
