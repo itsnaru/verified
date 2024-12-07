@@ -632,7 +632,11 @@ select:focus-visible{
   }
 }
 
-
+@media (min-width: 768px) {
+  .list-location-text{
+    line-height: 18px;
+  }
+}
 @media (max-width: 767px) {
   .hot-deals-slider img{
     height: 200px;
@@ -875,10 +879,29 @@ select:focus-visible{
   }
   .list-details-left-btn{
     border-radius: 0 0 0 13px;
-    
+    border-right: 1px solid #e7f1ea;
   }
   .list-details-right-btn{
     border-radius: 0 0 13px 0;
+    background-color: #1ebc5a !important;
+    color: #fff !important;
+  }
+  .btn:active,
+  .btn:focus,
+  .btn:hover{
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  .list-location-holder{
+    width: calc(100% - 18px);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .list-location-text-last{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 }
 
