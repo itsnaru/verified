@@ -588,6 +588,7 @@ select:focus-visible{
   }
   .listing-outer .list-details-title{
     font-size: 12px;
+    line-height: 12px;
   }
   .listing-outer .list-details-value{
     font-size: 14;
@@ -698,6 +699,10 @@ select:focus-visible{
   .list-details-switch-btn{
     width: 180px !important;
     height: 30px;
+  }
+  .listing-outer {
+    box-shadow: 0 0 8px -2px #494949;
+    border: none;
   }
 }
 

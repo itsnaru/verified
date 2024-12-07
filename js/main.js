@@ -177,7 +177,15 @@ $(document).ready(function(){
     autoplaySpeed: 2000,
     arrows: false,
     dots: true,
-    dotsClass: 'flat-dots slick-dots'
+    dotsClass: 'flat-dots slick-dots',
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          fade: true
+        }
+      }
+    ]
   });
 
 })
