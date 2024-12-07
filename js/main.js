@@ -32,14 +32,17 @@ $(document).ready(function(){
   })
 
   $('.buying-btn').click(function(){
-    $('.switch-btn-outer').removeClass('lease-active').addClass('buy-active');
     $('.plot-list-outer').removeClass('show-plot-group');
     $('.buy-plot-group').addClass('show-plot-group');
   })
   $('.lease-btn').click(function(){
-    $('.switch-btn-outer').removeClass('buy-active').addClass('lease-active');
     $('.plot-list-outer').removeClass('show-plot-group');
     $('.lease-plot-group').addClass('show-plot-group');
+  })
+
+  $('.switch-btn-inner').click(function(){
+    $(this).parent().removeClass('left').removeClass('right');
+    $(this).parent().addClass($(this).data('btn-pos'))
   })
 
 })
@@ -166,6 +169,17 @@ $(document).ready(function(){
 
   });
 
+  $('.list-page-slider').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 2000,
+    arrows: false,
+    dots: true,
+    dotsClass: 'flat-dots slick-dots'
+  });
+
 })
 
 
@@ -173,3 +187,9 @@ function showExtraLi(_plotType){
   $(_plotType).toggleClass('show-extra-li');
   $(_plotType+'-show-more').toggleClass('active-show-more');
 }
+
+// function switchBtn(_btnSel){
+//   console.log(_btnSel);
+  
+//   $(_btnSel).addClass('testssssss')
+// }
