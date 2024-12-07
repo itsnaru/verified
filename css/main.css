@@ -485,7 +485,9 @@ select:focus-visible{
   width: auto;
 }
 
-
+.filter-icon-outer {
+  background-color: #e7f1ea;
+}
 
 
 
@@ -703,6 +705,10 @@ select:focus-visible{
   .listing-outer {
     box-shadow: 0 0 8px -2px #494949;
     border: none;
+  }
+  .filter-icon{
+    height: 20px;
+    width: auto;
   }
 }
 
