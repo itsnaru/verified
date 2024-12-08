@@ -55,7 +55,7 @@
       </div>
 
       <div class="col-6 col-lg-2 d-flex justify-content-end align-items-center">
-        <div class="mob-round-btn btn btn-primary btn-round py-2 px-2 me-3 d-lg-none" href="#">
+        <div class="mob-round-btn btn btn-primary btn-round py-2 px-2 me-3 d-lg-none" data-bs-toggle="modal" data-bs-target="#searchModal">
           <span><img class="mob-search-white-icon" src="img/search-icon-white.png"></span>
         </div>
 
@@ -161,6 +161,26 @@
   </div>
 </section>
 
+
+
+<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="searchModalLabel">Search</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <section class="mb-3 mb-lg-4 breadcrumb-section">
   <div class="container-xl">
     <div class="d-flex justify-content-start align-items-center">
@@ -180,9 +200,13 @@
         <div class="switch-btn-inner" data-btn-pos="right" >Lease</div>
       </div>
       
-      <div class="flex-1 filter-box d-none d-lg-flex justify-content-between">
-        <div class="flex-1 d-flex">
-          <div class="select-group d-inline-flex px-3 me-3">
+      <div class="flex-1 filter-box d-none d-lg-flex flex-column flex-lg-row justify-content-between p-4 p-lg-0">
+        <div class="flex-1 filter-box-inner d-flex flex-column flex-lg-row px-0 px-lg-0">
+          <div class="close-filter-outer d-flex d-lg-none justify-content-between align-items-center mb-3 pb-3 border-bottom">
+            <h5 class="mb-0">Filters</h5>
+            <img src="img/close.png" class="filter-close">
+          </div>
+          <div class="animate-style-1 select-group d-inline-flex px-3 me-lg-3">
             <select name="locality" id="locality" class="select-style-1 px-2">
               <option disabled selected>Locality</option>
               <option value="">Pune</option>
@@ -191,7 +215,7 @@
               <option value="">Bengaluru</option>
             </select>
           </div>
-          <div class="select-group d-inline-flex px-3 me-3">
+          <div class="animate-style-2 select-group d-inline-flex px-3 me-lg-3">
             <select name="property-type" id="property-type" class="select-style-1 px-2">
               <option disabled selected>Property Type</option>
               <option value="">All</option>
@@ -200,7 +224,7 @@
               <option value="">3 BHK</option>
             </select>
           </div>
-          <div class="select-group d-inline-flex px-3 me-3">
+          <div class="animate-style-3 select-group d-inline-flex px-3 me-lg-3">
             <select name="property-type" id="property-type" class="select-style-1 px-2">
               <option disabled selected>Property Type</option>
               <option value="">All</option>
@@ -209,7 +233,7 @@
               <option value="">3 BHK</option>
             </select>
           </div>
-          <div class="select-group d-inline-flex px-3">
+          <div class="animate-style-4 select-group d-inline-flex px-3">
             <select name="sell-model" id="sell-model" class="select-style-1 px-2">
               <option disabled selected>Sell Model</option>
               <option value="">Model 1</option>
@@ -218,15 +242,19 @@
               <option value="">Model 4</option>
             </select>
           </div>
+          <div class="animate-style-5 select-group-2 sort-by-group d-inline-flex align-items-center px-3 pe-lg-0 ms-lg-auto">
+            <span>Sort By:</span>
+            <select name="sort-by" id="sort-by" class="select-style-2 fw-6 px-2">
+              <option disabled selected>Popularity</option>
+              <option value="">Price Low-High</option>
+              <option value="">Price High-Low</option>
+              <option value="">Nearest</option>
+            </select>
+          </div>
         </div>
-        <div class="select-group-2 d-inline-flex align-items-center ps-3 pe-0">
-          <span>Sort By:</span>
-          <select name="sor-by" id="sor-by" class="select-style-2 fw-6 px-2">
-            <option disabled selected>Popularity</option>
-            <option value="">Price Low-High</option>
-            <option value="">Price High-Low</option>
-            <option value="">Nearest</option>
-          </select>
+        <div class="d-flex d-lg-none">
+          <button class="flex-1 btn btn-primary btn-round me-3">Apply Filtes</button>
+          <button class="flex-1 btn btn-danger btn-round">Clear Filtes</button>
         </div>
       </div>
 

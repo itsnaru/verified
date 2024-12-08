@@ -57,6 +57,13 @@ $(document).ready(function(){
     $()
   })
 
+  $('.filter-icon-outer').click(function(){
+    $('.filter-box').addClass('show-filter');
+  })
+  $('.filter-close').click(function(){
+    $('.filter-box').removeClass('show-filter');
+  })
+
 })
 
 
