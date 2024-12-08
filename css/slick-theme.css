@@ -267,6 +267,16 @@
 	background-color: #032251;  
 }
 
+#popular-cities .slick-track{
+  width: 100%;
+}
+.popular-cities .slick-prev{
+  left: 0px;
+}
+.popular-cities .slick-next{
+  right: 0px;
+}
+
 
 @media (max-width: 1280px) {
     .plot-slider .slick-prev{
@@ -331,5 +341,14 @@
 		background-color: #1ebc52;
 		width: 10px;
 		height: 5px;   
+	}
+	.popular-cities .slick-prev{
+		left: inherit;
+		top: -20px;
+		right: calc(30px + 15px);
+	}
+	.popular-cities .slick-next{
+		top: -20px;
+		right: 0px;
 	}
 }

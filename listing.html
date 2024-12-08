@@ -44,7 +44,7 @@
             <img src="img/search-icon.png" class="search-icon d-none d-sm-block">
             <input type="text" placeholder="Search you Location" class="main-search flex-1 ms-sm-3 fs-16">
           </div>
-          <div class="location-icon-outer d-flex justify-content-center align-items-center p-1 ms-2">
+          <div class="location-icon-outer d-flex justify-content-center align-items-center p-1 ms-2"  data-bs-toggle="modal" data-bs-target="#searchModal">
             <img src="img/aim.png" class="location-icon">
           </div>
           <div class="btn btn-primary btn-round fs-16 search-btn d-flex align-items-center ps-3 pe-3 px-sm-3 ms-sm-3">
@@ -167,15 +167,64 @@
   <div class="modal-dialog modal-xl">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="searchModalLabel">Search</h5>
+        <div class="inner-top-search-outer w-100 bg-white d-flex justify-content-center align-items-center py-2 px-3">
+          <div class="search-inner d-flex justify-content-start align-items-center w-100 bg-white py-2">
+            <img src="img/search-icon.png" class="search-icon d-none d-sm-block">
+            <input type="text" placeholder="Search you Location" class="main-search flex-1 ms-sm-3 fs-16">
+          </div>
+          <div class="btn btn-primary btn-round fs-16 search-btn d-flex align-items-center ps-3 pe-3 px-sm-3 ms-sm-3">
+            <img src="img/search-icon-white.png" class="search-icon d-sm-none">
+            <span class="d-none d-sm-inline">Search</span>
+          </div>
+        </div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <h5>Popular cities</h5>
+        <div class="popular-cities ">
+          <div>
+            <div class="w-100 d-flex flex-column justify-content-center align-items-center">
+              <img src="img/pune.png" class="city-img">
+              <span class="fs-14">Pune</span>
+            </div>
+          </div>
+          <div>
+            <div class="w-100 d-flex flex-column justify-content-center align-items-center">
+              <img src="img/ahd.png" class="city-img">
+              <span class="fs-14">Ahmedabad</span>
+            </div>
+          </div>
+          <div>
+            <div class="w-100 d-flex flex-column justify-content-center align-items-center">
+              <img src="img/mumbai.png" class="city-img">
+              <span class="fs-14">Mumbai</span>
+            </div>
+          </div>
+          <div>
+            <div class="w-100 d-flex flex-column justify-content-center align-items-center">
+              <img src="img/bang.png" class="city-img">
+              <span class="fs-14">Bangaluru</span>
+            </div>
+          </div>
+          <div>
+            <div class="w-100 d-flex flex-column justify-content-center align-items-center">
+              <img src="img/chd.png" class="city-img">
+              <span class="fs-14">Chandighar</span>
+            </div>
+          </div>
+          <div>
+            <div class="w-100 d-flex flex-column justify-content-center align-items-center">
+              <img src="img/kolk.png" class="city-img">
+              <span class="fs-14">Kolkata</span>
+            </div>
+          </div>
+          <div>
+            <div class="w-100 d-flex flex-column justify-content-center align-items-center">
+              <img src="img/hyd.png" class="city-img">
+              <span class="fs-14">Hyderabad</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -224,14 +273,30 @@
               <option value="">3 BHK</option>
             </select>
           </div>
-          <div class="animate-style-3 select-group d-inline-flex px-3 me-lg-3">
-            <select name="property-type" id="property-type" class="select-style-1 px-2">
-              <option disabled selected>Property Type</option>
-              <option value="">All</option>
-              <option value="">1 BHK</option>
-              <option value="">2 BHK</option>
-              <option value="">3 BHK</option>
-            </select>
+          <div class="animate-style-3 d-flex flex-column flex-lg-row d-lg-inline-flex position-relative z-index-5">
+            <div class="select-group  d-flex justify-content-center align-items-center price-range-btn ps-4 pe-3 me-lg-3">Price Range <img src="img/down-arrow-black.png" class="price-range-down-icon ms-3 me-1"></div>
+            <div class="price-range mb-4 mb-lg-0">
+              <div class="slider-wrapper p-3 py-4">
+                <div class="price-input mb-3 pb-3">
+                  <div class="field">
+                    <span>Min</span>
+                    <input type="number" value="0" class="min-input" />
+                  </div>
+                  <div class="seperator">-</div>
+                  <div class="field">
+                    <span>Max</span>
+                    <input type="number" value="30000" class="max-input" />
+                  </div>
+                </div>
+                <div class="slider">
+                  <div class="progress"></div>
+                </div>
+                <div class="range-input">
+                  <input type="range" min="0" max="30000" value="0" class="min-range" />
+                  <input type="range" min="0" max="30000" value="30000" class="max-range"/>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="animate-style-4 select-group d-inline-flex px-3">
             <select name="sell-model" id="sell-model" class="select-style-1 px-2">
