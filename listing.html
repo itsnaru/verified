@@ -162,7 +162,6 @@
 </section>
 
 
-
 <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-xl">
     <div class="modal-content">
@@ -208,6 +207,12 @@
           </div>
           <div>
             <div class="w-100 d-flex flex-column justify-content-center align-items-center">
+              <img src="img/ncr.png" class="city-img">
+              <span class="fs-14">Dehli</span>
+            </div>
+          </div>
+          <div>
+            <div class="w-100 d-flex flex-column justify-content-center align-items-center">
               <img src="img/chd.png" class="city-img">
               <span class="fs-14">Chandighar</span>
             </div>
@@ -222,6 +227,18 @@
             <div class="w-100 d-flex flex-column justify-content-center align-items-center">
               <img src="img/hyd.png" class="city-img">
               <span class="fs-14">Hyderabad</span>
+            </div>
+          </div>
+          <div>
+            <div class="w-100 d-flex flex-column justify-content-center align-items-center">
+              <img src="img/chen.png" class="city-img">
+              <span class="fs-14">Chennai</span>
+            </div>
+          </div>
+          <div>
+            <div class="w-100 d-flex flex-column justify-content-center align-items-center">
+              <img src="img/koch.jpg" class="city-img">
+              <span class="fs-14">Kochi</span>
             </div>
           </div>
         </div>
@@ -244,9 +261,9 @@
   <div class="container-xl d-flex justify-content-start align-items-stretch">
     <div class="flex-1 d-flex flex-wrap justify-content-between justify-content-lg-start">
 
-      <div class="switch-btn-outer list-details-switch-btn left me-3 mb-lg-4 mb-xxl-0">
-        <div class="switch-btn-inner" data-btn-pos="left" >Buying</div>
-        <div class="switch-btn-inner" data-btn-pos="right" >Lease</div>
+      <div class="nav switch-btn-outer list-details-switch-btn left me-3 mb-lg-4 mb-xxl-0">
+        <div class="switch-btn-inner active" data-btn-pos="left" id="tab-3-btn" data-bs-toggle="pill" data-bs-target="#tab-3" type="button" role="tab" aria-controls="tab-3" aria-selected="true">Buying</div>
+        <div class="switch-btn-inner" data-btn-pos="right" id="tab-4-btn" data-bs-toggle="pill" data-bs-target="#tab-4" type="button" role="tab" aria-controls="tab-4" aria-selected="false">Lease</div>
       </div>
       
       <div class="flex-1 filter-box d-none d-lg-flex flex-column flex-lg-row justify-content-between p-4 p-lg-0">
@@ -267,33 +284,37 @@
           <div class="animate-style-2 select-group d-inline-flex px-3 me-lg-3">
             <select name="property-type" id="property-type" class="select-style-1 px-2">
               <option disabled selected>Property Type</option>
-              <option value="">All</option>
-              <option value="">1 BHK</option>
-              <option value="">2 BHK</option>
-              <option value="">3 BHK</option>
+              <option value="na-plot">NA Plot</option>
+              <option value="farm-plot">Farm Plot</option>
+              <option value="industrial-plot">Industrial Plot</option>
+              <option value="commercial-plot">Commercial Plot</option>
+              <option value="villa-plot">Villa Plot</option>
+              <option value="rowhouse-plot">Rowhouse Plot</option>
+              <option value="institutional-plot">Institutional Plot</option>
+              <option value="mixed-use-plot">Mixed - Use Plot</option>
             </select>
           </div>
-          <div class="animate-style-3 d-flex flex-column flex-lg-row d-lg-inline-flex position-relative z-index-5">
+          <div class="animate-style-3 d-flex flex-column flex-lg-row d-lg-flex position-relative z-index-5">
             <div class="select-group  d-flex justify-content-center align-items-center price-range-btn ps-4 pe-3 me-lg-3">Price Range <img src="img/down-arrow-black.png" class="price-range-down-icon ms-3 me-1"></div>
             <div class="price-range mb-4 mb-lg-0">
               <div class="slider-wrapper p-3 py-4">
                 <div class="price-input mb-3 pb-3">
                   <div class="field">
                     <span>Min</span>
-                    <input type="number" value="0" class="min-input" />
+                    <input type="number" value="1000000" class="min-input" />
                   </div>
                   <div class="seperator">-</div>
                   <div class="field">
                     <span>Max</span>
-                    <input type="number" value="30000" class="max-input" />
+                    <input type="number" value="100000000" class="max-input" />
                   </div>
                 </div>
                 <div class="slider">
                   <div class="progress"></div>
                 </div>
                 <div class="range-input">
-                  <input type="range" min="0" max="30000" value="0" class="min-range" />
-                  <input type="range" min="0" max="30000" value="30000" class="max-range"/>
+                  <input type="range" min="1000000" max="100000000" value="0" class="min-range" />
+                  <input type="range" min="1000000" max="100000000" value="100000000" class="max-range"/>
                 </div>
               </div>
             </div>
@@ -301,10 +322,8 @@
           <div class="animate-style-4 select-group d-inline-flex px-3">
             <select name="sell-model" id="sell-model" class="select-style-1 px-2">
               <option disabled selected>Sell Model</option>
-              <option value="">Model 1</option>
-              <option value="">Model 2</option>
-              <option value="">Model 3</option>
-              <option value="">Model 4</option>
+              <option value="certified">Certified by Verified Plots</option>
+              <option value="managed">Managed by Verified Plots</option>
             </select>
           </div>
           <div class="animate-style-5 select-group-2 sort-by-group d-inline-flex align-items-center px-3 pe-lg-0 ms-lg-auto">
@@ -333,8 +352,8 @@
 </section>
 
 
-<section>
-  <div class="container-xl">
+<section class="tab-content">
+  <div class="container-xl tab-pane fade show active" id="tab-3" role="tabpanel" aria-labelledby="tab-3-btn">
     <h2 class="h1 color-blue fw-7 mb-3 mb-lg-4">NA Plots <span>Pune</span></h2>
 
     <div class="d-flex flex-column flex-lg-row g-0 listing-outer mb-3 mb-md-4">
@@ -490,8 +509,184 @@
       </div>
     </div>
   </div>
+  <div class="container-xl tab-pane fade" id="tab-4" role="tabpanel" aria-labelledby="tab-4-btn">
+    <h2 class="h1 color-blue fw-7 mb-3 mb-lg-4">Lease Plots <span>Pune</span></h2>
+    <div class="d-flex flex-column flex-lg-row g-0 listing-outer mb-3 mb-md-4">
+      <div class="listing-img-outer position-relative p-0 p-md-1 p-lg-3 pe-lg-0">
+        <img src="img/plot-1.jpg" class="listing-plot-img position-relative z-index-1">
+        <div class="top-bar bg-primary text-white px-4 py-1 position-absolute z-index-2">Certified by Verified Plots</div>
+      </div>
+      <div class="flex-1 listing-details-outer d-flex flex-column justify-content-start align-items-stretch p-0 px-md-3 pb-md-3 py-lg-5 px-lg-5">
+        <div class="list-price-box-outer d-flex justify-content-between align-items-stretch">
+          <h2 class="h2 color-blue fw-7 p-2 p-lg-0 mb-0 mb-lg-4 list-location-heading flex-1 d-flex justify-content-start align-items-center">Green Meadows Kasarwadi, Pune</h2>
+          <div class="list-price-box mb-0 text-start d-flex d-md-none flex-column justify-content-center align-items-start px-3 py-2">
+            <p class="fw-4 mb-0 list-details-start-from">Starts From</p>
+            <h2 class="h4 color-blue fw-7 mb-0 list-details-price"><span>₹</span>26.5 Lacs</h2>
+          </div>
+        </div>
+        
+        <div class="list-location-outer d-flex justify-content-start align-items-center pb-3 mb-2 mb-md-3">
+          <img src="img/location-marker.png" class="list-location-icon me-2">
+          <div class="d-flex justify-content-start align-items-center list-location-holder">
+            <span class="fw-5 list-location-text pe-1 pe-md-0">Kasarwadi, Pune</span>
+            <div class="list-location-separator bg-primary d-none d-md-inline-flex mx-4"></div>
+            <span class="fw-5 list-location-text list-location-text-last"> NA Plots for Sale near Hinjewadi, Pune</span>
+          </div>
+        </div>
+        
+        <div class="list-details-outer d-flex w-00 justify-content-center justify-content-md-start align-items-center mb-2 pb-md-3 mb-md-3 px-2 px-md-0">
+          <div class="list-details-inner text-center text-md-start d-flex flex-column flex-md-row justify-content-center justify-content-md-start align-items-center me-md-4 me-xl-5 p-2 p-md-0 py-2">
+            <img src="img/maximize.png" class="list-details-icon mt-1 mb-2 mb-md-0">
+            <div class="ln-22 ps-md-3">
+              <p class="fw-4 mb-0 list-details-title">Plot <br class="d-sm-none">Area</p>
+              <p class="mb-0 fw-6 list-details-value">5400 <small>SQFT</small></p>
+            </div>
+          </div>
+          <div class="list-details-inner text-center text-md-start d-flex flex-column flex-md-row justify-content-center justify-content-md-start align-items-center me-md-4 me-xl-5 p-2 p-md-0 py-2">
+            <img src="img/area.png" class="list-details-icon dimensions-icon mt-1 mb-2 mb-md-0">
+            <div class="ln-22 ps-md-3">
+              <p class="fw-4 mb-0 list-details-title">Dimensions <br class="d-sm-none">(L x B)</p>
+              <p class="mb-0 fw-6 list-details-value">75 x 72.45</p>
+            </div>
+          </div>
+          <div class="list-details-inner text-center text-md-start d-flex flex-column flex-md-row justify-content-center justify-content-md-start align-items-center p-2 p-md-0 py-2">
+            <img src="img/best-price.png" class="list-details-icon price-tag-icon mt-1 mb-2 mb-md-0">
+            <div class="ln-22 ps-md-3">
+              <p class="fw-4 mb-0 list-details-title">Per SQFT <br class="d-sm-none">Price</p>
+              <p class="mb-0 fw-6 list-details-value">5435 <small>SQFT</small></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="list-price-outer w-100 d-flex flex-column flex-sm-row justify-content-between align-items-center align-items-sm-end px-sm-2 pb-sm-2 px-md-0 pb-md-0">
+          <div class="list-price-box mb-2 mb-md-0 text-center text-sm-start d-none d-md-flex flex-column">
+            <p class="fw-4 mb-0 list-details-start-from">Starts From</p>
+            <h2 class="h4 color-blue fw-7 mb-0 list-details-price"><span>₹</span>26.5 Lacs</h2>
+          </div>
+          <div class="flex-1 d-flex justify-content-center justify-content-md-end align-items-center list-details-btn-outer">
+            <a href="#" class="btn btn-primary btn-round px-4 py-2 me-sm-3 list-details-left-btn">Schedule a Visit</a>
+            <a href="#" class="btn btn-outline-primary btn-round px-4 py-2 color-dark-grey btn-hover-primary list-details-right-btn">Request a Callback</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="nearby-location-outer gap-2 bg-light d-flex justify-content-start align-items-start flex-wrap p-2 p-md-3  mb-3 mb-md-4">
+      <div class="w-100 fw-7">Search Nearby Locations</div>
+      <div class="nearby-location-items bg-white px-2 py-1 fs-14">Aundh</div>
+      <div class="nearby-location-items bg-white px-2 py-1 fs-14">Sangvi</div>
+      <div class="nearby-location-items bg-white px-2 py-1 fs-14">Baner</div>
+      <div class="nearby-location-items bg-white px-2 py-1 fs-14">Wakad</div>
+      <div class="nearby-location-items bg-white px-2 py-1 fs-14">Hinjewadi</div>
+      <div class="nearby-location-items bg-white px-2 py-1 fs-14">Katraj</div>
+      <div class="nearby-location-items bg-white px-2 py-1 fs-14">Hadapsar</div>
+      <div class="nearby-location-items bg-white px-2 py-1 fs-14">Nigadi</div>
+      <div class="nearby-location-items bg-white px-2 py-1 fs-14">Ravet</div>
+      <div class="nearby-location-items bg-white px-2 py-1 fs-14">Mhalunje</div>
+      <div class="nearby-location-items bg-white px-2 py-1 fs-14">Pashan</div>
+      <div class="nearby-location-items bg-white px-2 py-1 fs-14">Balewadi</div>
+      <div class="nearby-location-items extra-locations d-none bg-white px-2 py-1 fs-14">Loni</div>
+      <div class="nearby-location-items extra-locations d-none bg-white px-2 py-1 fs-14">Magarpatta</div>
+      <div class="nearby-location-items extra-locations d-none bg-white px-2 py-1 fs-14">Talegoan</div>
+      <div class="nearby-location-items extra-locations d-none bg-white px-2 py-1 fs-14">Aalandi</div>
+      <div class="nearby-location-items extra-locations d-none bg-white px-2 py-1 fs-14">Dehu</div>
+      <div class="nearby-location-items extra-locations d-none bg-white px-2 py-1 fs-14">Pimpri</div>
+      <div class="nearby-location-items extra-locations d-none bg-white px-2 py-1 fs-14">Chinchwad</div>
+      <div class="nearby-location-items extra-locations d-none bg-white px-2 py-1 fs-14">Akurdi</div>
+      <div class="nearby-location-items extra-locations d-none bg-white px-2 py-1 fs-14">Khadki</div>
+      <div class="nearby-location-items extra-locations d-none bg-white px-2 py-1 fs-14">Dapodi</div>
+      <div class="nearby-location-items bg-white px-2 py-1 fs-14 extra-location-btn">+10</div>
+      <div class="w-100 d-flex justify-content-start mt-1">
+        <div class="btn btn-primary fs-14 px-2 px-md-3 py-1 me-2">Apply</div>
+        <div class="btn btn-danger fs-14 px-2 px-md-3 py-1 clear-location-btn">Clear</div>
+      </div>
+    </div>
+    <div class="d-flex flex-column flex-lg-row g-0 listing-outer mb-3 mb-md-4">
+      <div class="listing-img-outer position-relative p-0 p-md-1 p-lg-3 pe-lg-0">
+        <img src="img/plot-2.jpg" class="listing-plot-img position-relative z-index-1">
+        <div class="top-bar bg-primary text-white px-4 py-1 position-absolute z-index-2">Certified by Verified Plots</div>
+      </div>
+      <div class="flex-1 listing-details-outer d-flex flex-column justify-content-start align-items-stretch p-0 px-md-3 pb-md-3 py-lg-5 px-lg-5">
+        <div class="list-price-box-outer d-flex justify-content-between align-items-stretch">
+          <h2 class="h2 color-blue fw-7 p-2 p-lg-0 mb-0 mb-lg-4 list-location-heading flex-1 d-flex justify-content-start align-items-center">Lake View Khadakwasla, Pune</h2>
+          <div class="list-price-box mb-0 text-start d-flex d-md-none flex-column justify-content-center align-items-start px-3 py-2">
+            <p class="fw-4 mb-0 list-details-start-from">Starts From</p>
+            <h2 class="h4 color-blue fw-7 mb-0 list-details-price"><span>₹</span>26.5 Lacs</h2>
+          </div>
+        </div>
+        
+        <div class="list-location-outer d-flex justify-content-start align-items-center pb-3 mb-2 mb-md-3">
+          <img src="img/location-marker.png" class="list-location-icon me-2">
+          <div class="d-flex justify-content-start align-items-center list-location-holder">
+            <span class="fw-5 list-location-text pe-1 pe-md-0">Near Khadakwasla Dam, Pune</span>
+            <div class="list-location-separator bg-primary d-none d-md-inline-flex mx-4"></div>
+            <span class="fw-5 list-location-text list-location-text-last"> NA Plots for Sale, 2km from Khadakwasla Dam, Pune</span>
+          </div>
+        </div>
+        
+        <div class="list-details-outer d-flex w-00 justify-content-center justify-content-md-start align-items-center mb-2 pb-md-3 mb-md-3 px-2 px-md-0">
+          <div class="list-details-inner text-center text-md-start d-flex flex-column flex-md-row justify-content-center justify-content-md-start align-items-center me-md-4 me-xl-5 p-2 p-md-0 py-2">
+            <img src="img/maximize.png" class="list-details-icon mt-1 mb-2 mb-md-0">
+            <div class="ln-22 ps-md-3">
+              <p class="fw-4 mb-0 list-details-title">Plot <br class="d-sm-none">Area</p>
+              <p class="mb-0 fw-6 list-details-value">5400 <small>SQFT</small></p>
+            </div>
+          </div>
+          <div class="list-details-inner text-center text-md-start d-flex flex-column flex-md-row justify-content-center justify-content-md-start align-items-center me-md-4 me-xl-5 p-2 p-md-0 py-2">
+            <img src="img/area.png" class="list-details-icon dimensions-icon mt-1 mb-2 mb-md-0">
+            <div class="ln-22 ps-md-3">
+              <p class="fw-4 mb-0 list-details-title">Dimensions <br class="d-sm-none">(L x B)</p>
+              <p class="mb-0 fw-6 list-details-value">75 x 72.45</p>
+            </div>
+          </div>
+          <div class="list-details-inner text-center text-md-start d-flex flex-column flex-md-row justify-content-center justify-content-md-start align-items-center p-2 p-md-0 py-2">
+            <img src="img/best-price.png" class="list-details-icon price-tag-icon mt-1 mb-2 mb-md-0">
+            <div class="ln-22 ps-md-3">
+              <p class="fw-4 mb-0 list-details-title">Per SQFT <br class="d-sm-none">Price</p>
+              <p class="mb-0 fw-6 list-details-value">5435 <small>SQFT</small></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="list-price-outer w-100 d-flex flex-column flex-sm-row justify-content-between align-items-center align-items-sm-end px-sm-2 pb-sm-2 px-md-0 pb-md-0">
+          <div class="list-price-box mb-2 mb-md-0 text-center text-sm-start d-none d-md-flex flex-column">
+            <p class="fw-4 mb-0 list-details-start-from">Starts From</p>
+            <h2 class="h4 color-blue fw-7 mb-0 list-details-price"><span>₹</span>26.5 Lacs</h2>
+          </div>
+          <div class="flex-1 d-flex justify-content-center justify-content-md-end align-items-center list-details-btn-outer">
+            <a href="#" class="btn btn-primary btn-round px-4 py-2 me-sm-3 list-details-left-btn">Schedule a Visit</a>
+            <a href="#" class="btn btn-outline-primary btn-round px-4 py-2 color-dark-grey btn-hover-primary list-details-right-btn">Request a Callback</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
 </section>
 
+
+
+<section>
+  <div class="container-xl">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-start">
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</section>
 
 <section class="">
   <div class="container-xl">
@@ -499,66 +694,66 @@
       <div class="col-12 my-lg-3">
         <div class="w-100 border-top pt-5"></div>
       </div>
+
+
       <div class="col-12 d-flex justify-content-start align-items-center">
-        <div class="switch-btn-outer left">
-          <div class="switch-btn-inner buying-btn" data-btn-pos="left">Buying</div>
-          <div class="switch-btn-inner lease-btn" data-btn-pos="right">Lease</div>
+        <div class="nav switch-btn-outer list-details-switch-btn left">
+          <div class="switch-btn-inner active" data-btn-pos="left" id="tab-1-btn" data-bs-toggle="pill" data-bs-target="#tab-1" type="button" role="tab" aria-controls="tab-1" aria-selected="true">Buying</div>
+          <div class="switch-btn-inner" data-btn-pos="right" id="tab-2-btn" data-bs-toggle="pill" data-bs-target="#tab-2" type="button" role="tab" aria-controls="tab-2" aria-selected="false">Lease</div>
         </div>
       </div>
-
-      <div class="col-12">
-        
-        <div class="w-100 text-start plot-list-outer buy-plot-group show-plot-group">
-          <div class="w-100 text-center text-md-start fw-7 mb-3 mt-4 mt-lg-5">Buy Plots in Lonavala</div>
+      <div class="col-12 tab-content">  
+        <div class="w-100 text-start plot-list-outer buy-plot-group tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1-btn">
+          <div class="w-100 text-start text-md-start fw-7 mb-3 mt-4 mt-lg-5">Buy Plots in Lonavala</div>
           <ul class="plot-list buy-plots-lonavala">
-            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
-            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
-            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
-            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
-            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
-            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
-            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
-            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
-            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
-            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
-            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
-            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
-            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
-            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
-            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
-            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
-            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
-            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
-            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
-            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
-            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
-            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
-            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
-            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
-            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
-            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
-            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
-            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
 
-            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
-            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
-            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
-            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
-            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
-            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
-            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
-            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
-            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
-            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
-            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
-            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
           </ul>
           <div class="show-li d-inline-flex justify-content-start align-items-center fs-14 fw-7 buy-plots-lonavala-show-more" onclick="showExtraLi('.buy-plots-lonavala')">
             <span class="pe-2">Show More</span><img src="img/down-arrow.png" class="show-more-arrow">
           </div>
         </div>
-        <div class="w-100 text-start plot-list-outer lease-plot-group">
-          <div class="w-100 text-center text-md-start fw-7 mb-3 mt-4 mt-lg-5">Lease Plots in Lonavala</div>
+        <div class="w-100 text-start plot-list-outer lease-plot-group tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab-2-btn">
+          <div class="w-100 text-start text-md-start fw-7 mb-3 mt-4 mt-lg-5">Lease Plots in Lonavala</div>
           <ul class="plot-list lease-plots-lonavala">
             <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
             <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
@@ -607,10 +802,16 @@
           </div>
         </div>
       </div>
+
+
     </div>
   </div>
 </section>
 
+
+<a class="floating-wp" href="#">
+  <img src="img/whatsapp.png" class="floating-wp-icon">
+</a>
 <footer class="footer-bottom mt-5 pt-5 pb-4 mt-lg-5 pt-lg-5 pb-lg-4 footer-outer-bg">
   <div class="container-xl">
     <div class="row pb-5">

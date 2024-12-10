@@ -219,7 +219,7 @@ $(document).ready(function(){
 $('#searchModal').on('shown.bs.modal', function (e) {
   $('.popular-cities').slick({
     infinite: true,
-    slidesToShow: 5,
+    slidesToShow: 7,
     slidesToScroll: 1,
     autoplay: false,
     autoplaySpeed: 2000,
@@ -227,7 +227,13 @@ $('#searchModal').on('shown.bs.modal', function (e) {
     dots: false,
     responsive: [
       {
-        breakpoint: 991,
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 5
+        }
+      },
+      {
+        breakpoint: 992,
         settings: {
           slidesToShow: 3
         }

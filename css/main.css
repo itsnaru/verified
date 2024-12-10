@@ -670,6 +670,27 @@ select:focus-visible{
   box-shadow: 0 0 5px -1px #000;
 }
 
+.floating-wp{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  z-index: 5;
+  bottom: 40px;
+  right: 40px;
+
+  border-radius: 50%;
+  box-shadow: 0 0 10px -3px #000;
+
+  animation: jello-horizontal 0.9s 5s both;
+}
+.floating-wp-icon{
+  width: 40px;
+  height: 40px;
+}
 
 
 @keyframes fade-in {
@@ -680,6 +701,30 @@ select:focus-visible{
     opacity: 1;
   }
 }
+@keyframes jello-horizontal {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
 @media (max-width: 1400px) {
   .listing-plot-img{
     width: 350px;
@@ -690,6 +735,9 @@ select:focus-visible{
 @media (min-width: 991px) {
   .animate-to-top-2{animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s both;}
   .animate-to-top-3{animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s both;}
+  #sell-model{
+    max-width: 165px;
+  }
 }
 @media (max-width: 991px) {
   .top-menu{
@@ -949,6 +997,17 @@ select:focus-visible{
   .nearby-location-items,
   .nearby-location-outer .btn{
     font-size: 12px;
+  }
+
+  .floating-wp{
+    width: 30px;
+    height: 30px;  
+    bottom: 12px;
+    right: 12px;
+  }
+  .floating-wp-icon{
+    width: 30px;
+    height: 30px;
   }
 }
 
