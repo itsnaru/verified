@@ -277,6 +277,13 @@
   right: 0px;
 }
 
+.details-slider-1 .slick-prev{
+  left: 15px;
+}
+.details-slider-1 .slick-next{
+  right: 15px;
+}
+
 
 @media (max-width: 1280px) {
     .plot-slider .slick-prev{

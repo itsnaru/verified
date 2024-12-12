@@ -21,12 +21,14 @@ a{
 .color-2x{
   color: #222b2f;
 }
+.color-3x{
+  color: #83898d;
+}
 .bg-light-blue{
   background-color: #e7f1ea;
 }
-
-.btn-hover-primary{
-
+.bg-dark-blue{
+  background-color: #032251;
 }
 
 .fw-1{font-weight: 100;}
@@ -59,6 +61,14 @@ a{
 .z-index-7{z-index: 7;}
 .z-index-8{z-index: 8;}
 .z-index-9{z-index: 9;}
+
+.br-10{
+  border-radius: 10px;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
 
 .bg-light{
   background-color: #e9e9e9 !important;
@@ -451,6 +461,7 @@ select:focus-visible{
   box-shadow: 3px 0px 8px -4px #000000;
 }
 
+
 .listing-outer{
   background-image: url('../img/verified-plots-icon.png');
   background-size: 60px auto;
@@ -693,37 +704,7 @@ select:focus-visible{
 }
 
 
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes jello-horizontal {
-  0% {
-    transform: scale3d(1, 1, 1);
-  }
-  30% {
-    transform: scale3d(1.25, 0.75, 1);
-  }
-  40% {
-    transform: scale3d(0.75, 1.25, 1);
-  }
-  50% {
-    transform: scale3d(1.15, 0.85, 1);
-  }
-  65% {
-    transform: scale3d(0.95, 1.05, 1);
-  }
-  75% {
-    transform: scale3d(1.05, 0.95, 1);
-  }
-  100% {
-    transform: scale3d(1, 1, 1);
-  }
-}
+
 
 @media (max-width: 1400px) {
   .listing-plot-img{
@@ -1032,7 +1013,8 @@ select:focus-visible{
   }
   .search-btn {
     height: 39px;
-    border-radius: 0 50px 50px 0;
+    /* border-radius: 0 50px 50px 0; */
+    border-radius: 0 5px 5px 0;
   }
   .search-inner{
     height: 39px;
@@ -1217,6 +1199,48 @@ select:focus-visible{
     opacity: 1;
   }
 }
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes jello-horizontal {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
 
 /* =============footer css start============ */
 
@@ -1246,11 +1270,6 @@ select:focus-visible{
   box-shadow: unset;
 }
 
-
-
-
-
-
 @media (max-width: 991px) {
   .price-range-btn{
     justify-content: space-between !important;
@@ -1271,3 +1290,244 @@ select:focus-visible{
     font-size: 14px;
   }
 }
+
+
+
+/* -------------------------- */
+/* Booking Details Style START*/
+.breadcrumb-holder{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.right-booking-holder{
+  width: 400px;
+}
+.booking-form{
+  border-radius: 15px;
+}
+.detail-location-icon{
+  height: 22px;
+  width: auto;
+}
+.details-switch-icon{
+  height: 16px;
+  width: auto;
+}
+.details-switch-btn{
+  border: 0;
+  border-bottom: 3px solid #e7f1ea;
+  border-radius: 0;
+  min-width: 90px;
+}
+.details-switch-btn.active{
+  border-bottom-color: #1ebc52 !important;
+}
+.details-switch-btn-inner{
+  opacity: 0.6;
+}
+.details-switch-btn.active .details-switch-btn-inner{
+  opacity: 1;
+}
+
+.details-switch-container{
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.details-image-slider-1{
+  height: 500px;
+}
+.details-switch-slider-img{
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.details-slider-1 .top-bar{
+  left: 0;
+  display: none;
+}
+
+.details-slider-1 .slick-active .top-bar{
+  display: block;
+  animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s both;
+}
+
+.details-switch-container iframe{
+  width: 100%;
+  height: 500px;
+}
+
+.details-price-card-outer{
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.deails-area-icon{
+  height: 30px;
+  width: auto;
+}
+.deails-price-icon{
+  height: 34px;
+  width: auto;
+}
+.details-price-center-card{
+  border-right: 2px solid #445374;
+  border-left: 2px solid #445374;
+}
+.details-verification-icon{
+  height: 36px;
+  width: auto;
+}
+.details-of-plot-list{
+  list-style-type: none;
+  column-count: 2;
+}
+.details-divider{
+  height: 2px;
+  background-color: #dee2e6;
+}
+.key-item-outer{
+  gap: 1rem;
+}
+.key-item{
+  background-color: #e7f1ea;
+  border-radius: 50px;
+}
+.w-2{
+  width: 200px;
+}
+.details-download-icon{
+  height: 14px;
+  width: auto;
+}
+
+.count-md-2{
+  column-count: 2;
+}
+
+.help-icon{
+  height: 36px;
+  width: auto;
+}
+.details-social-icon{
+  height: 34px;
+  width: auto;
+}
+
+.show-more[aria-expanded="true"]::before{
+  content: "Show Less";
+}
+.show-more[aria-expanded="false"]::before{
+  content: "Show More";
+}
+
+.wp-icon-2{
+  height: 26px;
+  width: auto;
+}
+.bs-check .form-check-input[type=checkbox]{
+  width: 36px;
+  height: 26px;
+  outline: none !important;
+}
+.form-check-input:focus {
+  border-color: #1ebc52;
+  outline: 0;
+  box-shadow: none;
+}
+
+.rb-icon-holder{
+  width: 50px;
+}
+.detail-approve-right-icon{height: 28px;}
+.detail-legal-right-icon{height: 24px;}
+.detail-visit-right-icon{height: 32px;}
+
+
+@media (max-width: 768px) {
+  .help-icon{
+    height: 26px;
+  }
+  .details-social-icon{
+    height: 24px;
+  }
+  .needhelp-inner-heading{
+    font-size: 16px;
+  }
+  .key-item-outer{
+    gap: 0.5rem;
+  }
+  .key-item{
+    font-size: 14px;
+  }
+  .details-of-plot-list{
+    column-count: 1;
+  }
+  .details-nav-outer{
+    /* flex-wrap: inherit; */
+  }
+  .details-image-slider-1,
+  .details-switch-container iframe,
+  .details-switch-slider-img{
+    height: 300px;
+  }
+  .details-price-center-card{
+    border: none;
+  }
+  .details-price-card-outer{
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .details-price-holder{
+    width: 100%;
+    flex: inherit;
+  }
+  .details-price-center-card,
+  .details-price-right-card{
+    flex: 0 0 45%;
+    background-color: #06285b;
+    border-radius: 5px;
+    box-shadow: 0 0 10px -4px #011a3f;
+  }
+}
+@media (max-width: 576px) {
+  .details-image-slider-1,
+  .details-switch-container iframe,
+  .details-switch-slider-img{
+    height: 250px;
+  }
+  .details-nav-outer{
+    flex-wrap: inherit;
+  }
+  .details-nav-outer .details-switch-btn{
+    flex: 1 0 20%;
+    padding-left: 0;
+    padding-right: 0;
+    min-width: inherit;
+  }
+  .details-switch-icon {
+    height: 14px;
+    width: auto;
+    padding-right: 5px !important;
+  }
+  .breadcrumb-holder span,
+  .details-price-card-outer .plotarea-text,
+  .details-price-card-outer .persqft-text{
+    font-size: 12px;
+  }
+  .details-price-card-outer .h4{
+    font-size: 14px;
+  }
+  .deails-area-icon {
+    height: 20px;
+  }
+  .deails-price-icon {
+    height: 24px;
+  }
+}
+
+/* Booking Details Style CLOSE*/
+/* -------------------------- */

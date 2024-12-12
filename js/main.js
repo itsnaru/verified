@@ -212,6 +212,16 @@ $(document).ready(function(){
     ]
   });
 
+  $('.details-slider-1').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 2000,
+    arrows: true,
+    dots: false
+  });
+
 })
 
 
@@ -255,11 +265,7 @@ function showExtraLi(_plotType){
   $(_plotType+'-show-more').toggleClass('active-show-more');
 }
 
-// function switchBtn(_btnSel){
-//   console.log(_btnSel);
-  
-//   $(_btnSel).addClass('testssssss')
-// }
+
 
 
 const priceInputs = document.querySelectorAll(".price-input input");
@@ -304,3 +310,60 @@ rangeInputs.forEach((input) => {
     }
   });
 });
+
+
+var tabEl = document.querySelector('.details-switch-btn[data-bs-target="#image"]');
+if(tabEl){
+  tabEl.addEventListener('shown.bs.tab', function (event) {
+    
+    $('.details-slider-1').slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: false,
+      autoplaySpeed: 2000,
+      arrows: true,
+      dots: false
+    });
+  })
+
+}
+
+
+var _input = document.querySelector("#schedule-phone");
+if(_input){
+  window.intlTelInput(_input, {
+      separateDialCode: true,
+      // excludeCountries: ["in", "il"],
+      // onlyCountries: ["in","pk", "us", "sg", "my", "bd"],
+      preferredCountries: ["in", "pk", "us", "no"]
+  });
+}
+var _input = document.querySelector("#book-phone");
+if(_input){
+  window.intlTelInput(_input, {
+      separateDialCode: true,
+      // excludeCountries: ["in", "il"],
+      // onlyCountries: ["in","pk", "us", "sg", "my", "bd"],
+      preferredCountries: ["in", "pk", "us", "no"]
+  });
+}
+
+var _input = document.querySelector("#schedule2-phone");
+if(_input){
+  window.intlTelInput(_input, {
+      separateDialCode: true,
+      // excludeCountries: ["in", "il"],
+      // onlyCountries: ["in","pk", "us", "sg", "my", "bd"],
+      preferredCountries: ["in", "pk", "us", "no"]
+  });
+}
+var _input = document.querySelector("#book2-phone");
+if(_input){
+  window.intlTelInput(_input, {
+      separateDialCode: true,
+      // excludeCountries: ["in", "il"],
+      // onlyCountries: ["in","pk", "us", "sg", "my", "bd"],
+      preferredCountries: ["in", "pk", "us", "no"]
+  });
+}

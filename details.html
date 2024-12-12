@@ -12,9 +12,8 @@
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/slick-theme.css">
   <link rel="stylesheet" href="css/main.css">
-
-  <link rel="stylesheet" href="https://cdn.tutorialjinni.com/intl-tel-input/17.0.8/css/intlTelInput.css"/>
-        <script src="https://cdn.tutorialjinni.com/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  <link rel="stylesheet" href="css/country-dropdown.css">
+  <script src="js/country-dropdown.js"></script>
 </head>
 <body>
 
@@ -74,19 +73,6 @@
     </div>
   </div>
 </header>
-
-<section class="mb-3 mb-lg-4 header-top-space">
-  <div class="container-xl">
-    <div class="row pt-3 pt-md-4 pt-lg-5">
-      <div class="col-12">
-       
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
 
 <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-xl">
@@ -173,33 +159,485 @@
   </div>
 </div>
 
-<section class="mb-3 mb-lg-4 breadcrumb-section">
-  <div class="container-xl">
+<section class="mb-3 mb-lg-4 breadcrumb-section header-top-space">
+  <div class="container-xl pt-3 pt-lg-4">
     <div class="d-flex justify-content-start align-items-center">
-      <span class="color-grey">Verified Plots</span>
-      <span class="color-grey px-2">/</span>
-      <span class="color-dark-grey">Plots in Pune</span>
+      <div class="breadcrumb-holder">
+        <span class="color-grey">Verified Plots</span>
+        <span class="color-grey px-0 px-md-2">/</span>
+        <span class="color-grey">Plots in Pune</span>
+        <span class="color-grey px-0 px-md-2">/</span>
+        <span class="color-dark-grey">Green Meadows Kasarwadi</span>
+      </div>
     </div>
   </div>
 </section>
 
-<input name="phone" type="text" id="phone"/> 
+<section class="">
+  <div class="container-xl mb-3 mb-md-4">
+    <h2 class="h2 color-blue fw-7 list-location-heading">Green Meadows Kasarwadi, Pune</h2>
+    <div class="mb-1"><span class="fw-5 list-location-text"> NA Plots for Sale near Hinjewadi, Pune</span></div>
+    <div class="d-flex justify-content-start align-items-center"><span class="fw-5 list-location-text"><img src="img/location-icon-black.png" class="detail-location-icon me-2"> Hinjewadi, Pune</span></div>
+  </div>
+  <div class="container-xl d-flex flex-column flex-lg-row">
+    <div class="flex-1 d-flex flex-column justify-content-start align-items-stretch me-lg-4 me-xl-5">
+      
+      <div class="w-100">
+        
+        <div class="nav mb-3 mb-md-4 details-nav-outer">
+          <div class="btn details-switch-btn active" id="image-btn" data-bs-toggle="pill" data-bs-target="#image" type="button" role="tab" aria-controls="image" aria-selected="true">
+            <div class="details-switch-btn-inner d-flex justify-content-center align-items-center"><img src="img/image-icon-black.png" class="details-switch-icon pe-2"> Image</div>
+          </div>
+          <div class="btn details-switch-btn" id="video-btn" data-bs-toggle="pill" data-bs-target="#video" type="button" role="tab" aria-controls="video" aria-selected="false">
+            <div class="details-switch-btn-inner d-flex justify-content-center align-items-center"><img src="img/youtube-icon-black.png" class="details-switch-icon pe-2"> Video</div>
+          </div>
+          <div class="btn details-switch-btn" id="map-btn" data-bs-toggle="pill" data-bs-target="#map" type="button" role="tab" aria-controls="map" aria-selected="false">
+            <div class="details-switch-btn-inner d-flex justify-content-center align-items-center"><img src="img/map-icon-black.png" class="details-switch-icon pe-2"> Map</div>
+          </div>
+          <div class="btn details-switch-btn" id="street-btn" data-bs-toggle="pill" data-bs-target="#street" type="button" role="tab" aria-controls="street" aria-selected="false">
+            <div class="details-switch-btn-inner d-flex justify-content-center align-items-center"><img src="img/google-icon-black.png" class="details-switch-icon pe-2"> Street</div>
+          </div>
+        </div>
+        
+        <section class="tab-content">
+          <div class="details-switch-container details-image-slider-1 position-relative w-100 tab-pane fade show active" id="image" role="tabpanel" aria-labelledby="image-btn">
+            <div class="details-slider-1 position-absolute w-100 h-auto">
+              <div>
+                <div class="w-100 position-relative">
+                  <img src="img/plot-1.jpg" class="details-switch-slider-img">
+                  <div class="top-bar bg-primary text-white px-4 py-1 position-absolute z-index-2">Certified by Verified Plots</div>
+                </div>
+              </div>
+              <div>
+                <div class="w-100 position-relative">
+                  <img src="img/plot-1.jpg" class="details-switch-slider-img">
+                  <div class="top-bar bg-primary text-white px-4 py-1 position-absolute z-index-2">Certified by Verified Plots</div>
+                </div>
+              </div>
+              <div>
+                <div class="w-100 position-relative">
+                  <img src="img/plot-1.jpg" class="details-switch-slider-img">
+                  <div class="top-bar bg-primary text-white px-4 py-1 position-absolute z-index-2">Certified by Verified Plots</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="details-switch-container bg-light w-100 tab-pane fade" id="video" role="tabpanel" aria-labelledby="video-btn">
+            <iframe frameborder="0" class="w-100"></iframe>
+          </div>
+          <div class="details-switch-container bg-light w-100 tab-pane fade" id="map" role="tabpanel" aria-labelledby="map-btn">
+            <iframe frameborder="0" class="w-100"></iframe>
+          </div>
+          <div class="details-switch-container bg-light w-100 tab-pane fade" id="street" role="tabpanel" aria-labelledby="street-btn">
+            <iframe frameborder="0" class="w-100"></iframe>
+          </div>
+        </section>
 
-<script>
-  var input = document.querySelector("#phone");
-  window.intlTelInput(input, {
-      separateDialCode: true,
-      // excludeCountries: ["in", "il"],
-      onlyCountries: ["us", "in","pk", "sg", "my", "bd"],
-      preferredCountries: ["us", "in", "pk", "no"]
-  });
-</script>
+        <div class="details-price-card-outer d-flex justify-content-center align-items-stretch bg-dark-blue pb-3 px-2 py-md-4 px-md-5 mt-3 mt-md-4">
+          <div class="details-price-holder d-flex flex-1 flex-column justify-content-center align-items-center align-items-md-start pt-3 pt-md-0">
+            <p class="mb-0 text-white">Start From</p>
+            <h2 class="h1 text-primary fw-7 mb-0"><span>₹</span>26.5 Lacs</h2>
+          </div>
+          <div class="details-price-center-card d-flex flex-row flex-md-row text-start text-md-start justify-content-center align-items-center px-2 px-md-4 px-xl-5 py-2 py-md-0">
+            <img src="img/maximize.png" class="deails-area-icon mb-0 mb-md-0 me-2 me-md-3">
+            <div class="">
+              <p class="mb-0 text-white plotarea-text">Plot Area</p>
+              <h2 class="h4 text-white fw-7 mb-0">5435 <small>SQFT</small></h2>
+            </div>
+          </div>
+          <div class="details-price-right-card d-flex flex-row flex-md-row text-start text-md-start justify-content-center align-items-center ps-md-4 ps-xl-5 py-2 py-md-0">
+            <img src="img/best-price.png" class="deails-price-icon mb-0 mb-md-0 me-2 me-md-3">
+            <div class="">
+              <p class="mb-0 text-white persqft-text">Per SQFT</p>
+              <h2 class="h4 text-white fw-7 mb-0">5435 <small>SQFT</small></h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-100 d-flex d-md-inline-flex d-lg-none">
+          <button type="button" class="flex-1 btn btn-primary br-10 mt-3" data-bs-toggle="modal" data-bs-target="#Schdele-Book-modal">
+            Schedule <span class="d-none d-sm-inline">a Visit</span> / Book <span class="d-none d-sm-inline">Noe</span>
+          </button>
+        </div>
+
+        <div class="details-verification-outer d-flex justify-content-start align-items-center mt-4 mb-4">
+          <img src="img/verification-icon.png" class="details-verification-icon me-3">
+          <span class="fw-5">Verified - Preliminary verification done</span>
+        </div>
+
+        <div class="d-flex flex-column justify-content-start align-items-stretch mt-xl-5">
+          <h4 class="color-blue fw-6 mb-3">Details of Plot</h4>
+          <ul class="details-of-plot-list ps-0 mb-0">
+            <li class="mb-2"><strong>Property Type: </strong><span>Lorem Ipsum is simple text.</span></li>
+            <li class="mb-2"><strong>Price Negotiable: </strong><span>Lorem Ipsum is simple text.</span></li>
+            <li class="mb-2"><strong>Approach Road: </strong><span>Lorem Ipsum is simple text.</span></li>
+            <li class="mb-2"><strong>Possession: </strong><span>Lorem Ipsum is simple text.</span></li>
+            <li class="mb-2"><strong>Dimension: </strong><span>Lorem Ipsum is simple text.</span></li>
+            <li class="mb-2"><strong>Ownership: </strong><span>Lorem Ipsum is simple text.</span></li>
+            <li class="mb-2"><strong>Boundary Wall: </strong><span>Lorem Ipsum is simple text.</span></li>
+            <li class="mb-2"><strong>Listing Date: </strong><span>Lorem Ipsum is simple text.</span></li>
+          </ul>
+        </div>
+
+        <div class="w-100 details-divider my-3 my-xl-5"></div>
+
+        <div class="d-flex flex-column justify-content-start align-items-stretch">
+          <h4 class="color-blue fw-6 mb-3">Key Pillars</h4>
+          <div class="key-item-outer d-flex justify-content-start align-items-start flex-wrap">
+            <div class="key-item px-3 py-2 fs-16">Power Backup</div>
+            <div class="key-item px-3 py-2 fs-16">Water Supply</div>
+            <div class="key-item px-3 py-2 fs-16">Freehold</div>
+            <div class="key-item px-3 py-2 fs-16">West Facing</div>
+            <div class="key-item px-3 py-2 fs-16">Drainage Line</div>
+            <div class="key-item px-3 py-2 fs-16">Key One</div>
+            <div class="key-item px-3 py-2 fs-16">Key Two</div>
+            <div class="key-item px-3 py-2 fs-16">Key Three</div>
+            <div class="key-item px-3 py-2 fs-16">Key Four</div>
+          </div>
+        </div>
+
+        <div class="w-100 details-divider my-3 my-xl-5"></div>
+
+        <div class="d-flex flex-column justify-content-start align-items-stretch">
+          <h4 class="color-blue fw-6 mb-3">Details of Plot</h4>
+
+          <div class="static-text">
+            <p class="mb-1">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta temporibus similique vitae. Dolorum esse sit aspernatur fugit atque sunt ex temporibus neque delectus quisquam nulla minima, deleniti optio. Officiis, exercitationem!
+            </p>
+            <p class="mb-1">
+              Explicabo veritatis minima eum esse laborum aspernatur fugit error commodi, pariatur vitae voluptas illum similique excepturi sequi, tempora nobis mollitia! Sapiente fugit necessitatibus ratione possimus vel cumque quos quia at?
+            </p>
+          </div>
+          <div class="collapse multi-collapse mb-1" id="extraDetails">
+            <p class="mb-1">
+              Quibusdam expedita atque numquam suscipit ea voluptatum quam tempora laboriosam fuga, odit quo non consequatur temporibus? Eligendi magni numquam et, nihil officia assumenda nostrum illum dolorem molestiae quod commodi reprehenderit.
+            </p>
+            <p class="mb-1">
+              It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+            </p>
+          </div>
+
+          <div class="mb-0"><a data-bs-toggle="collapse" class="show-more" href="#extraDetails" role="button" aria-expanded="false" aria-controls="extraDetails"></a></div>
+          
+        </div>
+
+        <div class="w-100 details-divider my-3 my-xl-5"></div>
+
+        <div class="d-flex flex-column justify-content-start align-items-stretch">
+          <h4 class="color-blue fw-6 mb-3">Details of Plot</h4>
+          <div class="d-flex justify-content-start align-items-center mb-3">
+            <div class="fw-5 w-2">7/12 Report</div>
+            <a href="#" class="btn btn-primary btn-round px-xl-4"><img src="img/download-icon-white.png" class="details-download-icon me-2"> Download</a>
+          </div>
+          <div class="d-flex justify-content-start align-items-center mb-3">
+            <div class="fw-5 w-2">Search</div>
+            <a href="#" class="btn btn-primary btn-round px-xl-4"><img src="img/download-icon-white.png" class="details-download-icon me-2"> Download</a>
+          </div>
+          <div class="d-flex justify-content-start align-items-center mb-3">
+            <div class="fw-5 w-2">DP Plan</div>
+            <a href="#" class="btn btn-primary btn-round px-xl-4"><img src="img/download-icon-white.png" class="details-download-icon me-2"> Download</a>
+          </div>
+        </div>
+
+        <div class="w-100 details-divider my-3 my-xl-5"></div>
+
+        <div class="d-flex flex-column justify-content-start align-items-stretch">
+          <h4 class="color-blue fw-6 mb-3">Near By</h4>
+          
+          <div class="nav mb-4">
+            <div class="btn details-switch-btn active" id="education-btn" data-bs-toggle="pill" data-bs-target="#education" type="button" role="tab" aria-controls="education" aria-selected="true">
+              <div class="details-switch-btn-inner d-flex justify-content-center align-items-center">Education</div>
+            </div>
+            <div class="btn details-switch-btn" id="video-btn" data-bs-toggle="pill" data-bs-target="#hospital" type="button" role="tab" aria-controls="hospital" aria-selected="false">
+              <div class="details-switch-btn-inner d-flex justify-content-center align-items-center">Hospital</div>
+            </div>
+            <div class="btn details-switch-btn" id="restaurant-btn" data-bs-toggle="pill" data-bs-target="#restaurant" type="button" role="tab" aria-controls="restaurant" aria-selected="false">
+              <div class="details-switch-btn-inner d-flex justify-content-center align-items-center">Restaurant</div>
+            </div>
+            <div class="btn details-switch-btn" id="hotel-btn" data-bs-toggle="pill" data-bs-target="#hotel" type="button" role="tab" aria-controls="hotel" aria-selected="false">
+              <div class="details-switch-btn-inner d-flex justify-content-center align-items-center">Hotel</div>
+            </div>
+          </div>
+
+          <section class="tab-content">
+            <div class="details-education-slider-1 position-relative w-100 tab-pane fade show active" id="education" role="tabpanel" aria-labelledby="education-btn">
+              <ul class="ps-0 mb-0 count-md-2 column-count column-count list-unstyled">
+                <li class="mb-2"><strong>Hospital: </strong><span>12.5 km</span></li>
+                <li class="mb-2"><strong>School: </strong><span>12.5 km</span></li>
+                <li class="mb-2"><strong>Mall: </strong><span>12.5 km</span></li>
+                <li class="mb-2"><strong>Market: </strong><span>12.5 km</span></li>
+                <li class="mb-2"><strong>Bus Stop: </strong><span>12.5 km</span></li>
+                <li class="mb-2"><strong>Railway Station: </strong><span>12.5 km</span></li>
+                <li class="mb-2"><strong>Airport: </strong><span>12.5 km</span></li>
+                <li class="mb-2"><strong>Gym: </strong><span>12.5 km</span></li>
+              </ul>
+            </div>
+            <div class="w-100 tab-pane fade" id="hospital" role="tabpanel" aria-labelledby="hospital-btn">
+              <ul class="ps-0 mb-0 count-md-2 column-count column-count list-unstyled">
+                <li class="mb-2"><strong>Hospital: </strong><span>12.5 km</span></li>
+                <li class="mb-2"><strong>School: </strong><span>12.5 km</span></li>
+                <li class="mb-2"><strong>Mall: </strong><span>12.5 km</span></li>
+                <li class="mb-2"><strong>Market: </strong><span>12.5 km</span></li>
+                <li class="mb-2"><strong>Bus Stop: </strong><span>12.5 km</span></li>
+                <li class="mb-2"><strong>Railway Station: </strong><span>12.5 km</span></li>
+                <li class="mb-2"><strong>Airport: </strong><span>12.5 km</span></li>
+                <li class="mb-2"><strong>Gym: </strong><span>12.5 km</span></li>
+              </ul>
+            </div>
+            <div class="w-100 tab-pane fade" id="restaurant" role="tabpanel" aria-labelledby="restaurant-btn">
+              <ul class="ps-0 mb-0 count-md-2 column-count column-count list-unstyled">
+                <li class="mb-2"><strong>Hospital: </strong><span>12.5 km</span></li>
+                <li class="mb-2"><strong>School: </strong><span>12.5 km</span></li>
+                <li class="mb-2"><strong>Mall: </strong><span>12.5 km</span></li>
+                <li class="mb-2"><strong>Market: </strong><span>12.5 km</span></li>
+                <li class="mb-2"><strong>Bus Stop: </strong><span>12.5 km</span></li>
+                <li class="mb-2"><strong>Railway Station: </strong><span>12.5 km</span></li>
+                <li class="mb-2"><strong>Airport: </strong><span>12.5 km</span></li>
+                <li class="mb-2"><strong>Gym: </strong><span>12.5 km</span></li>
+              </ul>
+            </div>
+            <div class="w-100 tab-pane fade" id="hotel" role="tabpanel" aria-labelledby="hotel-btn">
+              <ul class="ps-0 mb-0 count-md-2 column-count column-count list-unstyled">
+                <li class="mb-2"><strong>Hospital: </strong><span>12.5 km</span></li>
+                <li class="mb-2"><strong>School: </strong><span>12.5 km</span></li>
+                <li class="mb-2"><strong>Mall: </strong><span>12.5 km</span></li>
+                <li class="mb-2"><strong>Market: </strong><span>12.5 km</span></li>
+                <li class="mb-2"><strong>Bus Stop: </strong><span>12.5 km</span></li>
+                <li class="mb-2"><strong>Railway Station: </strong><span>12.5 km</span></li>
+                <li class="mb-2"><strong>Airport: </strong><span>12.5 km</span></li>
+                <li class="mb-2"><strong>Gym: </strong><span>12.5 km</span></li>
+              </ul>
+            </div>
+          </section>
+
+        </div>
+
+        <div class="w-100 details-divider my-3 my-xl-5"></div>
+
+        <div class="d-flex flex-column justify-content-start align-items-stretch mb-4">
+          <h4 class="color-blue fw-6 mb-3 mb-xl-4">Need Help?</h4>
+          <div class="d-flex justify-content-start align-items-center mb-3 mb-xl-4">
+            <img src="img/conversation-icon.png" class="help-icon me-3 me-xl-4">
+            <div class="d-flex flex-column justify-content-center align-items-start">
+              <h5 class="mb-0 fw-5 needhelp-inner-heading">Message Host</h5>
+              <span class="color-3x">Contact Host Directly</span>
+            </div>
+          </div>
+          <div class="d-flex justify-content-start align-items-center mb-3 mb-xl-4">
+            <img src="img/phone-icon.png" class="help-icon me-3 me-xl-4">
+            <div class="d-flex flex-column justify-content-center align-items-start">
+              <h5 class="mb-0 fw-5 needhelp-inner-heading">Call Customer Support</h5>
+              <span class="color-3x">10<small>AM</small> to 6<small>PM</small> all days in week</span>
+            </div>
+          </div>
+          <div class="d-flex justify-content-start align-items-center">
+            <img src="img/social-icon.png" class="details-social-icon me-3 me-xl-4">
+            <div class="d-flex flex-column justify-content-center align-items-start">
+              <h5 class="mb-0 fw-5 needhelp-inner-heading">Live Chat Support</h5>
+              <span class="color-3x">+91 9876543210</span>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    
+    <div class="right-booking-holder d-flex justify-content-start align-items-start flex-column bg-white d-none d-lg-flex flex-column">
+      <div class="booking-form border p-3 p-lg-4">
+        <div class="nav switch-btn-outer list-details-switch-btn left w-100 mb-4 mt-2">
+          <div class="switch-btn-inner active" data-btn-pos="left" id="schedule-btn" data-bs-toggle="pill" data-bs-target="#schedule" type="button" role="tab" aria-controls="schedule" aria-selected="true">Schedule Visit</div>
+          <div class="switch-btn-inner" data-btn-pos="right" id="book-btn" data-bs-toggle="pill" data-bs-target="#book" type="button" role="tab" aria-controls="book" aria-selected="false">Book Now</div>
+        </div>
+        <div class="tab-content mb-1">
+          <div class="tab-pane fade show active" id="schedule" role="tabpanel" aria-labelledby="schedule-btn">
+            <div class="mb-3">
+              <input type="text" class="form-control br-10" id="name" placeholder="Name">
+            </div>
+            <div class="mb-3 fs-16">
+              <input class="form-control br-10 fs-16" name="phone" type="text" placeholder="Mobile number" id="schedule-phone"/> 
+            </div>
+            <div class="mb-3 py-2 px-3 form-control br-10 fs-14 text-center color-blue">
+              We are accepting bookings for stay duration of minimum 3 months.
+            </div>
+  
+            <div class="mb-3 d-flex justify-content-start align-items-center">
+              <img src="img/whatsapp-2.png" class="wp-icon-2 me-3">
+              <span class="fs-16">Get updated over WhatsApp</span>
+            </div>
+  
+            <div class="d-flex justify-content-start align-items-center form-check bs-check ps-0 mb-3">
+              <input class="form-check-input ms-0 mt-0 cursor-pointer" type="checkbox" value="" id="agreeTC" checked>
+              <label class="form-check-label ps-3 fs-16 cursor-pointer" for="agreeTC">
+                I have read and agreed to the <span class="color-blue cursor-pointer" data-bs-toggle="modal" data-bs-target="#TC"> Terms and Conditions </span> and <span class="color-blue cursor-pointer" data-bs-toggle="modal" data-bs-target="#TC"> Privacy </span>.
+              </label>
+            </div>
+            <button class="btn btn-primary btn-round w-100">Schedule a Visit</button>
+          </div>
+          <div class="tab-pane fade" id="book" role="tabpanel" aria-labelledby="book-btn">
+            <div class="mb-3">
+              <input type="text" class="form-control br-10" id="name" placeholder="Name">
+            </div>
+            <div class="mb-3 fs-16">
+              <input class="form-control br-10 fs-16" name="phone" type="text" placeholder="Mobile number" id="book-phone"/> 
+            </div>
+            <div class="mb-3 py-2 px-3 form-control br-10 fs-14 text-center color-blue">
+              We are accepting bookings for stay duration of minimum 3 months.
+            </div>
+  
+            <div class="mb-3 d-flex justify-content-start align-items-center">
+              <img src="img/whatsapp-2.png" class="wp-icon-2 me-3">
+              <span class="fs-16">Get updated over WhatsApp</span>
+            </div>
+  
+            <div class="d-flex justify-content-start align-items-center form-check bs-check ps-0 mb-3">
+              <input class="form-check-input ms-0 mt-0 cursor-pointer" type="checkbox" value="" id="policy" checked>
+              <label class="form-check-label ps-3 fs-16 cursor-pointer" for="policy">
+                I have read and agreed to the <span class="color-blue cursor-pointer" data-bs-toggle="modal" data-bs-target="#TC"> Terms and Conditions </span> and <span class="color-blue cursor-pointer" data-bs-toggle="modal" data-bs-target="#TC"> Privacy </span>.
+              </label>
+            </div>
+            <button class="btn btn-primary btn-round w-100">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex flex-column bg-light-blue w-100 br-10 p-3 p-lg-4 mt-3 mt-lg-4">
+        <div class="d-flex justify-content-start align-items-center mb-3">
+          <div class="rb-icon-holder d-flex justify-content-start">
+            <img src="img/approve.png" class="w-auto detail-approve-right-icon">
+          </div>
+          <span class="fs-16">Certified vy Verified Plots</span>
+        </div>
+        <div class="d-flex justify-content-start align-items-center mb-3">
+          <div class="rb-icon-holder d-flex justify-content-start">
+            <img src="img/legal-service-icno.png" class="w-auto detail-legal-right-icon">
+          </div>
+          <span class="fs-16">Free Legal Assistance</span>
+        </div>
+        <div class="d-flex justify-content-start align-items-center">
+          <div class="rb-icon-holder d-flex justify-content-start">
+            <img src="img/location-2.png" class="w-auto detail-visit-right-icon">
+          </div>
+          <span class="fs-16">Free Site Visit</span>
+        </div>
+      </div>
+
+
+      
+
+    </div>
+
+
+  </div>
+</section>
+
+
+
+
+<!-- Book/Visit Form for mobile -->
+<div class="modal fade" id="Schdele-Book-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="Schdele-Book-modalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="nav switch-btn-outer left w-100">
+          <div class="switch-btn-inner px-3 active" data-btn-pos="left" id="schedule2-btn" data-bs-toggle="pill" data-bs-target="#schedule2" type="button" role="tab" aria-controls="schedule2" aria-selected="true">Schedule Visit</div>
+          <div class="switch-btn-inner px-3" data-btn-pos="right" id="book2-btn" data-bs-toggle="pill" data-bs-target="#book2" type="button" role="tab" aria-controls="book2" aria-selected="false">Book Now</div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="tab-content mb-1">
+          <div class="tab-pane fade show active" id="schedule2" role="tabpanel" aria-labelledby="schedule2-btn">
+            <div class="mb-3">
+              <input type="text" class="form-control br-10" id="name" placeholder="Name">
+            </div>
+            <div class="mb-3 fs-16">
+              <input class="form-control br-10 fs-16" name="phone" type="text" placeholder="Mobile number" id="schedule2-phone"/> 
+            </div>
+            <div class="mb-3 py-2 px-3 form-control br-10 fs-14 text-center color-blue">
+              We are accepting bookings for stay duration of minimum 3 months.
+            </div>
+  
+            <div class="mb-3 d-flex justify-content-start align-items-center">
+              <img src="img/whatsapp-2.png" class="wp-icon-2 me-3">
+              <span class="fs-16">Get updated over WhatsApp</span>
+            </div>
+  
+            <div class="d-flex justify-content-start align-items-center form-check bs-check ps-0 mb-3">
+              <input class="form-check-input ms-0 mt-0 cursor-pointer" type="checkbox" value="" id="agreeTC" checked>
+              <label class="form-check-label ps-3 fs-16 cursor-pointer" for="agreeTC">
+                I have read and agreed to the <span class="color-blue cursor-pointer" data-bs-toggle="modal" data-bs-target="#TC"> Terms and Conditions </span> and <span class="color-blue cursor-pointer" data-bs-toggle="modal" data-bs-target="#TC"> Privacy </span>.
+              </label>
+            </div>
+            <button class="btn btn-primary btn-round w-100">Schedule a Visit</button>
+          </div>
+          <div class="tab-pane fade" id="book2" role="tabpanel" aria-labelledby="book2-btn">
+            <div class="mb-3">
+              <input type="text" class="form-control br-10" id="name" placeholder="Name">
+            </div>
+            <div class="mb-3 fs-16">
+              <input class="form-control br-10 fs-16" name="phone" type="text" placeholder="Mobile number" id="book2-phone"/> 
+            </div>
+            <div class="mb-3 py-2 px-3 form-control br-10 fs-14 text-center color-blue">
+              We are accepting bookings for stay duration of minimum 3 months.
+            </div>
+  
+            <div class="mb-3 d-flex justify-content-start align-items-center">
+              <img src="img/whatsapp-2.png" class="wp-icon-2 me-3">
+              <span class="fs-16">Get updated over WhatsApp</span>
+            </div>
+  
+            <div class="d-flex justify-content-start align-items-center form-check bs-check ps-0 mb-3">
+              <input class="form-check-input ms-0 mt-0 cursor-pointer" type="checkbox" value="" id="policy" checked>
+              <label class="form-check-label ps-3 fs-16 cursor-pointer" for="policy">
+                I have read and agreed to the <span class="color-blue cursor-pointer" data-bs-toggle="modal" data-bs-target="#TC"> Terms and Conditions </span> and <span class="color-blue cursor-pointer" data-bs-toggle="modal" data-bs-target="#TC"> Privacy </span>.
+              </label>
+            </div>
+            <button class="btn btn-primary btn-round w-100">Book Now</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Terms and Condition Modal -->
+<div class="modal fade" id="TC" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="TCLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title color-blue" id="TCLabel">Terms and Conditions</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body fs-14">
+        <p class="mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos excepturi eligendi dolores cupiditate impedit ducimus nulla quo a veritatis incidunt sed eum sint consequatur alias reiciendis labore quam, aliquam repudiandae.</p>
+        <p class="mb-3">Natus possimus doloribus impedit mollitia a voluptas perferendis. Fugiat quisquam incidunt eum voluptatem assumenda omnis, tempore, nulla architecto quis accusamus magnam fuga sed cum quibusdam eos enim aliquam animi. Omnis.</p>
+        <p class="mb-3">Neque nisi laudantium labore ullam amet rem similique animi in ratione officiis! Tempora cumque facere recusandae repellat hic officia tempore eligendi placeat rerum a inventore quo repellendus, voluptatem ipsum odio!</p>
+        <p class="mb-3">Ipsum corporis fugiat ea magnam nesciunt, totam facilis exercitationem amet earum aperiam aliquid ratione adipisci voluptate, esse praesentium unde vel! Modi sint quasi tempore recusandae repellat voluptatem accusamus autem. Maiores.</p>
+        <p class="mb-3">Impedit eligendi facere consectetur natus rerum illum consequatur velit odit eum veniam sequi repellendus nemo magnam suscipit molestiae culpa, dolores expedita esse ducimus assumenda mollitia fugiat tempora veritatis. Distinctio, eos?</p>
+        <p class="mb-0">Iste quod quas dolorem magnam dignissimos perferendis voluptatum, laudantium veritatis corporis nesciunt. Doloribus, non aliquid? Maxime facere fugiat dignissimos eaque et distinctio perspiciatis temporibus! Voluptatum autem soluta odit. Ipsam, voluptatibus?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Agree</button>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
 
 <section class="">
   <div class="container-xl">
     <div class="row">
       <div class="col-12 my-lg-3">
-        <div class="w-100 border-top pt-5"></div>
+        <div class="w-100 border-top border-2 pt-5"></div>
       </div>
 
 
@@ -319,6 +757,7 @@
 <a class="floating-wp" href="#">
   <img src="img/whatsapp.png" class="floating-wp-icon">
 </a>
+
 <footer class="footer-bottom mt-5 pt-5 pb-4 mt-lg-5 pt-lg-5 pb-lg-4 footer-outer-bg">
   <div class="container-xl">
     <div class="row pb-5">
