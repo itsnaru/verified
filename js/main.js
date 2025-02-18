@@ -69,6 +69,11 @@ $(document).ready(function(){
     $('.price-range').toggleClass('show-price-range');
   })
 
+  $('.sell-lease-card').click(function(){
+    $('.sell-lease-card').removeClass('card-active');
+    $(this).addClass('card-active');
+  })
+
 })
 
 

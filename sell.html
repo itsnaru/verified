@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verified Plots | Home</title>
+  <link rel="icon" type="image/x-icon" href="./img/verified-plots-icon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/slick-theme.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/country-dropdown.css">
+  <script src="js/country-dropdown.js"></script>
+</head>
+<body>
+
+<header class="fixed-top border-bottom border-2" id="inner-header">
+  <div class="container-xxl py-3">
+    <div class="row">
+      <div class="col-6 col-lg-2 d-flex justify-content-start align-items-center">
+        <a href="#">
+          <img class="header-logo" src="img/verified-plots-logo.png" alt="verified-plots-logo">
+        </a>
+      </div>
+
+      <div class="col-12 col-lg-8 top-menu d-none flex-column justify-content-start justify-content-lg-center align-items-start align-items-lg-center p-4 p-lg-0">
+        <div class="w-100 d-lg-none d-flex justify-content-between align-items-center mb-4">
+          <a href="#">
+            <img class="header-logo top-menu-logo" src="img/verified-plots-logo.png" alt="verified-plots-logo">
+          </a>
+          <img src="img/close.png" class="close-menu">
+        </div>
+        <div class="top-menu-inner d-flex flex-column flex-lg-row justify-content-center align-items-center">
+          <a class="header-link px-2 mx-3 text-decoration-none" href="#">Buy</a>
+          <a class="header-link px-2 mx-3 text-decoration-none" href="#">Sell</a>
+          <a class="header-link px-2 mx-3 text-decoration-none" href="#">Hot Deals</a>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-8 d-none d-lg-flex">
+        <div class="w-100 bg-white d-flex justify-content-center align-items-center py-2 px-3">
+            <div class="top-menu-inner d-flex flex-column flex-lg-row justify-content-center align-items-center">
+                <a class="header-link px-2 mx-3 text-decoration-none" href="#">Buy</a>
+                <a class="header-link px-2 mx-3 text-decoration-none" href="#">Sell</a>
+                <a class="header-link px-2 mx-3 text-decoration-none" href="#">Hot Deals</a>
+              </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-2 d-flex justify-content-end align-items-center">
+        <div class="mob-round-btn btn btn-primary btn-round py-2 px-2 me-3 d-lg-none" data-bs-toggle="modal" data-bs-target="#searchModal">
+          <span><img class="mob-search-white-icon" src="img/search-icon-white.png"></span>
+        </div>
+
+        <a class="mob-round-btn btn btn-primary btn-round py-2 px-2" href="#">
+          <span><img class="btn-icon" src="img/call-center.png"></span>
+          <span class="d-none d-lg-inline px-2">Support</span>
+        </a>
+
+        <span>
+          <img src="img/menu.png" class="menu-icon d-flex d-lg-none ms-4">
+        </span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="inner-top-search-outer w-100 bg-white d-flex justify-content-center align-items-center py-2 px-3">
+          <div class="search-inner d-flex justify-content-start align-items-center w-100 bg-white py-2">
+            <img src="img/search-icon.png" class="search-icon d-none d-sm-block">
+            <input type="text" placeholder="Search you Location" class="main-search flex-1 ms-sm-3 fs-16">
+          </div>
+          <div class="btn btn-primary btn-round fs-16 search-btn d-flex align-items-center ps-3 pe-3 px-sm-3 ms-sm-3">
+            <img src="img/search-icon-white.png" class="search-icon d-sm-none">
+            <span class="d-none d-sm-inline">Search</span>
+          </div>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h5>Popular cities</h5>
+        <div class="popular-cities ">
+          <div>
+            <div class="w-100 d-flex flex-column justify-content-center align-items-center">
+              <img src="img/pune.png" class="city-img">
+              <span class="fs-14">Pune</span>
+            </div>
+          </div>
+          <div>
+            <div class="w-100 d-flex flex-column justify-content-center align-items-center">
+              <img src="img/ahd.png" class="city-img">
+              <span class="fs-14">Ahmedabad</span>
+            </div>
+          </div>
+          <div>
+            <div class="w-100 d-flex flex-column justify-content-center align-items-center">
+              <img src="img/mumbai.png" class="city-img">
+              <span class="fs-14">Mumbai</span>
+            </div>
+          </div>
+          <div>
+            <div class="w-100 d-flex flex-column justify-content-center align-items-center">
+              <img src="img/bang.png" class="city-img">
+              <span class="fs-14">Bangaluru</span>
+            </div>
+          </div>
+          <div>
+            <div class="w-100 d-flex flex-column justify-content-center align-items-center">
+              <img src="img/ncr.png" class="city-img">
+              <span class="fs-14">Dehli</span>
+            </div>
+          </div>
+          <div>
+            <div class="w-100 d-flex flex-column justify-content-center align-items-center">
+              <img src="img/chd.png" class="city-img">
+              <span class="fs-14">Chandighar</span>
+            </div>
+          </div>
+          <div>
+            <div class="w-100 d-flex flex-column justify-content-center align-items-center">
+              <img src="img/kolk.png" class="city-img">
+              <span class="fs-14">Kolkata</span>
+            </div>
+          </div>
+          <div>
+            <div class="w-100 d-flex flex-column justify-content-center align-items-center">
+              <img src="img/hyd.png" class="city-img">
+              <span class="fs-14">Hyderabad</span>
+            </div>
+          </div>
+          <div>
+            <div class="w-100 d-flex flex-column justify-content-center align-items-center">
+              <img src="img/chen.png" class="city-img">
+              <span class="fs-14">Chennai</span>
+            </div>
+          </div>
+          <div>
+            <div class="w-100 d-flex flex-column justify-content-center align-items-center">
+              <img src="img/koch.jpg" class="city-img">
+              <span class="fs-14">Kochi</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="sell-hero-section mb-3 mb-lg-4 header-top-space py-5">
+    <div class="container-lg py-lg-5 sell-hero-bg">
+        <div class="row">
+            <div class="col-12 col-md-6 d-flex flex-column justify-content-start align-items-start">
+                <div class="sell-round d-flex justify-content-center align-items-center pe-3">
+                    <div class="sell-vf-icon-outer me-3"><img src="img/verified-plots-white-icon.png" class="sell-vf-icon"></div>
+                    <span>Sell or Lease 3x faster</span>
+                </div>
+                <h2 class="h2 color-blue fw-7 list-location-heading mt-4 mb-0"><span class="text-primary">Sell/Lease</span> your plots at <br>Verified Plots</h2>
+                <p class="my-4">List your Plots for free and get access to 15,000+ clients or investors on our platform.</p>
+                
+                <div class="d-flex flex-column justify-content-start align-items-stretch">
+                    
+                    <div class="d-flex justify-content-start align-items-center mb-3 mb-xl-4">
+                      <img src="img/money-icon.png" class="help-icon me-3">
+                      <div class="d-flex flex-column justify-content-center align-items-start">
+                        <span class="color-2x">Get the best price</span>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-start align-items-center mb-3 mb-xl-4">
+                      <img src="img/manager-icon.png" class="help-icon me-3">
+                      <div class="d-flex flex-column justify-content-center align-items-start">
+                        <span class="color-2x">Dedicated experts team</span>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-start align-items-center">
+                      <img src="img/schedule-icon.png" class="details-social-icon me-3">
+                      <div class="d-flex flex-column justify-content-center align-items-start">
+                        <span class="color-2x">Legal assistance</span>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mt-4 mt-md-0 d-flex flex-column justify-content-start align-items-start justify-content-md-end align-items-md-end">
+                <div class="i-want-box br-15 border d-flex flex-column p-3 p-lg-4 me-xl-5">
+                    <h4 class="color-blue fw-6 mb-3 text-center">I Want to...</h4>
+                    <div class="d-flex gap-4">
+                        <div class="flex-1">
+                            <div class="sell-lease-card card-active d-flex flex-wrap justify-content-between align-items-center bg-white p-3 p-lg-4 border br-15">
+                                <div class="icon-circle-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M10.5 17.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 1 0 1z" fill="#ffffff" opacity="1" data-original="#000000" class=""></path><path d="M10.5 20h-2c-.827 0-1.5-.673-1.5-1.5v-3c0-.827.673-1.5 1.5-1.5h2a.5.5 0 0 1 0 1h-2c-.275 0-.5.225-.5.5v3c0 .275.225.5.5.5h2a.5.5 0 0 1 0 1zM21.5 20h-3a.5.5 0 0 1-.5-.5v-5a.5.5 0 0 1 1 0V19h2.5a.5.5 0 0 1 0 1zM16.5 20h-3a.5.5 0 0 1-.5-.5v-5a.5.5 0 0 1 1 0V19h2.5a.5.5 0 0 1 0 1zM12 7c-1.654 0-3-1.346-3-3s1.346-3 3-3 3 1.346 3 3-1.346 3-3 3zm0-5c-1.103 0-2 .897-2 2s.897 2 2 2 2-.897 2-2-.897-2-2-2z" fill="#ffffff" opacity="1" data-original="#000000" class=""></path><path d="M21.5 23h-19A2.502 2.502 0 0 1 0 20.5v-8C0 11.121 1.121 10 2.5 10h19c1.379 0 2.5 1.121 2.5 2.5v8c0 1.379-1.121 2.5-2.5 2.5zm-19-12c-.827 0-1.5.673-1.5 1.5v8c0 .827.673 1.5 1.5 1.5h19c.827 0 1.5-.673 1.5-1.5v-8c0-.827-.673-1.5-1.5-1.5z" fill="#ffffff" opacity="1" data-original="#000000" class=""></path><path d="M6.5 11a.502.502 0 0 1-.454-.71l3-6.5a.5.5 0 0 1 .908.42l-3 6.5A.5.5 0 0 1 6.5 11zM17.5 11a.5.5 0 0 1-.454-.29l-3-6.5a.5.5 0 0 1 .908-.42l3 6.5a.502.502 0 0 1-.454.71zM4.25 20H2.5a.5.5 0 0 1 0-1h1.75c.413 0 .75-.337.75-.75s-.337-.75-.75-.75h-.5c-.965 0-1.75-.785-1.75-1.75S2.785 14 3.75 14H5.5a.5.5 0 0 1 0 1H3.75c-.413 0-.75.337-.75.75s.337.75.75.75h.5c.965 0 1.75.785 1.75 1.75S5.215 20 4.25 20z" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"  x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class="sell-check-icon"><g><path d="M497.36 69.995c-7.532-7.545-19.753-7.558-27.285-.032L238.582 300.845l-83.522-90.713c-7.217-7.834-19.419-8.342-27.266-1.126-7.841 7.217-8.343 19.425-1.126 27.266l97.126 105.481a19.273 19.273 0 0 0 13.784 6.22c.141.006.277.006.412.006a19.317 19.317 0 0 0 13.623-5.628L497.322 97.286c7.551-7.525 7.564-19.746.038-27.291z" fill="#d0d0d0" opacity="1" data-original="#000000" class=""></path><path d="M492.703 236.703c-10.658 0-19.296 8.638-19.296 19.297 0 119.883-97.524 217.407-217.407 217.407-119.876 0-217.407-97.524-217.407-217.407 0-119.876 97.531-217.407 217.407-217.407 10.658 0 19.297-8.638 19.297-19.296C275.297 8.638 266.658 0 256 0 114.84 0 0 114.84 0 256c0 141.154 114.84 256 256 256 141.154 0 256-114.846 256-256 0-10.658-8.638-19.297-19.297-19.297z" fill="#d0d0d0" opacity="1" data-original="#000000" class=""></path></g></svg>
+                                <h5 class="color-grey w-100 fw-6 mb-0 mt-3 mt-lg-4 text-start">Sell My Plot</h5>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <div class="sell-lease-card d-flex flex-wrap justify-content-between align-items-center bg-white p-3 p-lg-4 border br-15">
+                                <div class="icon-circle-1">
+                                     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M447.327 38.482H309.491V10.199C309.491 4.566 304.925 0 299.292 0h-86.584c-5.633 0-10.199 4.566-10.199 10.199v28.282H64.673c-23.459 0-42.546 19.086-42.546 42.546v227.767c0 23.459 19.086 42.546 42.546 42.546h137.836v150.461c0 5.633 4.566 10.199 10.199 10.199h86.584c5.633 0 10.199-4.566 10.199-10.199V351.34h137.835c23.459 0 42.546-19.086 42.546-42.546V81.028c.001-23.461-19.085-42.546-42.545-42.546zM222.908 20.398h66.186v18.083h-66.186V20.398zm66.184 471.204h-66.186V351.34h66.186v140.262zm180.382-182.808c0 12.213-9.935 22.148-22.148 22.148H64.673c-12.213 0-22.148-9.935-22.148-22.148V81.028c0-12.213 9.935-22.148 22.148-22.148h382.654c12.213 0 22.148 9.935 22.148 22.148v227.766z" fill="#ffffff" opacity="1" data-original="#000000" class=""></path><path d="M271.299 375.331c-5.633 0-10.199 4.566-10.199 10.199v4.08c0 5.633 4.566 10.199 10.199 10.199s10.199-4.566 10.199-10.199v-4.08c0-5.633-4.566-10.199-10.199-10.199zM271.299 408.988c-5.633 0-10.199 4.566-10.199 10.199v54.056c0 5.633 4.566 10.199 10.199 10.199s10.199-4.566 10.199-10.199v-54.056c0-5.633-4.566-10.199-10.199-10.199zM211.733 107.084h-35.831c-3.512 0-7.022 1.651-7.022 4.956h.001v65.57c0 3.303 4.027 4.956 8.054 4.956s8.053-1.652 8.053-4.956v-26.641h15.593c3.408 0 4.853-3.305 4.853-6.092 0-3.305-1.755-6.299-4.853-6.299h-15.593v-17.451h26.744c3.098 0 4.854-3.304 4.854-7.124.001-3.305-1.445-6.919-4.853-6.919zM254.068 107.083c-14.25 0-25.299 6.608-25.299 24.369v27.363c0 17.761 11.049 24.369 25.299 24.369 14.248 0 25.401-6.608 25.401-24.369v-27.363c0-17.76-11.151-24.369-25.401-24.369zm9.293 51.733c0 7.125-3.511 10.326-9.292 10.326-5.783 0-9.19-3.201-9.19-10.326v-27.363c0-7.125 3.408-10.327 9.19-10.327s9.292 3.202 9.292 10.327v27.363zM349.887 172.963l-12.598-22.821c7.228-2.787 12.494-9.396 12.494-20.961 0-16.832-11.255-22.098-25.401-22.098h-21.375c-2.994 0-4.957 2.271-4.957 4.853v65.674c0 3.303 4.027 4.956 8.054 4.956s8.053-1.652 8.053-4.956v-24.885h6.815l14.146 27.466c1.137 2.168 3.1 2.995 5.164 2.995 4.75 0 10.12-4.337 10.12-8.364.001-.517-.103-1.24-.515-1.859zm-25.506-32.63h-10.223v-19.207h10.223c5.782 0 9.293 2.375 9.293 9.604-.001 7.228-3.511 9.603-9.293 9.603zM185.148 275.975l-12.598-22.821c7.228-2.787 12.494-9.396 12.494-20.961 0-16.832-11.255-22.098-25.401-22.098h-21.374c-2.995 0-4.957 2.271-4.957 4.853v65.674c0 3.304 4.027 4.956 8.054 4.956s8.053-1.652 8.053-4.956v-24.885h6.815l14.146 27.466c1.137 2.168 3.1 2.995 5.164 2.995 4.75 0 10.12-4.337 10.12-8.364 0-.517-.104-1.24-.516-1.859zm-25.505-32.63H149.42v-19.207h10.223c5.782 0 9.292 2.375 9.292 9.604 0 7.228-3.51 9.603-9.292 9.603zM245.654 271.534H217.98V253.98h15.49c3.408 0 4.853-3.305 4.853-6.092 0-3.305-1.755-6.299-4.853-6.299h-15.49v-17.451h27.674c3.097 0 4.854-3.304 4.854-7.124 0-3.305-1.446-6.918-4.854-6.918h-36.76c-3.512 0-7.022 1.651-7.022 4.956v65.57c0 3.304 3.512 4.956 7.022 4.956h36.76c3.408 0 4.854-3.614 4.854-6.918 0-3.821-1.757-7.126-4.854-7.126zM310.495 210.095c-4.027 0-8.053 1.445-8.053 4.853v35.109l-16.728-31.907c-3.925-7.538-6.093-8.054-11.875-8.054-4.028 0-8.054 1.548-8.054 4.956v65.57c0 3.304 4.027 4.956 8.054 4.956s8.053-1.652 8.053-4.956v-35.108l19.619 35.728c1.962 3.615 5.266 4.337 8.983 4.336 4.027 0 8.054-1.652 8.054-4.956v-65.673c.002-3.408-4.026-4.854-8.053-4.854zM382.667 210.095H338.06c-3.408 0-4.854 3.717-4.854 7.124 0 3.924 1.756 7.331 4.854 7.331h14.25v56.07c0 3.304 4.027 4.956 8.053 4.956 4.027 0 8.053-1.652 8.053-4.956v-56.07h14.25c3.097 0 4.854-3.407 4.854-7.331.001-3.406-1.445-7.124-4.853-7.124z" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"  x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class="sell-check-icon"><g><path d="M497.36 69.995c-7.532-7.545-19.753-7.558-27.285-.032L238.582 300.845l-83.522-90.713c-7.217-7.834-19.419-8.342-27.266-1.126-7.841 7.217-8.343 19.425-1.126 27.266l97.126 105.481a19.273 19.273 0 0 0 13.784 6.22c.141.006.277.006.412.006a19.317 19.317 0 0 0 13.623-5.628L497.322 97.286c7.551-7.525 7.564-19.746.038-27.291z" fill="#d0d0d0" opacity="1" data-original="#000000" class=""></path><path d="M492.703 236.703c-10.658 0-19.296 8.638-19.296 19.297 0 119.883-97.524 217.407-217.407 217.407-119.876 0-217.407-97.524-217.407-217.407 0-119.876 97.531-217.407 217.407-217.407 10.658 0 19.297-8.638 19.297-19.296C275.297 8.638 266.658 0 256 0 114.84 0 0 114.84 0 256c0 141.154 114.84 256 256 256 141.154 0 256-114.846 256-256 0-10.658-8.638-19.297-19.297-19.297z" fill="#d0d0d0" opacity="1" data-original="#000000" class=""></path></g></svg>
+                                <h5 class="color-grey w-100 fw-6 mb-0 mt-3 mt-lg-4 text-start">Lease My Plot</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-round w-100 mt-3 mt-lg-4">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container-lg">
+        <h2 class="h1 color-blue fw-7 mb-3 mb-lg-4 text-center mb-4 mb-lg-5">Simple Onboarding Process</h2>
+        <div class="row gy-4">
+            <div class="col-6 col-md-3 d-flex">
+                <div class="onboard-card py-5 w-100 h-100 d-flex align-items-center p-3 border border-2 br-10 position-relative">
+                    <div class="bg-num">1</div>
+                    <div class="h-100 w-100 d-flex flex-column align-items-center justify-content-center position-relative z-index-2">
+                        
+                        <img src="img/consulting.png" class="onboard-icon mt-md-2">
+                        <h5 class="w-100 fw-6 mb-0 mt-3 mt-lg-4 text-center">Tell us about <br>your plots</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 d-flex">
+                <div class="onboard-card py-5 w-100 h-100 d-flex align-items-center p-3 border border-2 br-10 position-relative">
+                    <div class="bg-num">2</div>
+                    <div class="h-100 w-100 d-flex flex-column align-items-center justify-content-center position-relative z-index-2">
+                        
+                        <img src="img/submit.png" class="onboard-icon mt-md-2">
+                        <h5 class="w-100 fw-6 mb-0 mt-3 mt-lg-4 text-center">Upload your <br>documents</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 d-flex">
+                <div class="onboard-card py-5 w-100 h-100 d-flex align-items-center p-3 border border-2 br-10 position-relative">
+                    <div class="bg-num">3</div>
+                    <div class="h-100 w-100 d-flex flex-column align-items-center justify-content-center position-relative z-index-2">
+                        
+                        <img src="img/phone-camera.png" class="onboard-icon mt-md-2">
+                        <h5 class="w-100 fw-6 mb-0 mt-3 mt-lg-4 text-center">Sechedule a <br>photo session</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 d-flex">
+                <div class="onboard-card py-5 w-100 h-100 d-flex align-items-center p-3 border border-2 br-10 position-relative">
+                    <div class="bg-num">4</div>
+                    <div class="h-100 w-100 d-flex flex-column align-items-center justify-content-center position-relative z-index-2">
+                        
+                        <img src="img/location-pin.png" class="onboard-icon mt-md-2">
+                        <h5 class="w-100 fw-6 mb-0 mt-3 mt-lg-4 text-center">Your property <br>is listed</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="py-5 mt-xl-5">
+  <div class="container-xl">
+    <div class="row">
+      <div class="col-12 col-xl-4 d-flex flex-column justify-content-start align-items-start pe-lg-5">
+        <h2 class="h1 color-blue fw-7 pb-3 pb-lg-4 mb-3 mb-lg-4 border-bottom">Frequently Asked Questions?</h2>
+        <h5 class="color-grey w-100 fw-6 mb-3 mb-lg-4 text-start">Have more questions? Reach out to us</h5>
+        <h2 class="h2 color-blue fw-7">
+          <a href="tel:9126264444" class="d-flex justify-content-start align-items-center text-decoration-none faq-phone-no">
+            <img src="img/phone-call.png" class="sell-phone-call-icon me-3">
+            <span>9126264444</span>
+          </a>
+        </h2>
+      </div>
+      <div class="col-12 col-xl-8">
+
+        <div class="accordion mt-4 mt-xl-0" id="faqTabs">
+          <div class="accordion-item br-10 bg-light-blue border-none mb-3">
+            <h2 class="accordion-header" id="faqOne">
+              <button class="accordion-button bg-light-blue w-100 fw-6 h5 mb-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                What is Verified Plots?
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="faqOne" data-bs-parent="#faqTabs">
+              <div class="accordion-body pt-0">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi explicabo animi voluptates officiis distinctio. Adipisci fuga deserunt maiores sapiente iste. Eius odio exercitationem iusto iste magnam a veniam sit sunt!
+                Delectus quasi ipsam ab nobis quae autem hic velit, explicabo nostrum nam ipsa laudantium adipisci omnis assumenda, blanditiis mollitia magnam voluptas voluptatibus sit alias ex id sunt? Explicabo, odio vel.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item br-10 bg-light-blue border-none mb-3">
+            <h2 class="accordion-header" id="faqTwo">
+              <button class="accordion-button bg-light-blue w-100 fw-6 h5 mb-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                How does Verified Plots work?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="faqTwo" data-bs-parent="#faqTabs">
+              <div class="accordion-body pt-0">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi explicabo animi voluptates officiis distinctio. Adipisci fuga deserunt maiores sapiente iste. Eius odio exercitationem iusto iste magnam a veniam sit sunt!
+                Delectus quasi ipsam ab nobis quae autem hic velit, explicabo nostrum nam ipsa laudantium adipisci omnis assumenda, blanditiis mollitia magnam voluptas voluptatibus sit alias ex id sunt? Explicabo, odio vel.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item br-10 bg-light-blue border-none mb-3">
+            <h2 class="accordion-header" id="faqThree">
+              <button class="accordion-button bg-light-blue w-100 fw-6 h5 mb-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Can we list plots on Verified Plots?
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="faqThree" data-bs-parent="#faqTabs">
+              <div class="accordion-body pt-0">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi explicabo animi voluptates officiis distinctio. Adipisci fuga deserunt maiores sapiente iste. Eius odio exercitationem iusto iste magnam a veniam sit sunt!
+                Delectus quasi ipsam ab nobis quae autem hic velit, explicabo nostrum nam ipsa laudantium adipisci omnis assumenda, blanditiis mollitia magnam voluptas voluptatibus sit alias ex id sunt? Explicabo, odio vel.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item br-10 bg-light-blue border-none mb-3">
+            <h2 class="accordion-header" id="faqFour">
+              <button class="accordion-button bg-light-blue w-100 fw-6 h5 mb-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Is Verified Plots available in my city?
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="faqFour" data-bs-parent="#faqTabs">
+              <div class="accordion-body pt-0">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi explicabo animi voluptates officiis distinctio. Adipisci fuga deserunt maiores sapiente iste. Eius odio exercitationem iusto iste magnam a veniam sit sunt!
+                Delectus quasi ipsam ab nobis quae autem hic velit, explicabo nostrum nam ipsa laudantium adipisci omnis assumenda, blanditiis mollitia magnam voluptas voluptatibus sit alias ex id sunt? Explicabo, odio vel.
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-light-blue py-5 sell-cards-outer mt-xl-5 mb-xl-5">
+  <div class="container-xl p-lg-5 br-15">
+    <div class="row">
+      <div class="col-12 col-lg-6 col-xl-8 pe-xl-5">
+        <h2 class="h1 color-blue fw-7 mb-3 mb-lg-4 text-start mb-4 mb-lg-5">What type of plot you are looking to sell</h2>
+        <div class="d-flex flex-wrap gap-3">
+          <div class="d-flex flex-column justify-content-start align-items-center flex-4 p-3 bg-white br-10">
+            <img src="img/plotting.png" class="plot-img">
+            <h5 class="mt-2 mt-sm-3 mb-0 text-center">NA <br class="d-sm-none">Plots</h5>
+          </div>
+          <div class="d-flex flex-column justify-content-start align-items-center flex-4 p-3 bg-white br-10">
+            <img src="img/farm.png" class="plot-img">
+            <h5 class="mt-2 mt-sm-3 mb-0 text-center">Farm <br class="d-sm-none">Plots</h5>
+          </div>
+          <div class="d-flex flex-column justify-content-start align-items-center flex-4 p-3 bg-white br-10">
+            <img src="img/factory.png" class="plot-img">
+            <h5 class="mt-2 mt-sm-3 mb-0 text-center">Industrial <br class="d-sm-none">Plots</h5>
+          </div>
+          <div class="d-flex flex-column justify-content-start align-items-center flex-4 p-3 bg-white br-10">
+            <img src="img/skyline.png" class="plot-img">
+            <h5 class="mt-2 mt-sm-3 mb-0 text-center">Commercial <br class="d-sm-none">Plots</h5>
+          </div>
+          <div class="d-flex flex-column justify-content-start align-items-center flex-4 p-3 bg-white br-10">
+            <img src="img/villa.png" class="plot-img">
+            <h5 class="mt-2 mt-sm-3 mb-0 text-center">Villa <br class="d-sm-none">Plots</h5>
+          </div>
+          <div class="d-flex flex-column justify-content-start align-items-center flex-4 p-3 bg-white br-10">
+            <img src="img/institution.png" class="plot-img">
+            <h5 class="mt-2 mt-sm-3 mb-0 text-center">Institutional <br class="d-sm-none">Plots</h5>
+          </div>
+          <div class="d-flex flex-column justify-content-start align-items-center flex-4 p-3 bg-white br-10">
+            <img src="img/rowhouse.png" class="plot-img">
+            <h5 class="mt-2 mt-sm-3 mb-0 text-center">RowHouse <br class="d-sm-none">Plots</h5>
+          </div>
+          <div class="d-flex flex-column justify-content-start align-items-center flex-4 p-3 bg-white br-10">
+            <img src="img/land.png" class="plot-img">
+            <h5 class="mt-2 mt-sm-3 mb-0 text-center">Agricultural <br class="d-sm-none">Plots</h5>
+          </div>
+          <div class="d-flex flex-column justify-content-start align-items-center flex-4 p-3 bg-white br-10">
+            <img src="img/skyline.png" class="plot-img">
+            <h5 class="mt-2 mt-sm-3 mb-0 text-center">Commercial <br class="d-sm-none">Plots</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6 col-xl-4 mt-5 mt-lg-0">
+
+        <div class="w-100 d-flex justify-content-start align-items-start flex-column d-flex flex-column">
+          <div class="bg-white border br-10 p-3 p-lg-4">
+            <h4 class="color-blue mb-4">Partner With Us</h4>
+            <div class="mb-3 d-flex gap-3">
+              <input type="text" class="form-control br-10" id="firstname" placeholder="First Name">
+              <input type="text" class="form-control br-10" id="lastname" placeholder="Last Name">
+            </div>
+            <div class="mb-3 fs-16">
+              <input class="form-control br-10 fs-16" name="phone" type="email" placeholder="Mobile number" id="schedule-phone"/> 
+            </div>
+            <div class="mb-3 d-flex gap-3">
+              <input type="text" class="form-control br-10" id="email" placeholder="Email ID">
+            </div>
+            <div class="mb-3 fs-16">
+              <select class="form-select br-10 fs-16" aria-label="Default select example">
+                <option selected disabled>Plot Partnership</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+            <div class="mb-3 fs-16">
+              <input class="form-control br-10 fs-16" name="glink" type="text" placeholder="Google Map Link" id="google-map-link"/> 
+            </div>
+            <div class="mb-3 fs-16">
+              <textarea class="form-control fs-16 br-15" placeholder="Type your message here" id="floatingTextarea2" style="height: 100px"></textarea>
+            </div>
+  
+  
+            <div class="d-flex justify-content-start align-items-center form-check bs-check ps-0 mb-3">
+              <input class="form-check-input ms-0 mt-0 cursor-pointer" type="checkbox" value="" id="agreeTC" checked>
+              <span class="ps-3 lh-1 d-inline">
+                <label class="form-check-label d-inline fs-16 cursor-pointer" for="agreeTC">By Clicking on the button, I agree to the </label>
+                <span class="text-primary cursor-pointer fs-16" data-bs-toggle="modal" data-bs-target="#TC"> Terms and Conditions.</span>
+              </span>
+            </div>
+
+            <button class="btn btn-primary btn-round w-100 mt-4">Let's Get Started</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- Terms and Condition Modal -->
+<div class="modal fade" id="TC" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="TCLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title color-blue" id="TCLabel">Terms and Conditions</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body fs-14">
+        <p class="mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos excepturi eligendi dolores cupiditate impedit ducimus nulla quo a veritatis incidunt sed eum sint consequatur alias reiciendis labore quam, aliquam repudiandae.</p>
+        <p class="mb-3">Natus possimus doloribus impedit mollitia a voluptas perferendis. Fugiat quisquam incidunt eum voluptatem assumenda omnis, tempore, nulla architecto quis accusamus magnam fuga sed cum quibusdam eos enim aliquam animi. Omnis.</p>
+        <p class="mb-3">Neque nisi laudantium labore ullam amet rem similique animi in ratione officiis! Tempora cumque facere recusandae repellat hic officia tempore eligendi placeat rerum a inventore quo repellendus, voluptatem ipsum odio!</p>
+        <p class="mb-3">Ipsum corporis fugiat ea magnam nesciunt, totam facilis exercitationem amet earum aperiam aliquid ratione adipisci voluptate, esse praesentium unde vel! Modi sint quasi tempore recusandae repellat voluptatem accusamus autem. Maiores.</p>
+        <p class="mb-3">Impedit eligendi facere consectetur natus rerum illum consequatur velit odit eum veniam sequi repellendus nemo magnam suscipit molestiae culpa, dolores expedita esse ducimus assumenda mollitia fugiat tempora veritatis. Distinctio, eos?</p>
+        <p class="mb-0">Iste quod quas dolorem magnam dignissimos perferendis voluptatum, laudantium veritatis corporis nesciunt. Doloribus, non aliquid? Maxime facere fugiat dignissimos eaque et distinctio perspiciatis temporibus! Voluptatum autem soluta odit. Ipsam, voluptatibus?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Agree</button>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<section class="">
+  <div class="container-xl">
+    <div class="row">
+      <div class="col-12 my-lg-3">
+        <div class="w-100 border-top border-2 pt-5"></div>
+      </div>
+
+
+      <div class="col-12 d-flex justify-content-start align-items-center">
+        <div class="nav switch-btn-outer list-details-switch-btn left">
+          <div class="switch-btn-inner active" data-btn-pos="left" id="tab-1-btn" data-bs-toggle="pill" data-bs-target="#tab-1" type="button" role="tab" aria-controls="tab-1" aria-selected="true">Buying</div>
+          <div class="switch-btn-inner" data-btn-pos="right" id="tab-2-btn" data-bs-toggle="pill" data-bs-target="#tab-2" type="button" role="tab" aria-controls="tab-2" aria-selected="false">Lease</div>
+        </div>
+      </div>
+      <div class="col-12 tab-content">  
+        <div class="w-100 text-start plot-list-outer buy-plot-group tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1-btn">
+          <div class="w-100 text-start text-md-start fw-7 mb-3 mt-4 mt-lg-5">Buy Plots in Lonavala</div>
+          <ul class="plot-list buy-plots-lonavala">
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+          </ul>
+          <div class="show-li d-inline-flex justify-content-start align-items-center fs-14 fw-7 buy-plots-lonavala-show-more" onclick="showExtraLi('.buy-plots-lonavala')">
+            <span class="pe-2">Show More</span><img src="img/down-arrow.png" class="show-more-arrow">
+          </div>
+        </div>
+        <div class="w-100 text-start plot-list-outer lease-plot-group tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab-2-btn">
+          <div class="w-100 text-start text-md-start fw-7 mb-3 mt-4 mt-lg-5">Lease Plots in Lonavala</div>
+          <ul class="plot-list lease-plots-lonavala">
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+          </ul>
+          <div class="show-li d-inline-flex justify-content-start align-items-center fs-14 fw-7 lease-plots-lonavala-show-more" onclick="showExtraLi('.lease-plots-lonavala')">
+            <span class="pe-2">Show More</span><img src="img/down-arrow.png" class="show-more-arrow">
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+
+<a class="floating-wp" href="#">
+  <img src="img/whatsapp.png" class="floating-wp-icon">
+</a>
+
+<footer class="footer-bottom mt-5 pt-5 pb-4 mt-lg-5 pt-lg-5 pb-lg-4 footer-outer-bg">
+  <div class="container-xl">
+    <div class="row pb-5">
+      <div class="col-12 col-lg-6 col-md-6">
+        <img class="footer-logo pb-4" src="img/verified-plots-logo-white.png" alt="verified-plots-logo">
+        <h6 class="pb-3 text-white">Verified Plots Real Estate Service Pvt Ltd</h6>
+        <div class="d-flex mb-4 mb-lg-0">
+          <a href="#"><img class="ft-logo ml-0" src="img/facebook.png" alt="facebook-logo"></a>
+          <a href="#"><img class="ft-logo" src="img/twitter.png" alt="twitter-logo"></a>
+          <a href="#"><img class="ft-logo" src="img/instagram.png" alt="instagram-logo"></a>
+          <a href="#"><img class="ft-logo" src="img/pinterest-logo.png" alt="pinterest-logo"></a>
+          <a href="#"><img class="ft-logo" src="img/google.png" alt="google-logo"></a>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6 col-md-6">
+        <div class="row">
+          <div class="col-6">
+            <h6 class="pb-2 text-white">Company</h6>
+            <a href="#" class="ft-links">About Us</a>
+            <a href="#" class="ft-links">For Landlords</a>
+            <a href="#" class="ft-links">Partner Us</a>
+            <a href="#" class="ft-links">Contact Us</a>
+          </div>
+          <div class="col-6">
+            <h6 class="pb-2 text-white">Support</h6>
+            <a href="#" class="ft-links">Help</a>
+            <a href="#" class="ft-links">Terms of Use</a>
+            <a href="#" class="ft-links">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-100 border-top pt-4 border-light-grey"></div>
+    <div class="row d-flex flex-wrap">
+      <div class="col-12 col-lg-6 col-md-3 d-flex justify-content-start align-items-center order-2 order-md-1 mt-4 mt-md-0">
+        <h5 class="mb-ms-0 mb-md-0 mb-3">
+          <a href="#" class="ft-links mb-0 ms-3 ms-md-0 mt-0">Copyright &copy; 2024 - All</a>
+        </h5>
+      </div>
+      <div class="col-12 col-lg-6 col-md-9 order-1 order-md-2">
+        <div class="d-flex flex-column flex-sm-row">
+          <h6 class="text-white d-flex align-items-center me-sm-4 ms-3 ms-md-0 mb-md-0 mb-2">Subscribe</h6>
+          <div class="search-holder shadow-0 w-100 d-flex justify-content-center align-items-center p-1">
+            <div class="search-inner d-flex justify-content-start align-items-center w-100 bg-light-grey py-2 px-3">
+              <!-- <img src="img/search-icon.png" class="search-icon d-none d-sm-block"> -->
+              <input type="text" placeholder="Your Email" class="main-search text-white ms-sm-2 fs-16">
+            </div>
+            <div class="btn btn-primary btn-round fs-16 search-btn d-flex align-items-center ps-3 pe-3 px-sm-3 ms-sm-4">
+              <!-- <img src="img/search-icon-white.png" class="search-icon d-sm-none"> -->
+              <span class="d-sm-inline">Submit</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
