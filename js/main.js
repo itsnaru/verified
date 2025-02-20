@@ -372,3 +372,12 @@ if(_input){
       preferredCountries: ["in", "pk", "us", "no"]
   });
 }
+var _input = document.querySelector("#login-to-access");
+if(_input){
+  window.intlTelInput(_input, {
+      separateDialCode: true,
+      // excludeCountries: ["in", "il"],
+      // onlyCountries: ["in","pk", "us", "sg", "my", "bd"],
+      preferredCountries: ["in", "pk", "us", "no"]
+  });
+}

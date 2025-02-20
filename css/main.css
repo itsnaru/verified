@@ -1,9 +1,49 @@
 
+@font-face {
+  font-family: Font-Bold;
+  font-style: normal;
+  font-weight: 300;
+  font-display: block;
+  src: local("CentraNo1-Bold"),url(./fonts/CentraNo1-Bold.woff2) format("woff2");
+  unicode-range: U+000-5ff
+}
+
+@font-face {
+  font-family: Font-Book;
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: local("CentraNo1-Book"),url(./fonts/CentraNo1-Book.woff2) format("woff2");
+  unicode-range: U+000-5ff
+}
+
+@font-face {
+  font-family: Font-Light;
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: local("CentraNo1-Light"),url(./fonts/CentraNo1-Light.woff2) format("woff2");
+  unicode-range: U+000-5ff
+}
+
+@font-face {
+  font-family: Font-Medium;
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: local("CentraNo1-Medium"),url(./fonts/CentraNo1-Medium.woff2) format("woff2");
+  unicode-range: U+000-5ff
+}
 
 body{
   font-family: "Hanken Grotesk", sans-serif;
+  font-family: Font-Book;
   font-size: 18px;
   color: #222b2f;
+}
+h1,h2,h3,h4,h5,h5,
+.h1,.h2,.h3,.h4,.h5,.h5{
+  font-family: Font-Bold;
 }
 a{
   color: #222b2f;
@@ -69,6 +109,9 @@ a{
 .br-5{
   border-radius: 5px !important;
   overflow: hidden;
+}
+.border-bottom-none{
+  border-bottom: none !important;
 }
 
 .cursor-pointer{
@@ -675,7 +718,7 @@ select:focus-visible{
   box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.1);
 }
 
-#searchModal .btn-close{
+.btn-close{
   position: absolute;
   right: -6px;
   top: -6px;
@@ -715,6 +758,11 @@ select:focus-visible{
   .listing-plot-img{
     width: 350px;
     height: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  h2, .h2 {
+      font-size: 2.2rem;
   }
 }
 
@@ -1689,4 +1737,19 @@ select:focus-visible{
     width: 15px;
     height: 15px;
   }
+}
+
+.blur-details{
+  position: relative;
+}
+
+.blur-details *{
+  filter: blur(4px);
+}
+
+.right-10{
+  right: 10px;
+}
+.top-10{
+  top: 10px;
 }
