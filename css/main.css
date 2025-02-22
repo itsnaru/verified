@@ -37,13 +37,13 @@
 
 body{
   font-family: "Hanken Grotesk", sans-serif;
-  font-family: Font-Book;
+  font-family: Font-Light;
   font-size: 18px;
   color: #222b2f;
 }
 h1,h2,h3,h4,h5,h5,
 .h1,.h2,.h3,.h4,.h5,.h5{
-  font-family: Font-Bold;
+  font-family: Font-Book;
 }
 a{
   color: #222b2f;
