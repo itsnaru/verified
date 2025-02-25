@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verified Plots | Home</title>
+  <link rel="icon" type="image/x-icon" href="./img/verified-plots-icon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/slick-theme.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/country-dropdown.css">
+  <script src="js/country-dropdown.js"></script>
+</head>
+<body>
+
+<header class="fixed-top border-bottom border-2" id="inner-header">
+  <div class="container-xxl py-3">
+    <div class="row">
+      <div class="col-6 col-lg-2 d-flex justify-content-start align-items-center">
+        <a href="#">
+          <img class="header-logo" src="img/verified-plots-logo.png" alt="verified-plots-logo">
+        </a>
+      </div>
+
+      <div class="col-12 col-lg-8 top-menu d-none flex-column justify-content-start justify-content-lg-center align-items-start align-items-lg-center p-4 p-lg-0">
+        <div class="w-100 d-lg-none d-flex justify-content-between align-items-center mb-4">
+          <a href="#">
+            <img class="header-logo top-menu-logo" src="img/verified-plots-logo.png" alt="verified-plots-logo">
+          </a>
+          <img src="img/close.png" class="close-menu">
+        </div>
+        <div class="top-menu-inner d-flex flex-column flex-lg-row justify-content-center align-items-center">
+          <a class="header-link px-2 mx-3 text-decoration-none" href="#">Buy</a>
+          <a class="header-link px-2 mx-3 text-decoration-none" href="#">Sell</a>
+          <a class="header-link px-2 mx-3 text-decoration-none" href="#">Hot Deals</a>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-8 d-none d-lg-flex">
+        <div class="w-100 bg-white d-flex justify-content-center align-items-center py-2 px-3">
+            <div class="top-menu-inner d-flex flex-column flex-lg-row justify-content-center align-items-center">
+                <a class="header-link px-2 mx-3 text-decoration-none" href="#">Buy</a>
+                <a class="header-link px-2 mx-3 text-decoration-none" href="#">Sell</a>
+                <a class="header-link px-2 mx-3 text-decoration-none" href="#">Hot Deals</a>
+              </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-2 d-flex justify-content-end align-items-center">
+        <div class="mob-round-btn btn btn-primary btn-round py-2 px-2 me-3 d-lg-none" data-bs-toggle="modal" data-bs-target="#searchModal">
+          <span><img class="mob-search-white-icon" src="img/search-icon-white.png"></span>
+        </div>
+
+        <a class="mob-round-btn btn btn-primary btn-round py-2 px-2" href="#">
+          <span><img class="btn-icon" src="img/call-center.png"></span>
+          <span class="d-none d-lg-inline px-2">Support</span>
+        </a>
+
+        <span>
+          <img src="img/menu.png" class="menu-icon d-flex d-lg-none ms-4">
+        </span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="inner-top-search-outer w-100 bg-white d-flex justify-content-center align-items-center py-2 px-3">
+          <div class="search-inner d-flex justify-content-start align-items-center w-100 bg-white py-2">
+            <img src="img/search-icon.png" class="search-icon d-none d-sm-block">
+            <input type="text" placeholder="Search you Location" class="main-search flex-1 ms-sm-3 fs-16">
+          </div>
+          <div class="btn btn-primary btn-round fs-16 search-btn d-flex align-items-center ps-3 pe-3 px-sm-3 ms-sm-3">
+            <img src="img/search-icon-white.png" class="search-icon d-sm-none">
+            <span class="d-none d-sm-inline">Search</span>
+          </div>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h5>Popular cities</h5>
+        <div class="popular-cities ">
+          <div>
+            <div class="w-100 d-flex flex-column justify-content-center align-items-center">
+              <img src="img/pune.png" class="city-img">
+              <span class="fs-14">Pune</span>
+            </div>
+          </div>
+          <div>
+            <div class="w-100 d-flex flex-column justify-content-center align-items-center">
+              <img src="img/ahd.png" class="city-img">
+              <span class="fs-14">Ahmedabad</span>
+            </div>
+          </div>
+          <div>
+            <div class="w-100 d-flex flex-column justify-content-center align-items-center">
+              <img src="img/mumbai.png" class="city-img">
+              <span class="fs-14">Mumbai</span>
+            </div>
+          </div>
+          <div>
+            <div class="w-100 d-flex flex-column justify-content-center align-items-center">
+              <img src="img/bang.png" class="city-img">
+              <span class="fs-14">Bangaluru</span>
+            </div>
+          </div>
+          <div>
+            <div class="w-100 d-flex flex-column justify-content-center align-items-center">
+              <img src="img/ncr.png" class="city-img">
+              <span class="fs-14">Dehli</span>
+            </div>
+          </div>
+          <div>
+            <div class="w-100 d-flex flex-column justify-content-center align-items-center">
+              <img src="img/chd.png" class="city-img">
+              <span class="fs-14">Chandighar</span>
+            </div>
+          </div>
+          <div>
+            <div class="w-100 d-flex flex-column justify-content-center align-items-center">
+              <img src="img/kolk.png" class="city-img">
+              <span class="fs-14">Kolkata</span>
+            </div>
+          </div>
+          <div>
+            <div class="w-100 d-flex flex-column justify-content-center align-items-center">
+              <img src="img/hyd.png" class="city-img">
+              <span class="fs-14">Hyderabad</span>
+            </div>
+          </div>
+          <div>
+            <div class="w-100 d-flex flex-column justify-content-center align-items-center">
+              <img src="img/chen.png" class="city-img">
+              <span class="fs-14">Chennai</span>
+            </div>
+          </div>
+          <div>
+            <div class="w-100 d-flex flex-column justify-content-center align-items-center">
+              <img src="img/koch.jpg" class="city-img">
+              <span class="fs-14">Kochi</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="header-top-space py-5">
+    <div class="container-xl py-lg-5">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="h1 color-blue fw-7 mb-3 mb-lg-4 text-center mb-4 mb-lg-5">Latest Blogs</h2>
+            </div>
+            <div class="col-12">
+                <div class="w-100 list-page-slider">
+                    <div>
+                      <div class="inner-slider-box-1 w-100 d-flex justify-content-center align-items-stretch">
+                        <div class="inner-slider-box-1-slide position-relative w-100 d-flex flex-column justify-content-start align-items-stretch align-items-md-end p-0">
+                          <img src="img/blog_banner_1.jpg" class="inner-slider-2-bg-image">
+                          <div class="inner-slider-box inner-blog-box position-relative z-index-2 d-flex flex-column justify-content-start align-items-center align-items-md-start text-center text-md-start m-md-4 p-4 p-md-5">
+                            <div class="top-bar bg-primary text-white px-4 py-1 position-absolute z-index-2">Certified by Verified Plots</div>
+                            <h3 class="text-white border-bottom border-transparent pb-4 mb-4 mt-5">Why Choosing NA Plots in Pune is Smarter Than Buying a Second Apartment.</h3>
+                            <div class="d-flex mt-0">
+                              <div class="d-flex flex-column flex-md-row justify-content-center justify-content-lg-start align-items-center slider-inner-icon-outer">
+                                <img src="img/calendar_primary.png" class="slider-inner-icon-2">
+                                <div class="ms-md-3 mt-2 mt-md-0 text-center text-md-start text-white">25 February 2025</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                        <div class="inner-slider-box-1 w-100 d-flex justify-content-center align-items-stretch">
+                          <div class="inner-slider-box-1-slide position-relative w-100 d-flex flex-column justify-content-start align-items-stretch align-items-md-end p-0">
+                            <img src="img/blog_banner_1.jpg" class="inner-slider-2-bg-image">
+                            <div class="inner-slider-box inner-blog-box position-relative z-index-2 d-flex flex-column justify-content-start align-items-center align-items-md-start text-center text-md-start m-md-4 p-4 p-md-5">
+                              <div class="top-bar bg-primary text-white px-4 py-1 position-absolute z-index-2">Certified by Verified Plots</div>
+                              <h3 class="text-white border-bottom border-transparent pb-4 mb-4 mt-5">Why Choosing NA Plots in Pune is Smarter Than Buying a Second Apartment.</h3>
+                              <div class="d-flex mt-0">
+                                <div class="d-flex flex-column flex-md-row justify-content-center justify-content-lg-start align-items-center slider-inner-icon-outer">
+                                  <img src="img/calendar_primary.png" class="slider-inner-icon-2">
+                                  <div class="ms-md-3 mt-2 mt-md-0 text-center text-md-start text-white">25 February 2025</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="inner-slider-box-1 w-100 d-flex justify-content-center align-items-stretch">
+                          <div class="inner-slider-box-1-slide position-relative w-100 d-flex flex-column justify-content-start align-items-stretch align-items-md-end p-0">
+                            <img src="img/blog_banner_1.jpg" class="inner-slider-2-bg-image">
+                            <div class="inner-slider-box inner-blog-box position-relative z-index-2 d-flex flex-column justify-content-start align-items-center align-items-md-start text-center text-md-start m-md-4 p-4 p-md-5">
+                              <div class="top-bar bg-primary text-white px-4 py-1 position-absolute z-index-2">Certified by Verified Plots</div>
+                              <h3 class="text-white border-bottom border-transparent pb-4 mb-4 mt-5">Why Choosing NA Plots in Pune is Smarter Than Buying a Second Apartment.</h3>
+                              <div class="d-flex mt-0">
+                                <div class="d-flex flex-column flex-md-row justify-content-center justify-content-lg-start align-items-center slider-inner-icon-outer">
+                                  <img src="img/calendar_primary.png" class="slider-inner-icon-2">
+                                  <div class="ms-md-3 mt-2 mt-md-0 text-center text-md-start text-white">25 February 2025</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="pb-5">
+    <div class="container-xl">
+        <div class="row mb-4">
+            <div class="col-12">
+                <h2 class="h1 color-blue fw-7 mb-3 mb-lg-4 text-center mb-4 mb-lg-5">Choose your blog type</h2>
+            </div>
+            <div class="col-12 d-flex flex-wrap justify-content-center align-items-center gap-3">
+                <button class="btn blog-btn bg-lightgreen btn-round px-4 py-2" onclick="showBlog('.blog-type')">All</button>
+                <button class="btn blog-btn bg-lightgreen btn-round px-4 py-2" onclick="showBlog('.type-whatsnew')">Whats new ?</button>
+                <button class="btn blog-btn bg-lightgreen btn-round px-4 py-2" onclick="showBlog('.type-mustknows')">Must Knows</button>
+                <button class="btn blog-btn bg-lightgreen btn-round px-4 py-2" onclick="showBlog('.type-lifestyle')">Lifestyle</button>
+                <button class="btn blog-btn bg-lightgreen btn-round px-4 py-2" onclick="showBlog('.type-neighbourhoodguides')">Neighbourhood Guides</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="blog-type type-whatsnew col-12 col-md-6 col-xl-4 p-3 d-flex flex-column justify-content-start align-items-stretch">
+                <div class="blog-box d-flex flex-column justify-content-between align-items-stretch br-15 w-100 h-100 p-3">
+                    <div class="blog-img-outer position-relative">
+                        <img src="img/plot-1.jpg" class="blog-img-1">
+                        <div class="blog-tag btn btn-primary btn-round mt-3 ms-3">Whats new?</div>
+                        <div class="d-flex justify-content-start align-items-center mt-3 ps-3">
+                            <img src="img/calendar_primary.png" class="blog-cal-img me-2">
+                            <span class="pt-1">March 11, 2025</span>
+                        </div>
+                        <div class="Font-Light my-3 px-3 blog-desc">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus ad dolor similique ipsa fuga non repudiandae, quia dolore, illum delectus assumenda.</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing typesetting industry.</p>
+                        </div>
+                    </div>
+                    <div class="blog-link mb-3 px-3">
+                        <a href="blog-detail.html" class="text-decoration-none"><span class="py-1 border-bottom border-primary">Read More</span> <img src="img/next-arrow-primary.png" class="link-next-arrow ps-2"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-type type-mustknows col-12 col-md-6 col-xl-4 p-3 d-flex flex-column justify-content-start align-items-stretch">
+                <div class="blog-box d-flex flex-column justify-content-between align-items-stretch br-15 w-100 h-100 p-3">
+                    <div class="blog-img-outer position-relative">
+                        <img src="img/plot-1.jpg" class="blog-img-1">
+                        <div class="blog-tag btn btn-primary btn-round mt-3 ms-3">Must Knows</div>
+                        <div class="d-flex justify-content-start align-items-center mt-3 ps-3">
+                            <img src="img/calendar_primary.png" class="blog-cal-img me-2">
+                            <span class="pt-1">March 11, 2025</span>
+                        </div>
+                        <div class="Font-Light my-3 px-3 blog-desc">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="blog-link mb-3 px-3">
+                        <a href="blog-detail.html" class="text-decoration-none"><span class="py-1 border-bottom border-primary">Read More</span> <img src="img/next-arrow-primary.png" class="link-next-arrow ps-2"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-type type-lifestyle col-12 col-md-6 col-xl-4 p-3 d-flex flex-column justify-content-start align-items-stretch">
+                <div class="blog-box d-flex flex-column justify-content-between align-items-stretch br-15 w-100 h-100 p-3">
+                    <div class="blog-img-outer position-relative">
+                        <img src="img/plot-1.jpg" class="blog-img-1">
+                        <div class="blog-tag btn btn-primary btn-round mt-3 ms-3">Lifestyle</div>
+                        <div class="d-flex justify-content-start align-items-center mt-3 ps-3">
+                            <img src="img/calendar_primary.png" class="blog-cal-img me-2">
+                            <span class="pt-1">March 11, 2025</span>
+                        </div>
+                        <div class="Font-Light my-3 px-3 blog-desc">
+                            Lorem Ipsum is simply dummy text of the printing typesetting industry.
+                        </div>
+                    </div>
+                    <div class="blog-link mb-3 px-3">
+                        <a href="blog-detail.html" class="text-decoration-none"><span class="py-1 border-bottom border-primary">Read More</span> <img src="img/next-arrow-primary.png" class="link-next-arrow ps-2"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-type type-neighbourhoodguides col-12 col-md-6 col-xl-4 p-3 d-flex flex-column justify-content-start align-items-stretch">
+                <div class="blog-box d-flex flex-column justify-content-between align-items-stretch br-15 w-100 h-100 p-3">
+                    <div class="blog-img-outer position-relative">
+                        <img src="img/plot-1.jpg" class="blog-img-1">
+                        <div class="blog-tag btn btn-primary btn-round mt-3 ms-3">Neighbourhood Guides</div>
+                        <div class="d-flex justify-content-start align-items-center mt-3 ps-3">
+                            <img src="img/calendar_primary.png" class="blog-cal-img me-2">
+                            <span class="pt-1">March 11, 2025</span>
+                        </div>
+                        <div class="Font-Light my-3 px-3 blog-desc">
+                            Lorem Ipsum is simply dummy text of the printing typesetting industry.
+                        </div>
+                    </div>
+                    <div class="blog-link mb-3 px-3">
+                        <a href="blog-detail.html" class="text-decoration-none"><span class="py-1 border-bottom border-primary">Read More</span> <img src="img/next-arrow-primary.png" class="link-next-arrow ps-2"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-type type-whatsnew col-12 col-md-6 col-xl-4 p-3 d-flex flex-column justify-content-start align-items-stretch">
+                <div class="blog-box d-flex flex-column justify-content-between align-items-stretch br-15 w-100 h-100 p-3">
+                    <div class="blog-img-outer position-relative">
+                        <img src="img/plot-1.jpg" class="blog-img-1">
+                        <div class="blog-tag btn btn-primary btn-round mt-3 ms-3">Whats new?</div>
+                        <div class="d-flex justify-content-start align-items-center mt-3 ps-3">
+                            <img src="img/calendar_primary.png" class="blog-cal-img me-2">
+                            <span class="pt-1">March 11, 2025</span>
+                        </div>
+                        <div class="Font-Light my-3 px-3 blog-desc">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus ad dolor similique ipsa fuga non repudiandae, quia dolore, illum delectus assumenda.</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing typesetting industry.</p>
+                        </div>
+                    </div>
+                    <div class="blog-link mb-3 px-3">
+                        <a href="blog-detail.html" class="text-decoration-none"><span class="py-1 border-bottom border-primary">Read More</span> <img src="img/next-arrow-primary.png" class="link-next-arrow ps-2"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-type type-mustknows col-12 col-md-6 col-xl-4 p-3 d-flex flex-column justify-content-start align-items-stretch">
+                <div class="blog-box d-flex flex-column justify-content-between align-items-stretch br-15 w-100 h-100 p-3">
+                    <div class="blog-img-outer position-relative">
+                        <img src="img/plot-1.jpg" class="blog-img-1">
+                        <div class="blog-tag btn btn-primary btn-round mt-3 ms-3">Must Knows</div>
+                        <div class="d-flex justify-content-start align-items-center mt-3 ps-3">
+                            <img src="img/calendar_primary.png" class="blog-cal-img me-2">
+                            <span class="pt-1">March 11, 2025</span>
+                        </div>
+                        <div class="Font-Light my-3 px-3 blog-desc">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam hic nihil voluptas inventore velit numquam alias ex sit quod dolore autem excepturi, modi, fuga cum! Incidunt amet pariatur debitis asperiores.
+                        </div>
+                    </div>
+                    <div class="blog-link mb-3 px-3">
+                        <a href="blog-detail.html" class="text-decoration-none"><span class="py-1 border-bottom border-primary">Read More</span> <img src="img/next-arrow-primary.png" class="link-next-arrow ps-2"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-type type-lifestyle col-12 col-md-6 col-xl-4 p-3 d-flex flex-column justify-content-start align-items-stretch">
+                <div class="blog-box d-flex flex-column justify-content-between align-items-stretch br-15 w-100 h-100 p-3">
+                    <div class="blog-img-outer position-relative">
+                        <img src="img/plot-1.jpg" class="blog-img-1">
+                        <div class="blog-tag btn btn-primary btn-round mt-3 ms-3">Lifestyle</div>
+                        <div class="d-flex justify-content-start align-items-center mt-3 ps-3">
+                            <img src="img/calendar_primary.png" class="blog-cal-img me-2">
+                            <span class="pt-1">March 11, 2025</span>
+                        </div>
+                        <div class="Font-Light my-3 px-3 blog-desc">
+                            Lorem Ipsum is simply dummy text of the printing typesetting industry.
+                        </div>
+                    </div>
+                    <div class="blog-link mb-3 px-3">
+                        <a href="blog-detail.html" class="text-decoration-none"><span class="py-1 border-bottom border-primary">Read More</span> <img src="img/next-arrow-primary.png" class="link-next-arrow ps-2"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-type type-neighbourhoodguides col-12 col-md-6 col-xl-4 p-3 d-flex flex-column justify-content-start align-items-stretch">
+                <div class="blog-box d-flex flex-column justify-content-between align-items-stretch br-15 w-100 h-100 p-3">
+                    <div class="blog-img-outer position-relative">
+                        <img src="img/plot-1.jpg" class="blog-img-1">
+                        <div class="blog-tag btn btn-primary btn-round mt-3 ms-3">Neighbourhood Guides</div>
+                        <div class="d-flex justify-content-start align-items-center mt-3 ps-3">
+                            <img src="img/calendar_primary.png" class="blog-cal-img me-2">
+                            <span class="pt-1">March 11, 2025</span>
+                        </div>
+                        <div class="Font-Light my-3 px-3 blog-desc">
+                            Lorem Ipsum is simply dummy text of the printing typesetting industry.
+                        </div>
+                    </div>
+                    <div class="blog-link mb-3 px-3">
+                        <a href="blog-detail.html" class="text-decoration-none"><span class="py-1 border-bottom border-primary">Read More</span> <img src="img/next-arrow-primary.png" class="link-next-arrow ps-2"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+function showBlog(_blog){
+    $('.blog-type').addClass('hide-blog');
+    $(_blog).removeClass('hide-blog');
+}
+</script>
+
+
+
+
+
+
+
+<section class="">
+  <div class="container-xl">
+    <div class="row">
+      <div class="col-12 my-lg-3">
+        <div class="w-100 border-top border-2 pt-5"></div>
+      </div>
+
+
+      <div class="col-12 d-flex justify-content-start align-items-center">
+        <div class="nav switch-btn-outer list-details-switch-btn left">
+          <div class="switch-btn-inner active" data-btn-pos="left" id="tab-1-btn" data-bs-toggle="pill" data-bs-target="#tab-1" type="button" role="tab" aria-controls="tab-1" aria-selected="true">Buying</div>
+          <div class="switch-btn-inner" data-btn-pos="right" id="tab-2-btn" data-bs-toggle="pill" data-bs-target="#tab-2" type="button" role="tab" aria-controls="tab-2" aria-selected="false">Lease</div>
+        </div>
+      </div>
+      <div class="col-12 tab-content">  
+        <div class="w-100 text-start plot-list-outer buy-plot-group tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1-btn">
+          <div class="w-100 text-start text-md-start fw-7 mb-3 mt-4 mt-lg-5">Buy Plots in Lonavala</div>
+          <ul class="plot-list buy-plots-lonavala">
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+          </ul>
+          <div class="show-li d-inline-flex justify-content-start align-items-center fs-14 fw-7 buy-plots-lonavala-show-more" onclick="showExtraLi('.buy-plots-lonavala')">
+            <span class="pe-2">Show More</span><img src="img/down-arrow.png" class="show-more-arrow">
+          </div>
+        </div>
+        <div class="w-100 text-start plot-list-outer lease-plot-group tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab-2-btn">
+          <div class="w-100 text-start text-md-start fw-7 mb-3 mt-4 mt-lg-5">Lease Plots in Lonavala</div>
+          <ul class="plot-list lease-plots-lonavala">
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+          </ul>
+          <div class="show-li d-inline-flex justify-content-start align-items-center fs-14 fw-7 lease-plots-lonavala-show-more" onclick="showExtraLi('.lease-plots-lonavala')">
+            <span class="pe-2">Show More</span><img src="img/down-arrow.png" class="show-more-arrow">
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+
+<a class="floating-wp" href="#">
+  <img src="img/whatsapp.png" class="floating-wp-icon">
+</a>
+
+<footer class="footer-bottom mt-5 pt-5 pb-4 mt-lg-5 pt-lg-5 pb-lg-4 footer-outer-bg">
+  <div class="container-xl">
+    <div class="row pb-5">
+      <div class="col-12 col-lg-6 col-md-6">
+        <img class="footer-logo pb-4" src="img/verified-plots-logo-white.png" alt="verified-plots-logo">
+        <h6 class="pb-3 text-white">Verified Plots Real Estate Service Pvt Ltd</h6>
+        <div class="d-flex mb-4 mb-lg-0">
+          <a href="#"><img class="ft-logo ml-0" src="img/facebook.png" alt="facebook-logo"></a>
+          <a href="#"><img class="ft-logo" src="img/twitter.png" alt="twitter-logo"></a>
+          <a href="#"><img class="ft-logo" src="img/instagram.png" alt="instagram-logo"></a>
+          <a href="#"><img class="ft-logo" src="img/pinterest-logo.png" alt="pinterest-logo"></a>
+          <a href="#"><img class="ft-logo" src="img/google.png" alt="google-logo"></a>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6 col-md-6">
+        <div class="row">
+          <div class="col-6">
+            <h6 class="pb-2 text-white">Company</h6>
+            <a href="#" class="ft-links">About Us</a>
+            <a href="#" class="ft-links">For Landlords</a>
+            <a href="#" class="ft-links">Partner Us</a>
+            <a href="#" class="ft-links">Contact Us</a>
+          </div>
+          <div class="col-6">
+            <h6 class="pb-2 text-white">Support</h6>
+            <a href="#" class="ft-links">Help</a>
+            <a href="#" class="ft-links">Terms of Use</a>
+            <a href="#" class="ft-links">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-100 border-top pt-4 border-light-grey"></div>
+    <div class="row d-flex flex-wrap">
+      <div class="col-12 col-lg-6 col-md-3 d-flex justify-content-start align-items-center order-2 order-md-1 mt-4 mt-md-0">
+        <h5 class="mb-ms-0 mb-md-0 mb-3">
+          <a href="#" class="ft-links mb-0 ms-3 ms-md-0 mt-0">Copyright &copy; 2024 - All</a>
+        </h5>
+      </div>
+      <div class="col-12 col-lg-6 col-md-9 order-1 order-md-2">
+        <div class="d-flex flex-column flex-sm-row">
+          <h6 class="text-white d-flex align-items-center me-sm-4 ms-3 ms-md-0 mb-md-0 mb-2">Subscribe</h6>
+          <div class="search-holder shadow-0 w-100 d-flex justify-content-center align-items-center p-1">
+            <div class="search-inner d-flex justify-content-start align-items-center w-100 bg-light-grey py-2 px-3">
+              <!-- <img src="img/search-icon.png" class="search-icon d-none d-sm-block"> -->
+              <input type="text" placeholder="Your Email" class="main-search text-white ms-sm-2 fs-16">
+            </div>
+            <div class="btn btn-primary btn-round fs-16 search-btn d-flex align-items-center ps-3 pe-3 px-sm-3 ms-sm-4">
+              <!-- <img src="img/search-icon-white.png" class="search-icon d-sm-none"> -->
+              <span class="d-sm-inline">Submit</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
