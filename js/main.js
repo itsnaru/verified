@@ -270,6 +270,10 @@ function showExtraLi(_plotType){
   $(_plotType+'-show-more').toggleClass('active-show-more');
 }
 
+function showBlog(_blog){
+  $('.blog-type').addClass('hide-blog');
+  $(_blog).removeClass('hide-blog');
+}
 
 
 

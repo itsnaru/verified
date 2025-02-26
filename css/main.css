@@ -115,6 +115,9 @@ a{
   border-radius: 5px !important;
   overflow: hidden;
 }
+.oveflow-hidden{
+  overflow: hidden;
+}
 .border-transparent{
   border-color: rgba(255, 255, 255, 0.6) !important;
 }
@@ -823,6 +826,32 @@ select:focus-visible{
   color: #fff !important;
 }
 
+.blog-details-holder{
+  position: relative;
+  top: -3rem;
+  margin-bottom: 3rem;
+  padding: 0 4rem !important;
+}
+.blog-details-banner-img{
+  max-height: 400px;
+  object-fit: cover;
+}
+.blog-side-img{
+  max-width: 400px;
+  max-height: 400px;
+  object-fit: cover;
+}
+.box-shadow-1{box-shadow: 0 0 15px -5px #ccc;}
+
+.blog-details-inner{
+  position: relative;
+  overflow: inherit !important;
+}
+
+.blog-details-inner .blog-tag{
+  top: -2rem;
+  left: 1.0rem !important;
+}
 
 @keyframes blog-in-center {
   0% {
@@ -1287,6 +1316,10 @@ select:focus-visible{
   #searchModal .btn-close {
     right: 0px;
     top: 0px;
+  }
+  .blog-details-holder{
+    position: relative;
+    padding: 0 2.5rem !important;
   }
 }
 
