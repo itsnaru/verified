@@ -466,6 +466,7 @@
       </div>
     </div>
     
+    
     <div class="right-booking-holder d-flex justify-content-start align-items-start flex-column bg-white d-none d-lg-flex flex-column">
       <div class="booking-form border p-3 p-lg-4">
         <div class="nav switch-btn-outer list-details-switch-btn left w-100 mb-4 mt-2">
@@ -495,7 +496,7 @@
                 I have read and agreed to the <span class="color-blue cursor-pointer" data-bs-toggle="modal" data-bs-target="#TC"> Terms and Conditions </span> and <span class="color-blue cursor-pointer" data-bs-toggle="modal" data-bs-target="#TC"> Privacy </span>.
               </label>
             </div>
-            <button class="btn btn-primary btn-round w-100" type="button" data-bs-toggle="modal" data-bs-target="#loginOTP">Schedule a Visit</button>
+            <button class="btn btn-primary btn-round w-100" type="button" data-bs-toggle="modal" data-bs-target="#logintoview">Schedule a Visit</button>
           </div>
           <div class="tab-pane fade" id="book" role="tabpanel" aria-labelledby="book-btn">
             <div class="mb-3">
@@ -519,7 +520,7 @@
                 I have read and agreed to the <span class="color-blue cursor-pointer" data-bs-toggle="modal" data-bs-target="#TC"> Terms and Conditions </span> and <span class="color-blue cursor-pointer" data-bs-toggle="modal" data-bs-target="#TC"> Privacy </span>.
               </label>
             </div>
-            <button class="btn btn-primary btn-round w-100">Book Now</button>
+            <button class="btn btn-primary btn-round w-100" type="button" data-bs-toggle="modal" data-bs-target="#logintoview">Book Now</button>
           </div>
         </div>
       </div>
@@ -555,10 +556,12 @@
 </section>
 
 
+<div class="container">
 
+</div>
 
 <!-- Book/Visit Form for mobile -->
-<div class="modal fade" id="Schdele-Book-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="Schdele-Book-modalLabel" aria-hidden="true">
+<div class="modal fade" id="Schdele-Book-modal" data-bs-keyboard="false" tabindex="-1" aria-labelledby="Schdele-Book-modalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -652,38 +655,111 @@
 </div>
 
 
+
 <!-- Mobile number verification Modal -->
 <div class="modal fade" id="logintoview" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="logintoviewLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
+  <div class="modal-dialog modal-dialog-centered" id="verificationModal">
+    <div class="w-100">
+
+    
+    <div id="collapseOne" class="modal-content accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#verificationModal">
       <div class="modal-header d-flex flex-column justify-content-start align-items-stretch border-bottom-none">
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         <p>Verify your number.</p>
         <div class="mb-3 fs-16">
           <input class="form-control br-10 fs-16" name="phone" type="text" placeholder="Mobile number" id="login-to-access"/> 
         </div>
-        <button class="btn btn-primary btn-round px-5 w-100" type="button" data-bs-toggle="modal" data-bs-target="#loginOTP">Login</button>
+        <button class="btn btn-primary btn-round px-5 w-100 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Login</button>
       </div>
     </div>
-  </div>
-</div>
 
-
-<!-- OTP verification Modal -->
-<div class="modal fade" id="loginOTP" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="loginOTPLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
+    <div id="collapseTwo" class="modal-content accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#verificationModal">
       <div class="modal-header d-flex flex-column justify-content-start align-items-stretch border-bottom-none">
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         <p>Please Enter OTP sent to XXXXX XXX12</p>
         <div class="mb-3 fs-16">
           <input class="form-control br-10 fs-16" name="phone" type="text" placeholder="Enter OTP..." id="login-to-access"/> 
         </div>
-        <button class="btn btn-primary btn-round px-5 w-100">Verify</button>
+        <button class="btn btn-primary btn-round px-5 w-100" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Verify</button>
       </div>
     </div>
+
+    <div id="collapseThree" class="modal-content accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#verificationModal">
+      <div class="modal-header d-flex flex-column justify-content-start align-items-stretch border-bottom-none">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h4 class="border-bottom pb-3 mb-3">Visit us on</h4>
+        <small class="mb-2">When are you planing to visit us?</small>
+        <div class="mb-4 w-100 d-flex gap-3">
+          <div class="flex-1 d-flex gap-3">
+            <div class="visit-date-box fs-14 px-3 py-2 br-10 bg-light-blue d-flex flex-1 flex-column justify-content-center align-items-center">
+              <strong>2 Mar</strong>
+              <small>Sun</small>
+            </div>
+            <div class="visit-date-box fs-14 px-3 py-2 br-10 bg-light-blue d-flex flex-1 flex-column justify-content-center align-items-center">
+              <strong>3 Mar</strong>
+              <small>Mon</small>
+            </div>
+            <div class="visit-date-box fs-14 px-3 py-2 br-10 bg-light-blue d-flex flex-1 flex-column justify-content-center align-items-center">
+              <strong>4 Mar</strong>
+              <small>Tue</small>
+            </div>
+          </div>
+          <div class="d-flex flex-column justify-content-center align-items-center visit-cal-icon-holder ps-3">
+            <div class="visit-cal-icon-outer bg-light-blue">
+              <label for="scheduleDate" class="justify-content-center align-items-center">
+                <input type="date" id="scheduleDate">
+              </label>
+            </div>
+            <div class="fs-14" class="scheduleSelectedDate">Select Date</div>
+          </div>
+        </div>
+        <small class="mb-2">What is your preferred time slot?</small>
+
+        <div class="mb-4 w-100 d-flex gap-3">
+          <div class="flex-1 d-flex gap-3">
+            <div class="visit-time-box fs-14 px-3 py-2 br-10 bg-light-blue d-flex flex-column justify-content-center align-items-center">
+              <strong>9-12 PM</strong>
+            </div>
+            <div class="visit-time-box fs-14 px-3 py-2 br-10 bg-light-blue d-flex flex-column justify-content-center align-items-center">
+              <strong>12-3 PM</strong>
+            </div>
+            <div class="visit-time-box fs-14 px-3 py-2 br-10 bg-light-blue d-flex flex-column justify-content-center align-items-center">
+              <strong>3-6 PM</strong>
+            </div>
+            <div class="visit-time-box fs-14 px-3 py-2 br-10 bg-light-blue d-flex flex-column justify-content-center align-items-center">
+              <strong>6-9 PM</strong>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-primary btn-round px-5 w-100"  type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Confirm</button>
+      </div>
+    </div>
+
+    <div id="collapseFour" class="modal-content accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#verificationModal">
+      <div class="modal-header d-flex flex-column justify-content-start align-items-stretch border-bottom-none py-5">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="d-flex justify-content-center align-items-center border-bottom mb-3 pb-3">
+          <img src="img/verification-icon.png" class="booked-verified-icon me-3">
+          <h2 class="mb-0">Waiting to see you..!</h2>
+        </div>
+        <h5 class="mb-3 text-center">We've booked a visit slot for you</h5>
+        <div class="d-flex flex-column justify-content-start align-items-start bg-light-blue p-3 fs-16 br-10">
+          <div class="mb-3 d-flex align-items-center justify-content-start"> <img src="img/calendar_primary.png" class="booked-icon me-2"> <span class="booked-title">Date:</span> <strong>03 Mar 2025</strong></div>
+          <div class="mb-3 d-flex align-items-center justify-content-start"> <img src="img/clock.png" class="booked-icon me-2"> <span class="booked-title">Time:</span> <strong>12PM-3PM</strong></div>
+          <div class=" d-flex align-items-center justify-content-start"><img src="img/location-2.png" class="booked-icon me-2"> <span class="booked-title">Location:</span> <strong>Baner, Pune, MH</strong></div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
   </div>
 </div>
+
+
 
 
 

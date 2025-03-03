@@ -14,6 +14,10 @@ $(window).scroll(function() {
 
 $(document).ready(function(){
 
+  $('#scheduleDate').change(function () {
+    console.log(this.value);
+  });
+
   var scroll = $(window).scrollTop();
   if (scroll >= 5) {
       $("header").addClass("header-scrolled");
@@ -72,6 +76,16 @@ $(document).ready(function(){
   $('.sell-lease-card').click(function(){
     $('.sell-lease-card').removeClass('card-active');
     $(this).addClass('card-active');
+  })
+
+  $('.visit-date-box').click(function(){
+    $('.visit-date-box').removeClass('active');
+    $(this).addClass('active');
+  })
+
+  $('.visit-time-box').click(function(){
+    $('.visit-time-box').removeClass('active');
+    $(this).addClass('active');
   })
 
 })

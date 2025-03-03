@@ -1868,3 +1868,68 @@ select:focus-visible{
 .top-10{
   top: 10px;
 }
+
+
+.visit-date-box,
+.visit-time-box{
+  cursor: pointer;
+}
+.visit-date-box.active,
+.visit-time-box.active{
+  background-color: #1ebc52;
+  color: #fff;
+}
+
+.visit-cal-icon-holder{
+  position: relative;
+}
+.visit-cal-icon-holder::before{
+  content: "";
+  display: block;
+  width: 2px;
+  height: 60%;
+  position: absolute;
+  left: 0;
+  background-color: #e7f1ea;
+}
+.visit-cal-icon-outer{
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.visit-cal-icon{
+  width: 16px;
+  height: 16px;
+}
+
+#scheduleDate{
+  position: relative;
+  width: 20px;
+  height: 20px;
+  z-index: 2;
+  border: none;
+  background-image: url(../img/calendar_primary.png);
+  background-position: right center;
+  background-size: 20px auto;
+  background-repeat: no-repeat;
+  color: transparent;
+  cursor: pointer;
+  background-color: transparent;
+}
+#scheduleDate::-webkit-calendar-picker-indicator {
+  background: transparent;
+}
+.booked-icon{
+  width: 20px;
+}
+.booked-title{
+  display: inline-block;
+  width: 100px;
+}
+.booked-verified-icon{
+  width: 50px;
+  height: auto;
+}
