@@ -1695,6 +1695,13 @@ select:focus-visible{
   .deails-price-icon {
     height: 24px;
   }
+  .btn-close{
+    right: 0px;
+    top: 0px;
+  }
+  .modal-backdrop.show {
+    opacity: 0.75;
+  }
 }
 
 /* Booking Details Style CLOSE*/
