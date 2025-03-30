@@ -290,7 +290,7 @@ function showBlog(_blog){
 }
 
 
-
+/* Code Updated START */
 const priceInputs = document.querySelectorAll(".price-input input");
 const rangeInputs = document.querySelectorAll(".range-input input");
 const range = document.querySelector(".slider .progress");
@@ -305,10 +305,10 @@ priceInputs.forEach((input) => {
     if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInputs[1].max) {
       if (e.target.className === "min-input") {
         rangeInputs[0].value = minPrice;
-        range.style.left = (minPrice / rangeInputs[0].max) * 100 + "%";
+        range.style.left = ((minPrice - 10000) / (50000 - 10000)) * 100 + "%";
       } else {
         rangeInputs[1].value = maxPrice;
-        range.style.right = 100 - (maxPrice / rangeInputs[1].max) * 100 + "%";
+        range.style.right = 100 - ((maxPrice - 10000) / (50000 - 10000)) * 100 + "%";
       }
     }
   });
@@ -328,11 +328,21 @@ rangeInputs.forEach((input) => {
     } else {
       priceInputs[0].value = minVal;
       priceInputs[1].value = maxVal;
-      range.style.left = (minVal / rangeInputs[0].max) * 100 + "%";
-      range.style.right = 100 - (maxVal / rangeInputs[1].max) * 100 + "%";
+      range.style.left = ((minVal - 10000) / (50000 - 10000)) * 100 + "%";
+      range.style.right = 100 - ((maxVal - 10000) / (50000 - 10000)) * 100 + "%";
     }
   });
 });
+
+function resetRange(_min, _max) {
+  priceInputs[0].value = _min;
+  priceInputs[1].value = _max;
+  rangeInputs[0].value = _min;
+  rangeInputs[1].value = _max;
+  range.style.left = "0%";
+  range.style.right = "0%";
+}
+/* Code Updated END */
 
 
 var tabEl = document.querySelector('.details-switch-btn[data-bs-target="#image"]');
@@ -399,3 +409,40 @@ if(_input){
       preferredCountries: ["in", "pk", "us", "no"]
   });
 }
+
+
+
+
+/* New Code START */
+const locations = ["New York", "Los Angeles", "Chicago", "Houston", "Miami", "San Francisco", "Seattle", "Boston", "Denver", "Atlanta"];
+
+document.addEventListener("click", (e) => {
+  document.querySelectorAll(".dropdown-menu").forEach(dropdown => {
+    if (!dropdown.previousElementSibling.contains(e.target)) {
+      dropdown.style.display = "none";
+    }
+  });
+});
+
+function filterDropdown(inputElement) {
+  const query = inputElement.value.toLowerCase();
+  const dropdown = inputElement.nextElementSibling;
+  dropdown.innerHTML = "";
+  if (query) {
+    const filtered = locations.filter(location => location.toLowerCase().includes(query));
+    filtered.forEach(location => {
+      const item = document.createElement("li");
+      item.textContent = location;
+      item.classList.add("dropdown-item");
+      item.onclick = () => {
+        inputElement.value = location;
+        dropdown.style.display = "none";
+      };
+      dropdown.appendChild(item);
+    });
+    dropdown.style.display = filtered.length ? "block" : "none";
+  } else {
+    dropdown.style.display = "none";
+  }
+}
+/* New Code END */

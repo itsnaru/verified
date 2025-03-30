@@ -64,19 +64,17 @@
             <div class="switch-btn text-center flex-1 py-2 px-3">Lease</div>
           </div>
           <div class="search-holder animate-to-top-3 w-100 bg-white d-flex justify-content-center align-items-center p-2 p-sm-4">
-            <!-- <div class="search-inner d-flex justify-content-start align-items-center w-100 bg-light py-2 px-3">
-              <img src="img/search-icon.png" class="search-icon d-none d-sm-block">
-              <input type="text" placeholder="Search by City, State or Stay Name" class="main-search flex-1 ms-sm-2 fs-16">
-            </div>
-            <div class="btn btn-primary btn-round fs-16 search-btn d-flex align-items-center ps-3 pe-3 px-sm-3 ms-sm-4">
-              <img src="img/search-icon-white.png" class="search-icon d-sm-none">
-              <span class="d-none d-sm-inline">Search</span>
-            </div> -->
             <div class="inner-top-search-outer w-100 bg-white d-flex justify-content-center align-items-center py-2 px-2 px-md-3">
+              
+              
               <div class="search-inner d-flex justify-content-start align-items-center w-100 bg-white py-2">
                 <img src="img/search-icon.png" class="search-icon d-none d-sm-block">
-                <input type="text" placeholder="Search you Location" class="main-search flex-1 ms-sm-3 fs-16">
+                <input type="text" placeholder="Search your Location" class="main-search flex-1 ms-sm-3 fs-16" oninput="filterDropdown(this)">
+                <ul class="dropdown-menu dropdown-1"></ul>
               </div>
+
+
+
               <div class="location-icon-outer d-flex justify-content-center align-items-center p-1 ms-2 me-2 me-md-0"  data-bs-toggle="modal" data-bs-target="#searchModal">
                 <img src="img/aim.png" class="location-icon">
               </div>
@@ -101,7 +99,8 @@
         <div class="inner-top-search-outer w-100 bg-white d-flex justify-content-center align-items-center py-2 px-3">
           <div class="search-inner d-flex justify-content-start align-items-center w-100 bg-white py-2">
             <img src="img/search-icon.png" class="search-icon d-none d-sm-block">
-            <input type="text" placeholder="Search you Location" class="main-search flex-1 ms-sm-3 fs-16">
+            <input type="text" placeholder="Search your Location" class="main-search flex-1 ms-sm-3 fs-16" oninput="filterDropdown(this)">
+            <ul class="dropdown-menu dropdown-2"></ul>
           </div>
           <div class="btn btn-primary btn-round fs-16 search-btn d-flex align-items-center ps-3 pe-3 px-sm-3 ms-sm-3">
             <img src="img/search-icon-white.png" class="search-icon d-sm-none">

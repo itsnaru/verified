@@ -296,28 +296,35 @@
           </div>
           <div class="animate-style-3 d-flex flex-column flex-lg-row d-lg-flex position-relative z-index-5">
             <div class="select-group  d-flex justify-content-center align-items-center price-range-btn ps-4 pe-3 me-lg-3">Price Range <img src="img/down-arrow-black.png" class="price-range-down-icon ms-3 me-1"></div>
+            
+            
+            <!-- Code Updated START -->
             <div class="price-range mb-4 mb-lg-0">
               <div class="slider-wrapper p-3 py-4">
                 <div class="price-input mb-3 pb-3">
                   <div class="field">
                     <span>Min</span>
-                    <input type="number" value="1000000" class="min-input" />
+                    <input type="number" value="10000" class="min-input" />
                   </div>
                   <div class="seperator">-</div>
                   <div class="field">
                     <span>Max</span>
-                    <input type="number" value="100000000" class="max-input" />
+                    <input type="number" value="50000" class="max-input" />
                   </div>
                 </div>
                 <div class="slider">
                   <div class="progress"></div>
                 </div>
                 <div class="range-input">
-                  <input type="range" min="1000000" max="100000000" value="0" class="min-range" />
-                  <input type="range" min="1000000" max="100000000" value="100000000" class="max-range"/>
+                  <input type="range" min="10000" max="50000" value="10000" class="min-range" />
+                  <input type="range" min="10000" max="50000" value="50000" class="max-range"/>
                 </div>
+                <button class="btn btn-primary w-100 mt-4" onclick="resetRange(10000, 50000)">Reset</button>
               </div>
             </div>
+            <!-- Code Updated END -->
+
+
           </div>
           <div class="animate-style-4 select-group d-inline-flex px-3">
             <select name="sell-model" id="sell-model" class="select-style-1 px-2">
@@ -749,7 +756,11 @@
             <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
           </ul>
           <div class="show-li d-inline-flex justify-content-start align-items-center fs-14 fw-7 buy-plots-lonavala-show-more" onclick="showExtraLi('.buy-plots-lonavala')">
-            <span class="pe-2">Show More</span><img src="img/down-arrow.png" class="show-more-arrow">
+            <span class="pe-2">
+              <span class="showmore">Show More</span>
+              <span class="showless">Show Less</span>
+            </span>
+            <img src="img/down-arrow.png" class="show-more-arrow">
           </div>
         </div>
         <div class="w-100 text-start plot-list-outer lease-plot-group tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab-2-btn">
@@ -798,7 +809,11 @@
             <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
           </ul>
           <div class="show-li d-inline-flex justify-content-start align-items-center fs-14 fw-7 lease-plots-lonavala-show-more" onclick="showExtraLi('.lease-plots-lonavala')">
-            <span class="pe-2">Show More</span><img src="img/down-arrow.png" class="show-more-arrow">
+            <span class="pe-2">
+              <span class="showmore">Show More</span>
+              <span class="showless">Show Less</span>
+            </span>
+            <img src="img/down-arrow.png" class="show-more-arrow">
           </div>
         </div>
       </div>

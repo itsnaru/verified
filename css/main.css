@@ -1940,3 +1940,22 @@ select:focus-visible{
   width: 50px;
   height: auto;
 }
+
+
+/* Code Updated START */
+.dropdown-1{
+  top: 90px;
+  left: 24px;
+}
+.dropdown-2{
+  top: 80px;
+  left: 15px;
+}
+.active-show-more .showmore,
+.showless{
+  display: none;
+}
+.active-show-more .showless{
+  display: inline;
+}
+/* Code Updated END */
