@@ -1,0 +1,243 @@
+.br-20{
+    border-radius: 20px;
+}
+.br-25{
+    border-radius: 25px;
+}
+.about-us-top-section{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 40%, rgb(30 188 81 / 41%) 100%);
+}
+.about-top-text{
+    max-width: 980px;
+    margin:auto;
+}
+.outer-about-img{
+    position: relative;
+}
+.inner-about-img{
+    height: 400px;
+    object-fit: cover;
+    border-radius: 25px;
+
+    position: absolute;
+    left: 0;
+    bottom: -300px;
+}
+.about-story-section{
+    margin-top: 250px;
+}
+.bold{
+    font-weight:600;
+}
+.our-story-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 25px;
+}
+.our-v-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+}
+.our-values{
+    background-color: #032251;
+    border-radius: 25px;
+}
+.v-box{
+    box-shadow: 0 0 15px -5px #16b74b;
+    min-height: 240px;
+}
+.v-box h4{
+    border-bottom: 2px solid #1ebc52;
+}
+.g-top{
+    max-width: 900px;
+    margin: auto;
+}
+.get-in-touch{
+    background-color: #e7f1e9;
+}
+.accordion-button:not(.collapsed){
+    background-color: #032251;
+    box-shadow:none;
+}
+.our-values .accordion-button{
+    font-size: 30px;
+}
+.our-values .accordion-button:focus{
+    box-shadow:none;
+}
+.our-values .accordion-button:not(.collapsed)::after {
+    background-image: url(../img/minus.png);
+}
+.our-values .accordion-button::after {
+    background-image: url(../img/plus-green.png);
+}
+.our-values .accordion-item{
+    border-bottom: 1px solid #ffffff8c;
+    border-radius: 0px !important;
+}
+.our-values-img img{
+    width: 40px;
+    height: auto;
+}
+.au-icon-2{
+    width: 50px;
+    height: auto;
+}
+
+.au-social-media svg{
+    width: 20px;
+    height: auto;
+}
+.ps-40{
+    padding-left: 56px;
+}
+
+.lr-lines{
+    position: relative;
+}
+
+.lr-lines::before,
+.lr-lines::after{
+    content: "";
+    display: block;
+    width: 2px;
+    height: 60%;
+    background-color: #fff;
+    position: absolute;
+    bottom: 10%;
+}
+
+.lr-lines::before{
+    left: 0;
+}
+.lr-lines::after{
+    right: 0;
+}
+
+@media (max-width: 991px) {
+    .our-v-img img{
+        position: relative;
+        top: -25px;
+        margin-bottom: -25px;
+    }
+}
+@media (max-width: 768px) {
+    .v-box {
+        min-height: inherit;
+    }
+    .our-values .accordion-button {
+        font-size: 25px;
+    }
+    .lr-lines::before,
+    .lr-lines::after{
+        display: none;
+    }
+    .au-social-box{
+        box-shadow: 0 0 15px -5px #b6b6b6;
+        border-radius: 25px;
+        padding: 25px !important;
+    }
+}
+@media (max-width: 576px) {
+    .inner-about-img{    
+        position: inherit;
+        height: auto;
+        bottom: inherit;
+    }
+    .about-story-section{
+        margin-top: 0;
+    }
+    .about-us-top-section{
+        border-radius: 0 0 35px 35px;
+    }
+    
+}
+
+
+.HIW-bg-1{
+    background-image: url('../img/photo-hand-with-pencil.jpg');
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+.HIW-bg-gradient-1{
+    background: #26314C;
+    background: linear-gradient(90deg, rgba(38, 49, 76, 0.98) 22%, rgba(38, 49, 76, 0.8) 64%, rgba(38, 49, 76, 0.02) 87%);
+}
+
+
+.HIW-start-search-top{
+    height: 300px;
+    position: relative;
+}
+.HIW-start-search-bg{
+    width: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+.HIW-start-search-bg img{
+    height: 400px;
+    width: auto;
+}
+.HIW-logo{
+    height: 60px;
+    width: auto;
+}
+.HIW-marks-icon{
+    height: 40px;
+    width: auto;
+}
+.middle-chain{
+    width: 500px;
+    /* height: 800px; */
+}
+.chain-icon{
+    width: 45px;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+    padding: 10px;
+    margin-right: 1rem;
+    background-color: #fff;
+}
+@media (max-width: 1200px) {
+    .HIW-start-search-bg img{
+        height: 320px;
+    }
+    .middle-chain{
+        width: 450px;
+    }
+}
+@media (max-width: 991px) {
+    .HIW-start-search-top{
+        height: auto;
+    }
+    .chain-box{
+        background-color: #e7f1ea;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 0 11px -10px #000000;
+    }
+    .chain-box h4{
+        width: 100%;
+        border-radius: 15px;
+        border: 2px solid #fff;
+    }
+}
+@media (max-width: 768px) {
+    .HID-text{
+        font-size: 14px !important;
+    }
+    .HIW-logo{
+        height: 30px;
+    }
+    .HIW-marks-icon{
+        height: 25px;
+    }
+    
+}
