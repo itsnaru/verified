@@ -280,3 +280,11 @@ animation: slideInRight 0.6s ease-out forwards;
     }
     
 }
+
+
+.chain-box-show-more svg{
+    transition: all 0.2s linear;
+}
+.chain-box-show-more[aria-expanded="true"] svg{
+    transform: rotate(-180deg);
+}
