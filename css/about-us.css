@@ -242,7 +242,7 @@ animation: slideInLeft 0.6s ease-out forwards;
 animation: slideInRight 0.6s ease-out forwards;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     .chain-box-left.animate {
         animation: slideInRight 0.6s ease-out forwards;
     }
