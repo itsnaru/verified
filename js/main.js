@@ -446,3 +446,30 @@ function filterDropdown(inputElement) {
   }
 }
 /* New Code END */
+
+
+
+
+/* How It Works page JS */
+document.addEventListener('DOMContentLoaded', function () {
+const boxes = document.querySelectorAll('.chain-box');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    const el = entry.target;
+    if (entry.isIntersecting) {
+      el.classList.add('animate');
+    } else {
+      // Reset animation when out of view to allow re-trigger
+      el.classList.remove('animate');
+    }
+  });
+}, {
+  threshold: 0.3 // Trigger when 30% visible
+});
+
+if(boxes){
+  boxes.forEach(box => observer.observe(box));
+}
+});
+/* How It Works page JS END */
