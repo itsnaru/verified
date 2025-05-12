@@ -242,6 +242,12 @@ animation: slideInLeft 0.6s ease-out forwards;
 animation: slideInRight 0.6s ease-out forwards;
 }
 
+@media (max-width: 768px) {
+    .chain-box-left.animate {
+        animation: slideInRight 0.6s ease-out forwards;
+    }
+}
+
 
 @media (max-width: 1200px) {
     .HIW-start-search-bg img{
