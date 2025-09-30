@@ -334,6 +334,7 @@ rangeInputs.forEach((input) => {
   });
 });
 
+
 function resetRange(_min, _max) {
   priceInputs[0].value = _min;
   priceInputs[1].value = _max;
@@ -473,3 +474,54 @@ if(boxes){
 }
 });
 /* How It Works page JS END */
+
+
+document.querySelectorAll(".loan-slider").forEach(wrapper => {
+  const minRange = wrapper.querySelector(".min-range");
+  const maxRange = wrapper.querySelector(".max-range");
+  const minInput = wrapper.querySelector(".min-input");
+  const maxInput = wrapper.querySelector(".max-input");
+  const rangeBar = wrapper.querySelector(".slider .progress");
+
+  const min = parseInt(wrapper.dataset.min);
+  const max = parseInt(wrapper.dataset.max);
+  const gap = parseInt(wrapper.dataset.gap);
+
+  function updateRange() {
+    let minVal = parseInt(minRange.value);
+    let maxVal = parseInt(maxRange.value);
+
+    if (maxVal - minVal < gap) {
+      if (event?.target === minRange) {
+        minRange.value = maxVal - gap;
+      } else {
+        maxRange.value = minVal + gap;
+      }
+    } else {
+      minInput.value = minVal;
+      maxInput.value = maxVal;
+      rangeBar.style.left = ((minVal - min) / (max - min)) * 100 + "%";
+      rangeBar.style.right = 100 - ((maxVal - min) / (max - min)) * 100 + "%";
+    }
+  }
+
+  function updateInput() {
+    let minVal = parseInt(minInput.value);
+    let maxVal = parseInt(maxInput.value);
+
+    if (maxVal - minVal >= gap && maxVal <= max && minVal >= min) {
+      minRange.value = minVal;
+      maxRange.value = maxVal;
+      rangeBar.style.left = ((minVal - min) / (max - min)) * 100 + "%";
+      rangeBar.style.right = 100 - ((maxVal - min) / (max - min)) * 100 + "%";
+    }
+  }
+
+  minRange.addEventListener("input", updateRange);
+  maxRange.addEventListener("input", updateRange);
+  minInput.addEventListener("input", updateInput);
+  maxInput.addEventListener("input", updateInput);
+
+  // initialize
+  updateRange();
+});
