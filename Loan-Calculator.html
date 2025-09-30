@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verified Plots | Loan Calculator</title>
+  <link rel="icon" type="image/x-icon" href="./img/verified-plots-icon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/slick-theme.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/country-dropdown.css">
+  <link rel="stylesheet" href="css/loancalculator.css">
+  <script src="js/country-dropdown.js"></script>
+</head>
+<body>
+
+<header class="fixed-top border-bottom border-2" id="inner-header">
+  <div class="container-xxl py-3">
+    <div class="row">
+      <div class="col-6 col-lg-2 d-flex justify-content-start align-items-center">
+        <a href="#">
+          <img class="header-logo" src="img/verified-plots-logo.png" alt="verified-plots-logo">
+        </a>
+      </div>
+
+      <div class="col-12 col-lg-8 top-menu d-none flex-column justify-content-start justify-content-lg-center align-items-start align-items-lg-center p-4 p-lg-0">
+        <div class="w-100 d-lg-none d-flex justify-content-between align-items-center mb-4">
+          <a href="#">
+            <img class="header-logo top-menu-logo" src="img/verified-plots-logo.png" alt="verified-plots-logo">
+          </a>
+          <img src="img/close.png" class="close-menu">
+        </div>
+        <div class="top-menu-inner d-flex flex-column flex-lg-row justify-content-center align-items-center">
+          <a class="header-link px-2 mx-3 text-decoration-none" href="#">Buy</a>
+          <a class="header-link px-2 mx-3 text-decoration-none" href="#">Sell</a>
+          <a class="header-link px-2 mx-3 text-decoration-none" href="#">Hot Deals</a>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-8 d-none d-lg-flex">
+        <div class="w-100 bg-white d-flex justify-content-center align-items-center py-2 px-3">
+            <div class="top-menu-inner d-flex flex-column flex-lg-row justify-content-center align-items-center">
+                <a class="header-link px-2 mx-3 text-decoration-none" href="#">Buy</a>
+                <a class="header-link px-2 mx-3 text-decoration-none" href="#">Sell</a>
+                <a class="header-link px-2 mx-3 text-decoration-none" href="#">Hot Deals</a>
+              </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-2 d-flex justify-content-end align-items-center">
+        <div class="mob-round-btn btn btn-primary btn-round py-2 px-2 me-3 d-lg-none" data-bs-toggle="modal" data-bs-target="#searchModal">
+          <span><img class="mob-search-white-icon" src="img/search-icon-white.png"></span>
+        </div>
+
+        <a class="mob-round-btn btn btn-primary btn-round py-2 px-2" href="#">
+          <span><img class="btn-icon" src="img/call-center.png"></span>
+          <span class="d-none d-lg-inline px-2">Support</span>
+        </a>
+
+        <span>
+          <img src="img/menu.png" class="menu-icon d-flex d-lg-none ms-4">
+        </span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="header-top-space">
+    <div class="container pt-4 pt-lg-5">
+        <div class="row loan-calculator-banner br-15">
+            <div class="col-12 d-flex flex-column p-4 px-lg-5 py-lg-5">
+              <h2 class="h1 animate-style-1 text-white text-left mb-4">Financing made possible for <br> every Plots buyer</h2>
+              <div class="d-flex flex-column flex-md-row mb-4">
+                <div class="d-flex justify-content-start align-items-center mb-3 mb-md-0 me-md-5">
+                  <img src="img/booking-20.svg" class="LC-banner-icon me-3">
+                  <h4 class="text-white fw-6 mb-0">Completely Online</h4>
+                </div>
+                <div class="d-flex justify-content-start align-items-center">
+                  <img src="img/clock-20.svg" class="LC-banner-icon me-3">
+                  <h4 class="text-white fw-6 mb-0">Same-day Approval</h4>
+                </div>
+              </div>
+              <div class="d-flex flex-column flex-md-row justify-content-start align-items-start align-items-md-center">
+                <a href="#" class="btn btn-primary btn-round fs-18 h4 px-4 mb-md-0">Check Eligibility</a>
+                <div class="ps-md-4 text-white">*Don't worry! It'll not affect your  credit score</div>
+              </div>
+            </div>
+        </div>
+        <div class="row px-lg-4">
+          <div class="col-12 px-4 px-lg-5">
+            <div class="row bg-light-blue br-15 px-3 py-4 p-md-5">
+              <div class="col-12 col-lg-7 d-flex flex-column pe-lg-5">
+                
+                <h4 class="color-blue fw-6 mb-1 mb-md-4">Plot Loan Calculator</h4>
+                <h2 class="h1 color-blue fw-7 mb-0">
+                  <span>₹</span>
+                  <span>18,170</span>
+                  <small class="fs-20">per month</small>
+                </h2>
+                
+                <div class="d-flex flex-column flex-md-row mb-3">
+                  <svg id="halfCircle" class="d-block w-100 h-auto" style="max-width: 200px;"></svg>
+                  <div class="flex-1 ms-md-5 pt-4">
+                    <div class="d-flex justify-content-start align-items-center mb-2">
+                      <svg width="16" height="16" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="10" fill="#1FBE54" />
+                      </svg>
+                      <div class="d-flex flex-1 justify-content-between ps-2 color-blue Font-Book">
+                        <span>Principal Loan Amount :</span>
+                        <span>25,00,000 rs</span>  
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-start align-items-center mb-2 border-bottom border-dark pb-2">
+                      <svg width="16" height="16" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="10" fill="#0B752E" />
+                      </svg>
+                      <div class="d-flex flex-1 justify-content-between ps-2 color-blue Font-Book">
+                        <span>Total Interest Payable :</span>
+                        <span>6,00,000 rs</span>  
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-start align-items-center">
+                      <svg class="invisible" width="16" height="16" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="10" fill="#0B752E" />
+                      </svg>
+                      <div class="d-flex flex-1 justify-content-between ps-2 color-blue Font-Medium mb-0">
+                        <span>Total Amount Payable :</span>
+                        <span>31,00,000 rs</span>  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p><strong class="Font-Medium">Disclaimer:</strong> Applicable rate of interest can vary subject to credit profile. Loan approval is at the sole discretion of the finance partner.</p>
+
+              </div>
+
+              <div class="col-12 col-lg-5">
+
+                <div class="nav switch-btn-outer bg-white left w-100 mb-2 mb-md-4 mt-2">
+                  <div class="switch-btn-inner active" data-btn-pos="left" id="schedule-btn" data-bs-toggle="pill" data-bs-target="#schedule" type="button" role="tab" aria-controls="schedule" aria-selected="true">EMI</div>
+                  <div class="switch-btn-inner" data-btn-pos="right" id="book-btn" data-bs-toggle="pill" data-bs-target="#book" type="button" role="tab" aria-controls="book" aria-selected="false">Loan Estimate</div>
+                </div>
+
+                <div class="tab-content mb-1">
+                  <div class="tab-pane px-3 px-lg-4 fade show active" id="schedule" role="tabpanel" aria-labelledby="schedule-btn">
+                    <!-- Loan Amount Slider -->
+                    <div class="loan-slider slider-wrapper EMI-Range w-100 pt-3" data-min="10000" data-max="50000" data-gap="1000">
+                      <div class="Font-Medium fs-20 mb-2">Loan Amount</div>
+                      <div class="slider">
+                        <div class="progress"></div>
+                      </div>
+                      <div class="range-input">
+                        <input type="range" min="10000" max="50000" value="10000" class="min-range" />
+                        <input type="range" min="10000" max="50000" value="50000" class="max-range" />
+                      </div>
+                      <div class="price-input mt-2">
+                        <input type="number" value="10000" class="min-input text-start ms-0 border-0" />
+                        <input type="number" value="50000" class="max-input text-end border-0" />
+                      </div>
+                    </div>
+
+                    <!-- Interest Amount Slider -->
+                    <div class="loan-slider slider-wrapper EMI-Range w-100 pt-3" data-min="12" data-max="48" data-gap="1">
+                      <div class="Font-Medium fs-20 mb-2">Interest Amount</div>
+                      <div class="slider">
+                        <div class="progress"></div>
+                      </div>
+                      <div class="range-input">
+                        <input type="range" min="12" max="48" value="12" class="min-range" />
+                        <input type="range" min="12" max="48" value="48" class="max-range" />
+                      </div>
+                      <div class="price-input mt-2">
+                        <input type="number" value="12" class="min-input text-start ms-0 border-0" />
+                        <input type="number" value="48" class="max-input text-end border-0" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane px-0 fade" id="book" role="tabpanel" aria-labelledby="book-btn">
+                    <div class="bg-white p-3 br-15">
+                      Loam Estimate
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</section>
+
+<section class="mt-4 mt-lg-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-8 offset-lg-2 text-center">
+        <h2 class="h1 color-blue Font-Medium mb-lg-4">The smart way to loan</h2>
+        <p class="Font-Book mb-lg-4">We have experts tailoring the best loan option for you. 18 financing partners to be precise. Zero down payment. Best interest rates. Lowest processing fee.</p>
+      </div>
+
+      <div class="col-12">
+
+          <style>
+            
+          </style>
+
+          <div class="accordion d-flex" id="accordionSmartWay">
+          <!-- Tab 1 -->
+          <div class="d-flex flex-column flex-lg-row w-100 accordionsmartway-group gap-3">
+            <div id="collapseOne" class="flex-1 accordion-collapse collapse bg-dark-blue text-white br-15 show" aria-labelledby="headingOne" data-bs-parent="#accordionSmartWay">
+              <div class="accordion-body d-flex flex-column justify-content-stretch align-items-start h-100 p-4 p-lg-5">
+                <img src="img/loan-20.svg" class="acc-body-icon mb-3">
+                <div class="flex-1 d-flex align-items-end">
+                  <div class="d-flex flex-column flex-2 pe-xl-5">
+                    <div class="h2 Font-Medium text-white">Check your used <br>plot loan eligibility</div>
+                    <p class="Font-Book mb-0">Fill in a form online to know your second hand car loan eligibility in minutes, without impacting your credit score. Calculate car loan EMI now!</p>
+                  </div>
+                  <div class="flex-1 d-flex justify-content-end align-items-end">
+                    <span class="Font-Bold loan-tab-num">1</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-row flex-lg-column align-items-center justify-content-start bg-light-blue br-15 py-3 px-4 acc-btn cursor-pointer" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <img src="img/loan-20.svg" class="tab-icon my-0 my-lg-5">
+              <div class="tab-title mb-0 mb-lg-4 ms-3 ms-lg-0 h2 Font-Medium color-blue">Loan Eligibility</div>
+            </div>
+            <div id="collapseTwo" class="flex-1 accordion-collapse collapse bg-dark-blue text-white br-15" aria-labelledby="headingTwo" data-bs-parent="#accordionSmartWay">
+              <div class="accordion-body d-flex flex-column justify-content-stretch align-items-start h-100 p-4 p-lg-5">
+                <img src="img/documents-20.svg" class="acc-body-icon mb-3">
+                <div class="flex-1 d-flex align-items-end">
+                  <div class="d-flex flex-column flex-2 pe-xl-5">
+                    <div class="h2 Font-Medium text-white">Upload your documents online</div>
+                    <p class="Font-Book mb-0">Submit KYC, income proof, and car details securely online. Quick digital uploads ensure a smooth and hassle-free loan process.</p>
+                  </div>
+                  <div class="flex-1 d-flex justify-content-end align-items-end">
+                    <span class="Font-Bold loan-tab-num">2</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-row flex-lg-column align-items-center justify-content-start bg-light-blue br-15 py-3 px-4 acc-btn cursor-pointer collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <img src="img/documents-20.svg" class="tab-icon my-0 my-lg-5">
+              <div class="tab-title mb-0 mb-lg-4 ms-3 ms-lg-0 h2 Font-Medium color-blue">Upload documents</div>
+            </div>
+            <div id="collapseThree" class="flex-1 accordion-collapse collapse bg-dark-blue text-white br-15" aria-labelledby="headingThree" data-bs-parent="#accordionSmartWay">
+              <div class="accordion-body d-flex flex-column justify-content-stretch align-items-start h-100 p-4 p-lg-5">
+                <img src="img/approval-20.svg" class="acc-body-icon mb-3">
+                <div class="flex-1 d-flex align-items-end">
+                  <div class="d-flex flex-column flex-2 pe-xl-5">
+                    <div class="h2 Font-Medium text-white">Get instant same-day loan approval</div>
+                    <p class="Font-Book mb-0">Enjoy faster processing with same-day approvals. Our quick verification system helps you move closer to your second hand car loan without delays.</p>
+                  </div>
+                  <div class="flex-1 d-flex justify-content-end align-items-end">
+                    <span class="Font-Bold loan-tab-num">3</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-row flex-lg-column align-items-center justify-content-start bg-light-blue br-15 py-3 px-4 acc-btn cursor-pointer collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <img src="img/approval-20.svg" class="tab-icon 0y-3 my-lg-5">
+              <div class="tab-title mb-0 mb-lg-4 ms-3 ms-lg-0 h2 Font-Medium color-blue">Same-day approval</div>
+            </div>
+            <div id="collapseFour" class="flex-1 accordion-collapse collapse bg-dark-blue text-white br-15" aria-labelledby="headingFour" data-bs-parent="#accordionSmartWay">
+              <div class="accordion-body d-flex flex-column justify-content-stretch align-items-start h-100 p-4 p-lg-5">
+                <img src="img/delivery-20.svg" class="acc-body-icon mb-3">
+                <div class="flex-1 d-flex align-items-end">
+                  <div class="d-flex flex-column flex-2 pe-xl-5">
+                    <div class="h2 Font-Medium text-white">Delivered to your doorstep</div>
+                    <p class="Font-Book mb-0">Once approved, receive your loan agreement and related documents right at home. Experience a convenient, paperless, and secure process from start to finish.</p>
+                  </div>
+                  <div class="flex-1 d-flex justify-content-end align-items-end">
+                    <span class="Font-Bold loan-tab-num">4</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-row flex-lg-column align-items-center justify-content-start bg-light-blue br-15 py-3 px-4 acc-btn cursor-pointer collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              <img src="img/delivery-20.svg" class="tab-icon 0y-3 my-lg-5">
+              <div class="tab-title mb-0 mb-lg-4 ms-3 ms-lg-0 h2 Font-Medium color-blue">Home delivery</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mt-4 mt-lg-5 py-3 pb-lg-5 pt-lg-0 loan-contact-section">
+  <div class="container pt-lg-5">
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-6">
+        <img src="img/plot-cutout.png" class="plot-cutout h-auto w-100">
+      </div>
+      <div class="col-12 col-md-6 col-lg-5 offset-lg-1">
+        <div class="bg-white br-15 box-shadow-1 p-5 mt-5">
+          <div class="mb-3">
+            <input type="text" class="form-control br-10" id="name" placeholder="Name">
+          </div>
+          <div class="mb-3 fs-16">
+            <input class="form-control br-10 fs-16" name="phone" type="text" placeholder="Mobile number" id="schedule-phone"/> 
+          </div>
+          <div class="mb-3 py-2 px-3 form-control br-10 fs-14 text-center color-blue">
+            We are accepting bookings for stay duration of minimum 3 months.
+          </div>
+          <button class="btn btn-primary btn-round w-100" type="button" data-bs-toggle="modal" data-bs-target="#logintoview">Schedule a Visit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="mt-4 mt-lg-5">
+  <div class="container py-3 pt-lg-5">
+    <div class="row mb-4 mb-lg-5">
+      <div class="col-12 text-center">
+        <h2 class="h1 color-blue Font-Medium mb-lg-4">Our Finance Partners</h2>
+      </div>
+    </div>
+    <div class="row flex-wrap">
+      <div class="col-6 col-md-4 col-lg-3 col-xl-2 px-3 mb-4">
+        <div class="d-flex justify-content-center align-item-center p-3 p-lg-4 mb-md-2 text-center bg-white box-shadow-1 br-15 h-100">
+          <img src="img/hdfc-20.jpg" class="bank-img">
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 col-xl-2 px-3 mb-4">
+        <div class="d-flex justify-content-center align-item-center p-3 p-lg-4 mb-md-2 text-center bg-white box-shadow-1 br-15 h-100">
+          <img src="img/icici-20.jpg" class="bank-img">
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 col-xl-2 px-3 mb-4">
+        <div class="d-flex justify-content-center align-item-center p-3 p-lg-4 mb-md-2 text-center bg-white box-shadow-1 br-15 h-100">
+          <img src="img/sbi-20.jpg" class="bank-img">
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 col-xl-2 px-3 mb-4">
+        <div class="d-flex justify-content-center align-item-center p-3 p-lg-4 mb-md-2 text-center bg-white box-shadow-1 br-15 h-100">
+          <img src="img/kotak-20.png" class="bank-img">
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 col-xl-2 px-3 mb-4">
+        <div class="d-flex justify-content-center align-item-center p-3 p-lg-4 mb-md-2 text-center bg-white box-shadow-1 br-15 h-100">
+          <img src="img/idfc-20.jpg" class="bank-img">
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 col-xl-2 px-3 mb-4">
+        <div class="d-flex justify-content-center align-item-center p-3 p-lg-4 mb-md-2 text-center bg-white box-shadow-1 br-15 h-100">
+          <img src="img/hdfc-20.jpg" class="bank-img">
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 col-xl-2 px-3 mb-4">
+        <div class="d-flex justify-content-center align-item-center p-3 p-lg-4 mb-md-2 text-center bg-white box-shadow-1 br-15 h-100">
+          <img src="img/icici-20.jpg" class="bank-img">
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 col-xl-2 px-3 mb-4">
+        <div class="d-flex justify-content-center align-item-center p-3 p-lg-4 mb-md-2 text-center bg-white box-shadow-1 br-15 h-100">
+          <img src="img/sbi-20.jpg" class="bank-img">
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 col-xl-2 px-3 mb-4">
+        <div class="d-flex justify-content-center align-item-center p-3 p-lg-4 mb-md-2 text-center bg-white box-shadow-1 br-15 h-100">
+          <img src="img/kotak-20.png" class="bank-img">
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 col-xl-2 px-3 mb-4">
+        <div class="d-flex justify-content-center align-item-center p-3 p-lg-4 mb-md-2 text-center bg-white box-shadow-1 br-15 h-100">
+          <img src="img/idfc-20.jpg" class="bank-img">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 d-flex flex-column justify-content-end align-items-start position-relative pt-5 pt-lg-0 loan-start-search-section">
+        <img src="img/loan-bottom-banner-20.png" class="w-100 h-auto position-relative z-index-1">
+        <div class="p-4 p-xl-5 text-start position-absolute z-index-2">
+          <h2 class="h1 text-white Font-Bold mb-4">Start your search for <br>your new Plots now</h2>
+          <a href="#" class="btn btn-primary btn-round fs-18 h4 px-4 mb-md-0">View Plots</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+
+</style>
+
+<section class="py-5">
+  <div class="container-xl">
+    <div class="row">
+      <div class="col-12 my-lg-3">
+        <div class="w-100 border-top border-2 pt-5"></div>
+      </div>
+
+
+      <div class="col-12 d-flex justify-content-start align-items-center">
+        <div class="nav switch-btn-outer list-details-switch-btn left">
+          <div class="switch-btn-inner active" data-btn-pos="left" id="tab-1-btn" data-bs-toggle="pill" data-bs-target="#tab-1" type="button" role="tab" aria-controls="tab-1" aria-selected="true">Buying</div>
+          <div class="switch-btn-inner" data-btn-pos="right" id="tab-2-btn" data-bs-toggle="pill" data-bs-target="#tab-2" type="button" role="tab" aria-controls="tab-2" aria-selected="false">Lease</div>
+        </div>
+      </div>
+      <div class="col-12 tab-content">  
+        <div class="w-100 text-start plot-list-outer buy-plot-group tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1-btn">
+          <div class="w-100 text-start text-md-start fw-7 mb-3 mt-4 mt-lg-5">Buy Plots in Lonavala</div>
+          <ul class="plot-list buy-plots-lonavala">
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+          </ul>
+          <div class="show-li d-inline-flex justify-content-start align-items-center fs-14 fw-7 buy-plots-lonavala-show-more" onclick="showExtraLi('.buy-plots-lonavala')">
+            <span class="pe-2">Show More</span><img src="img/down-arrow.png" class="show-more-arrow">
+          </div>
+        </div>
+        <div class="w-100 text-start plot-list-outer lease-plot-group tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab-2-btn">
+          <div class="w-100 text-start text-md-start fw-7 mb-3 mt-4 mt-lg-5">Lease Plots in Lonavala</div>
+          <ul class="plot-list lease-plots-lonavala">
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+          </ul>
+          <div class="show-li d-inline-flex justify-content-start align-items-center fs-14 fw-7 lease-plots-lonavala-show-more" onclick="showExtraLi('.lease-plots-lonavala')">
+            <span class="pe-2">Show More</span><img src="img/down-arrow.png" class="show-more-arrow">
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+
+<a class="floating-wp" href="#">
+  <img src="img/whatsapp.png" class="floating-wp-icon">
+</a>
+
+<footer class="footer-bottom mt-5 pt-5 pb-4 mt-lg-5 pt-lg-5 pb-lg-4 footer-outer-bg">
+  <div class="container-xl">
+    <div class="row pb-5">
+      <div class="col-12 col-lg-6 col-md-6">
+        <img class="footer-logo pb-4" src="img/verified-plots-logo-white.png" alt="verified-plots-logo">
+        <h6 class="pb-3 text-white">Verified Plots Real Estate Service Pvt Ltd</h6>
+        <div class="d-flex mb-4 mb-lg-0">
+          <a href="#"><img class="ft-logo ml-0" src="img/facebook.png" alt="facebook-logo"></a>
+          <a href="#"><img class="ft-logo" src="img/twitter.png" alt="twitter-logo"></a>
+          <a href="#"><img class="ft-logo" src="img/instagram.png" alt="instagram-logo"></a>
+          <a href="#"><img class="ft-logo" src="img/pinterest-logo.png" alt="pinterest-logo"></a>
+          <a href="#"><img class="ft-logo" src="img/google.png" alt="google-logo"></a>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6 col-md-6">
+        <div class="row">
+          <div class="col-6">
+            <h6 class="pb-2 text-white">Company</h6>
+            <a href="#" class="ft-links">About Us</a>
+            <a href="#" class="ft-links">For Landlords</a>
+            <a href="#" class="ft-links">Partner Us</a>
+            <a href="#" class="ft-links">Contact Us</a>
+          </div>
+          <div class="col-6">
+            <h6 class="pb-2 text-white">Support</h6>
+            <a href="#" class="ft-links">Help</a>
+            <a href="#" class="ft-links">Terms of Use</a>
+            <a href="#" class="ft-links">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-100 border-top pt-4 border-light-grey"></div>
+    <div class="row d-flex flex-wrap">
+      <div class="col-12 col-lg-6 col-md-3 d-flex justify-content-start align-items-center order-2 order-md-1 mt-4 mt-md-0">
+        <h5 class="mb-ms-0 mb-md-0 mb-3">
+          <a href="#" class="ft-links mb-0 ms-3 ms-md-0 mt-0">Copyright &copy; 2024 - All</a>
+        </h5>
+      </div>
+      <div class="col-12 col-lg-6 col-md-9 order-1 order-md-2">
+        <div class="d-flex flex-column flex-sm-row">
+          <h6 class="text-white d-flex align-items-center me-sm-4 ms-3 ms-md-0 mb-md-0 mb-2">Subscribe</h6>
+          <div class="search-holder shadow-0 w-100 d-flex justify-content-center align-items-center p-1">
+            <div class="search-inner d-flex justify-content-start align-items-center w-100 bg-light-grey py-2 px-3">
+              <!-- <img src="img/search-icon.png" class="search-icon d-none d-sm-block"> -->
+              <input type="text" placeholder="Your Email" class="main-search text-white ms-sm-2 fs-16">
+            </div>
+            <div class="btn btn-primary btn-round fs-16 search-btn d-flex align-items-center ps-3 pe-3 px-sm-3 ms-sm-4">
+              <!-- <img src="img/search-icon-white.png" class="search-icon d-sm-none"> -->
+              <span class="d-sm-inline">Submit</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+<script>
+function createResponsiveHalfCircle(svgId, arcs) {
+    const svg = document.getElementById(svgId);
+    svg.innerHTML = ''; // clear previous
+
+    const radius = 150;
+    const strokeWidth = 60;
+    const zoomFactor = 1.1; // maximum scale on hover
+
+    // Calculate center and viewBox to accommodate hover zoom
+    const extraSpace = radius * (zoomFactor - 1) + strokeWidth / 2;
+    const centerX = radius + strokeWidth / 2;
+    const centerY = radius + strokeWidth / 2 + extraSpace;
+    const viewBoxWidth = 2 * (radius + strokeWidth / 2);
+    const viewBoxHeight = radius + strokeWidth / 2 + extraSpace + radius; // half circle + extra space
+
+    svg.setAttribute("viewBox", `0 0 ${viewBoxWidth} 230`);
+
+    // Background semi-circle
+    const bg = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    bg.setAttribute("d", `M${centerX - radius} ${centerY} A${radius} ${radius} 0 0 1 ${centerX + radius} ${centerY}`);
+    bg.setAttribute("fill", "none");
+    bg.setAttribute("stroke", "#eee");
+    bg.setAttribute("stroke-width", strokeWidth);
+    svg.appendChild(bg);
+
+    let startAngle = 180;
+    arcs.forEach(arc => {
+        const arcAngle = 180 * (arc.percent / 100);
+        const endAngle = startAngle - arcAngle;
+
+        const startRad = (Math.PI / 180) * startAngle;
+        const endRad = (Math.PI / 180) * endAngle;
+
+        const x1 = centerX + radius * Math.cos(startRad);
+        const y1 = centerY - radius * Math.sin(startRad);
+        const x2 = centerX + radius * Math.cos(endRad);
+        const y2 = centerY - radius * Math.sin(endRad);
+
+        // Wrap in group for hover scaling
+        const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
+        g.setAttribute("class", "arc-group");
+        g.setAttribute("transform-origin", `${centerX}px ${centerY}px`);
+
+        const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        path.setAttribute("d", `M${x1} ${y1} A${radius} ${radius} 0 0 1 ${x2} ${y2}`);
+        path.setAttribute("fill", "none");
+        path.setAttribute("stroke", arc.color);
+        path.setAttribute("stroke-width", strokeWidth);
+        path.setAttribute("stroke-linecap", "butt");
+
+        g.appendChild(path);
+        svg.appendChild(g);
+
+        startAngle = endAngle;
+    });
+}
+
+// Example usage
+createResponsiveHalfCircle("halfCircle", [
+    { percent: 60, color: "#1FBE54" },
+    { percent: 40, color: "#0B752E" }
+]);
+</script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
