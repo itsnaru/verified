@@ -1,0 +1,224 @@
+.loan-calculator-banner {
+  background: 
+    linear-gradient(
+      90deg,
+      rgba(11, 34, 81, 0.95) 25%,
+      rgba(11, 34, 81, 0.9) 50%,
+      rgba(11, 34, 81, 0.6) 70%,
+      rgba(11, 34, 81, 0.15) 90%
+    ),
+    url('../img/banner-20.jpg');
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+
+  padding-bottom: 75px;
+  margin-bottom: -75px;
+}
+
+.LC-banner-icon{
+  height: 40px;
+  width: auto;
+}
+
+.arc-group path {
+    transition: all 0.5s ease;
+}
+.arc-group:hover path {
+    stroke: #032251;
+}
+
+.slider-container {
+  margin: 20px 0;
+  width: 300px; /* adjust width as needed */
+  font-family: Arial, sans-serif;
+}
+
+.slider-label {
+  font-weight: bold;
+  color: #0d2a4d;
+  margin-bottom: 5px;
+}
+
+.slider-wrapper {
+  position: relative;
+  height: 30px;
+}
+
+.slider-track {
+  width: 100%;
+  height: 6px;
+  background: #eee;
+  border-radius: 3px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slider-fill {
+  height: 6px;
+  background: #00c853; /* green fill */
+  border-radius: 3px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+}
+
+.slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #00c853;
+  border: none;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.slider-thumb::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #00c853;
+  cursor: pointer;
+  border: none;
+}
+
+.slider-thumb::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #00c853;
+  cursor: pointer;
+  border: none;
+}
+
+.slider-values {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  color: #0d2a4d;
+}
+
+#accordionSmartWay .collapsing {
+    height: inherit;
+    overflow: inherit;
+    transition: inherit;
+}
+#accordionSmartWay .accordion-collapse.collapse:not(.show){
+  display: none !important;
+}
+#accordionSmartWay .accordion-collapse.collapse.show{
+  animation: scale-up-ver-bottom 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+#accordionSmartWay .tab-icon{
+  width: 40px;
+  height: auto;
+}
+.acc-body-icon{
+  height: 70px;
+  width: auto;
+}
+.acc-btn[aria-expanded="true"]{
+  display: none !important;
+}
+.accordion-collapse,
+.acc-btn{
+  border-bottom: 10px solid #1ebc52;
+}
+.loan-tab-num{
+  font-size: 250px;
+  line-height: 190px;
+  color: rgba(255, 255, 255, 0.1) !important;
+}
+.loan-slider{
+  height: auto !important;
+}
+.EMI-Range{
+  box-shadow: none;
+}
+.EMI-Range .price-input{
+  box-shadow: none;
+  background-color: transparent;
+  justify-content: space-between
+}
+.EMI-Range .min-input,
+.EMI-Range .max-input{
+  background-color: transparent;
+  width: 50%;
+}
+.EMI-Range .progress{
+  background-color: #48bc52;
+}
+.EMI-Range .range-input input{
+  accent-color: #48bc52;
+}
+.loan-contact-section{
+  background: #e7f1ea;
+}
+.bank-img{
+  height: auto;
+  width: 100%;
+  object-fit: contain;
+}
+
+@keyframes scale-up-hor-right {
+  0% {
+    transform: scaleX(0.4);
+    transform-origin: 100% 100%;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: 100% 100%;
+  }
+}
+@keyframes scale-up-ver-bottom {
+  0% {
+    transform: scaleY(0.4);
+    transform-origin: 0% 100%;
+  }
+  100% {
+    transform: scaleY(1);
+    transform-origin: 0% 100%;
+  }
+}
+@media (min-width: 991px){
+  .acc-btn .tab-title{
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
+  #accordionSmartWay .tab-icon{
+    width: auto;
+    height: 70px;
+  }
+  .acc-body-icon{
+    height: 100px;
+    width: auto;
+  }
+  #accordionSmartWay .accordion-collapse.collapse.show{
+    animation: scale-up-hor-right 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  }
+  .loan-tab-num{
+    font-size: 250px;
+    line-height: 190px;
+  }
+  .loan-contact-section{
+    background: linear-gradient(to bottom, transparent 50%, #e7f1ea 50%);
+  }
+}
+@media (max-width: 991px) {
+  .loan-start-search-section{
+    background: #0b2251;
+    padding: 0;
+    border-radius: 15px;
+  }
+  .bank-img {
+    max-height: 35px;
+  }
+}

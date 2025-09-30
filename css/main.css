@@ -96,6 +96,7 @@ a{
 .ln-22{line-height: 22px;}
 
 .flex-1{flex: 1;}
+.flex-2{flex: 2;}
 .object-fit-cover{object-fit: cover;}
 
 .z-index-1{z-index: 1;}
@@ -725,11 +726,13 @@ select:focus-visible{
   border-radius: 5px;
 }
 
-.slider-wrapper .range-input {
+.slider-wrapper .range-input,
+.slider-wrapper .emi-input {
   position: relative;
 }
 
-.slider-wrapper .range-input input {
+.slider-wrapper .range-input input,
+.slider-wrapper .emi-input input {
   position: absolute;
   width: 100%;
   height: 5px;
@@ -740,7 +743,8 @@ select:focus-visible{
   accent-color: #4070f4;
 }
 
-.slider-wrapper .range-input input::-webkit-slider-thumb {
+.slider-wrapper .range-input input::-webkit-slider-thumb,
+.slider-wrapper .emi-input input::-webkit-slider-thumb {
   height: 15px;
   width: 15px;
   background-color: #4070f4;

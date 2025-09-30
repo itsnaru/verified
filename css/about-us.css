@@ -294,3 +294,32 @@ animation: slideInRight 0.6s ease-out forwards;
 .chain-box-show-more[aria-expanded="true"] svg{
     transform: rotate(-180deg);
 }
+
+/* Privacy Policy Page */
+.PrivacyPolicy-bg-1{
+    background-image: url('../img/privacypolicy-banner-1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.banner-with-title{
+    height: 250px;
+}
+.PrivacyPolicy-gradient-1{
+    background: #26314C;
+    background: linear-gradient(270deg, rgba(38, 49, 76, 0.6) 50%, rgba(38, 49, 76, 0.8) 64%, rgba(38, 49, 76, 0.02) 87%);
+}
+.dots-primary li::marker {
+  color: #1ebc52;
+}
+@media (max-width: 768px) {
+    .banner-with-title{
+        height: 120px;
+    }
+}
+@media (max-width: 576px) {
+    h5, .h5 {
+        font-size: 16px;
+    }
+}
+/* Privacy Policy Page */
