@@ -99,6 +99,8 @@ a{
 .flex-2{flex: 2;}
 .object-fit-cover{object-fit: cover;}
 
+.right-0{right: 0;}
+
 .z-index-1{z-index: 1;}
 .z-index-2{z-index: 2;}
 .z-index-4{z-index: 4;}
@@ -122,8 +124,14 @@ a{
 .border-transparent{
   border-color: rgba(255, 255, 255, 0.6) !important;
 }
+.border-none{
+  border: none !important;
+}
 .border-bottom-none{
   border-bottom: none !important;
+}
+.box-shadow-none{
+  box-shadow: none !important;
 }
 
 .cursor-pointer{

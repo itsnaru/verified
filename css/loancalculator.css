@@ -16,6 +16,16 @@
   margin-bottom: -75px;
 }
 
+.sq-meter-banner{
+    background: radial-gradient(circle,rgba(59, 140, 86, 1) 4%, rgba(3, 34, 81, 1) 63%);
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+
+  padding-bottom: 75px;
+  margin-bottom: -75px;
+}
+
 .LC-banner-icon{
   height: 40px;
   width: auto;
@@ -121,15 +131,15 @@
   width: 40px;
   height: auto;
 }
-.acc-body-icon{
+#accordionSmartWay .acc-body-icon{
   height: 70px;
   width: auto;
 }
-.acc-btn[aria-expanded="true"]{
+#accordionSmartWay .acc-btn[aria-expanded="true"]{
   display: none !important;
 }
-.accordion-collapse,
-.acc-btn{
+#accordionSmartWay .accordion-collapse,
+#accordionSmartWay .acc-btn{
   border-bottom: 10px solid #1ebc52;
 }
 .loan-tab-num{
@@ -221,4 +231,9 @@
   .bank-img {
     max-height: 35px;
   }
+}
+
+
+#Sqm-Sqft-load-more{
+  color: #1FBE54;
 }
