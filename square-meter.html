@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verified Plots | Loan Calculator</title>
+  <link rel="icon" type="image/x-icon" href="./img/verified-plots-icon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/slick-theme.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/country-dropdown.css">
+  <link rel="stylesheet" href="css/loancalculator.css">
+  <script src="js/country-dropdown.js"></script>
+</head>
+<body>
+
+<header class="fixed-top border-bottom border-2" id="inner-header">
+  <div class="container-xxl py-3">
+    <div class="row">
+      <div class="col-6 col-lg-2 d-flex justify-content-start align-items-center">
+        <a href="#">
+          <img class="header-logo" src="img/verified-plots-logo.png" alt="verified-plots-logo">
+        </a>
+      </div>
+
+      <div class="col-12 col-lg-8 top-menu d-none flex-column justify-content-start justify-content-lg-center align-items-start align-items-lg-center p-4 p-lg-0">
+        <div class="w-100 d-lg-none d-flex justify-content-between align-items-center mb-4">
+          <a href="#">
+            <img class="header-logo top-menu-logo" src="img/verified-plots-logo.png" alt="verified-plots-logo">
+          </a>
+          <img src="img/close.png" class="close-menu">
+        </div>
+        <div class="top-menu-inner d-flex flex-column flex-lg-row justify-content-center align-items-center">
+          <a class="header-link px-2 mx-3 text-decoration-none" href="#">Buy</a>
+          <a class="header-link px-2 mx-3 text-decoration-none" href="#">Sell</a>
+          <a class="header-link px-2 mx-3 text-decoration-none" href="#">Hot Deals</a>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-8 d-none d-lg-flex">
+        <div class="w-100 bg-white d-flex justify-content-center align-items-center py-2 px-3">
+            <div class="top-menu-inner d-flex flex-column flex-lg-row justify-content-center align-items-center">
+                <a class="header-link px-2 mx-3 text-decoration-none" href="#">Buy</a>
+                <a class="header-link px-2 mx-3 text-decoration-none" href="#">Sell</a>
+                <a class="header-link px-2 mx-3 text-decoration-none" href="#">Hot Deals</a>
+              </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-2 d-flex justify-content-end align-items-center">
+        <div class="mob-round-btn btn btn-primary btn-round py-2 px-2 me-3 d-lg-none" data-bs-toggle="modal" data-bs-target="#searchModal">
+          <span><img class="mob-search-white-icon" src="img/search-icon-white.png"></span>
+        </div>
+
+        <a class="mob-round-btn btn btn-primary btn-round py-2 px-2" href="#">
+          <span><img class="btn-icon" src="img/call-center.png"></span>
+          <span class="d-none d-lg-inline px-2">Support</span>
+        </a>
+
+        <span>
+          <img src="img/menu.png" class="menu-icon d-flex d-lg-none ms-4">
+        </span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="header-top-space px-3 px-xxl-0">
+    <div class="container-xxl position-relative pt-4 pt-lg-5">
+        <div class="row sq-meter-banner br-15">
+            <div class="col-12 d-flex flex-column p-4 px-lg-5 pt-lg-5 py-xxl-5">
+              <h2 class="h1 animate-style-1 Font-Medium text-white text-left mb-0">Square Meter to <br> Square Feet Converter</h2>
+            </div>
+        </div>
+        <div class="row px-xxl-4">
+          <div class="col-12 px-4 px-lg-5">
+            <div class="row bg-light-blue br-15 px-3 py-4 p-lg-5">
+              <div class="col-12 col-lg-6 d-flex flex-column pe-lg-5 position-relative z-index-2">
+                 <!-- Select State -->
+                  <div class="mb-3">
+                    <label for="states" class="form-label fs-14 Font-Book color-blue">Select State</label>
+                    <select id="states" class="form-select border-0 box-shadow-1">
+                      <!-- States -->
+                      <option id="andhra-pradesh">Andhra Pradesh</option>
+                      <option id="arunachal-pradesh">Arunachal Pradesh</option>
+                      <option id="assam">Assam</option>
+                      <option id="bihar">Bihar</option>
+                      <option id="chhattisgarh">Chhattisgarh</option>
+                      <option id="goa">Goa</option>
+                      <option id="gujarat">Gujarat</option>
+                      <option id="haryana">Haryana</option>
+                      <option id="himachal-pradesh">Himachal Pradesh</option>
+                      <option id="jharkhand">Jharkhand</option>
+                      <option id="karnataka">Karnataka</option>
+                      <option id="kerala">Kerala</option>
+                      <option id="madhya-pradesh">Madhya Pradesh</option>
+                      <option id="maharashtra" selected>Maharashtra</option>
+                      <option id="manipur">Manipur</option>
+                      <option id="meghalaya">Meghalaya</option>
+                      <option id="mizoram">Mizoram</option>
+                      <option id="nagaland">Nagaland</option>
+                      <option id="odisha">Odisha</option>
+                      <option id="punjab">Punjab</option>
+                      <option id="rajasthan">Rajasthan</option>
+                      <option id="sikkim">Sikkim</option>
+                      <option id="tamil-nadu">Tamil Nadu</option>
+                      <option id="telangana">Telangana</option>
+                      <option id="tripura">Tripura</option>
+                      <option id="uttar-pradesh">Uttar Pradesh</option>
+                      <option id="uttarakhand">Uttarakhand</option>
+                      <option id="west-bengal">West Bengal</option>
+
+                      <!-- Union Territories -->
+                      <option id="andaman-and-nicobar-islands">Andaman and Nicobar Islands</option>
+                      <option id="chandigarh">Chandigarh</option>
+                      <option id="dadra-and-nagar-haveli-and-daman-and-diu">Dadra and Nagar Haveli and Daman and Diu</option>
+                      <option id="delhi">Delhi</option>
+                      <option id="lakshadweep">Lakshadweep</option>
+                      <option id="puducherry">Puducherry</option>
+                      <option id="ladakh">Ladakh</option>
+                      <option id="jammu-and-kashmir">Jammu and Kashmir</option>
+                    </select>
+                  </div>
+
+                  <!-- Enter No of Units -->
+                  <div class="mb-3">
+                    <label for="units" class="form-label fs-14 Font-Book color-blue">Enter No of Units</label>
+                    <input type="number" class="form-control border-0 box-shadow-1" id="units" value="1" placeholder="Enter units">
+                  </div>
+
+                  <!-- From & To with Switch Icon -->
+                  <div class="mb-3">
+                    <div class="d-flex align-items-end gap-2">
+                      <!-- From Dropdown -->
+                      <div class="flex-1">
+                        <label class="form-label fs-14 Font-Book color-blue">From</label>
+                        <select id="square-meter-list" class="form-select border-0 box-shadow-1">
+                          <option value="Guntha">Guntha</option>
+                          <option value="Square Inch">Square Inch</option>
+                          <option value="Hectare">Hectare</option>
+                          <option value="Ground">Ground</option>
+                          <option value="Square Mile">Square Mile</option>
+                          <option value="Bigha">Bigha</option>
+                          <option value="Square Karam">Square Karam</option>
+                          <option value="Square Kilometer">Square Kilometer</option>
+                          <option value="Murabba">Murabba</option>
+                          <option value="Decimal">Decimal</option>
+                          <option value="Lessa">Lessa</option>
+                          <option value="Cent">Cent</option>
+                          <option value="Biswa Kacha">Biswa Kacha</option>
+                          <option value="Marla">Marla</option>
+                          <option value="Chatak">Chatak</option>
+                          <option value="Dhur">Dhur</option>
+                          <option value="Biswa">Biswa</option>
+                          <option value="Acre">Acre</option>
+                          <option value="Square Meter" selected>Square Meter</option>
+                          <option value="Square Yard">Square Yard</option>
+                          <option value="Kanal">Kanal</option>
+                          <option value="Gaj">Gaj</option>
+                          <option value="Killa">Killa</option>
+                          <option value="Pura">Pura</option>
+                          <option value="Katha">Katha</option>
+                          <option value="Square Feet">Square Feet</option>
+                          <option value="Square Centimeter">Square Centimeter</option>
+                        </select>
+                      </div>
+
+                      <!-- Switch Icon -->
+                      <div class="unit-switch-icon mx-3">
+                        <img src="img/unit-switch.svg" id="unit-switch">
+                      </div>
+
+                      <!-- To Dropdown -->
+                      <div class="flex-1">
+                        <label class="form-label fs-14 Font-Book color-blue">To</label>
+                        <select id="square-feet-list" class="form-select border-0 box-shadow-1">
+                          <option value="Guntha">Guntha</option>
+                          <option value="Square Inch">Square Inch</option>
+                          <option value="Hectare">Hectare</option>
+                          <option value="Ground">Ground</option>
+                          <option value="Square Mile">Square Mile</option>
+                          <option value="Bigha">Bigha</option>
+                          <option value="Square Karam">Square Karam</option>
+                          <option value="Square Kilometer">Square Kilometer</option>
+                          <option value="Murabba">Murabba</option>
+                          <option value="Decimal">Decimal</option>
+                          <option value="Lessa">Lessa</option>
+                          <option value="Cent">Cent</option>
+                          <option value="Biswa Kacha">Biswa Kacha</option>
+                          <option value="Marla">Marla</option>
+                          <option value="Chatak">Chatak</option>
+                          <option value="Dhur">Dhur</option>
+                          <option value="Biswa">Biswa</option>
+                          <option value="Acre">Acre</option>
+                          <option value="Square Meter">Square Meter</option>
+                          <option value="Square Yard">Square Yard</option>
+                          <option value="Kanal">Kanal</option>
+                          <option value="Gaj">Gaj</option>
+                          <option value="Killa">Killa</option>
+                          <option value="Pura">Pura</option>
+                          <option value="Katha">Katha</option>
+                          <option value="Square Feet" selected>Square Feet</option>
+                          <option value="Square Centimeter">Square Centimeter</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="col-12 mt-3">
+                <p class="color-blue Font-Medium mb-2" id="unit-count-name">1 Square Meter = </p>
+                <h2 class="h1 color-blue Font-Medium mb-2">
+                  <span id="unit-covert-value">10.763915</span>
+                  <span class="ps-1" id="unit-name">Square Feet</span>
+                </h2>
+                <p class="color-blue Font-Medium mb-0"><a href="#">Square Feet</a> to Square Meter Calculator</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="row mx-0 w-50 d-none d-lg-flex pe-lg-4 sq-meter-right-banner position-absolute bottom-0 right-0 z-index-0">
+          <div class="col-12 pe-4 pe-lg-5">
+            <img src="img/men-with-mobile-20.png" class="w-100 h-auto">
+          </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="mt-5">
+  <div class="container pt-lg-4">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="h2 animate-style-1 Font-Medium color-blue text-left">Popular Square Meter to Square Feet conversions</h2>
+        <p class="Font-Book">General Conversions from Square Meter to Square Feet are as follows:</p>
+      </div>
+      <div class="col-12 col-lg-7 mb-3 mb-lg-0">
+
+            <div class="d-flex flex-column border br-15">
+              <!-- Header -->
+              <div class="w-100 bg-dark-blue text-white">
+                <div class="d-flex py-2 px-3 mx-2 mx-lg-4">
+                  <div class="flex-2 Font-Book">Square Meter <br class="d-sm-none">(Sqm)</div>
+                  <div class="flex-1 Font-Book ps-3">Square Feet <br class="d-sm-none">(Sqft)</div>
+                </div>
+              </div>
+
+              <!-- Rows -->
+              <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+                <div class="flex-2">1 Square Meter to Square Feet</div>
+                <div class="flex-1 ps-3">10.764 Sqft</div>
+              </div>
+              <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+                <div class="flex-2">2 Square Meter to Square Feet</div>
+                <div class="flex-1 ps-3">21.528 Sqft</div>
+              </div>
+              <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+                <div class="flex-2">3 Square Meter to Square Feet</div>
+                <div class="flex-1 ps-3">32.292 Sqft</div>
+              </div>
+              <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+                <div class="flex-2">4 Square Meter to Square Feet</div>
+                <div class="flex-1 ps-3">43.056 Sqft</div>
+              </div>
+              <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+                <div class="flex-2">5 Square Meter to Square Feet</div>
+                <div class="flex-1 ps-3">53.820 Sqft</div>
+              </div>
+              <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+                <div class="flex-2">6 Square Meter to Square Feet</div>
+                <div class="flex-1 ps-3">64.584 Sqft</div>
+              </div>
+              <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+                <div class="flex-2">7 Square Meter to Square Feet</div>
+                <div class="flex-1 ps-3">75.348 Sqft</div>
+              </div>
+              <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+                <div class="flex-2">8 Square Meter to Square Feet</div>
+                <div class="flex-1 ps-3">86.112 Sqft</div>
+              </div>
+              <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+                <div class="flex-2">9 Square Meter to Square Feet</div>
+                <div class="flex-1 ps-3">96.876 Sqft</div>
+              </div>
+              <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+                <div class="flex-2">10 Square Meter to Square Feet</div>
+                <div class="flex-1 ps-3">107.640 Sqft</div>
+              </div>
+              <div class="w-100 py-3 text-center" id="Sqm-Sqft-load-more">
+                <span class="cursor-pointer">Load More</span>
+              </div>
+              <div class="w-100 d-flex flex-column Sqm-Sqft-load-more d-none">
+                <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+                  <div class="flex-2">11 Square Meter to Square Feet</div>
+                  <div class="flex-1 ps-3">118.404 Sqft</div>
+                </div>
+                <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+                  <div class="flex-2">12 Square Meter to Square Feet</div>
+                  <div class="flex-1 ps-3">129.168 Sqft</div>
+                </div>
+                <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+                  <div class="flex-2">13 Square Meter to Square Feet</div>
+                  <div class="flex-1 ps-3">139.932 Sqft</div>
+                </div>
+                <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+                  <div class="flex-2">14 Square Meter to Square Feet</div>
+                  <div class="flex-1 ps-3">150.696 Sqft</div>
+                </div>
+                <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+                  <div class="flex-2">15 Square Meter to Square Feet</div>
+                  <div class="flex-1 ps-3">161.460 Sqft</div>
+                </div>
+                <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+                  <div class="flex-2">16 Square Meter to Square Feet</div>
+                  <div class="flex-1 ps-3">172.224 Sqft</div>
+                </div>
+                <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+                  <div class="flex-2">17 Square Meter to Square Feet</div>
+                  <div class="flex-1 ps-3">182.988 Sqft</div>
+                </div>
+                <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+                  <div class="flex-2">18 Square Meter to Square Feet</div>
+                  <div class="flex-1 ps-3">193.752 Sqft</div>
+                </div>
+                <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+                  <div class="flex-2">19 Square Meter to Square Feet</div>
+                  <div class="flex-1 ps-3">204.516 Sqft</div>
+                </div>
+                <div class="d-flex py-2 px-3 mx-2 mx-lg-4">
+                  <div class="flex-2">20 Square Meter to Square Feet</div>
+                  <div class="flex-1 ps-3">215.280 Sqft</div>
+                </div>
+              </div>
+            </div>
+
+      </div>
+      <div class="col-12 col-lg-5">
+        <div class="d-flex flex-column pb-2 border br-15">
+          <!-- Header -->
+          <div class="w-100 bg-dark-blue text-white mb-2">
+            <div class="d-flex py-2 px-3 mx-2 mx-lg-4">
+              <div class="flex-2 Font-Book">Square Meter (Sqm)</div>
+            </div>
+          </div>
+
+          <!-- Rows -->
+          <div class="d-flex py-1 px-3 mx-2 mx-lg-4">
+            <a href="#" class="flex-1">CM to Inches</a>
+            <a href="#" class="flex-1 ps-3">Feet to CM</a>
+          </div>
+          <div class="d-flex py-1 px-3 mx-2 mx-lg-4">
+            <a href="#" class="flex-1">Inches to CM</a>
+            <a href="#" class="flex-1 ps-3">MM to Feet</a>
+          </div>
+          <div class="d-flex py-1 px-3 mx-2 mx-lg-4">
+            <a href="#" class="flex-1">Meter to Feet</a>
+            <a href="#" class="flex-1 ps-3">MM to CM</a>
+          </div>
+          <div class="d-flex py-1 px-3 mx-2 mx-lg-4">
+            <a href="#" class="flex-1">CM to Feet</a>
+            <a href="#" class="flex-1 ps-3">Feet to Inches</a>
+          </div>
+          <div class="d-flex py-1 px-3 mx-2 mx-lg-4">
+            <a href="#" class="flex-1">Inches to Feet</a>
+            <a href="#" class="flex-1 ps-3">CM to MM</a>
+          </div>
+          <div class="d-flex py-2 px-3 mx-2 mx-lg-4">
+            <a href="#" class="flex-1">Feet to Meter</a>
+            <a href="#" class="flex-1 ps-3">Meter to CM</a>
+          </div>
+        </div>
+
+        <div class="d-flex flex-column pb-2 border br-15 mt-3">
+          <!-- Header -->
+          <div class="w-100 bg-dark-blue text-white mb-2">
+            <div class="d-flex py-2 px-3 mx-2 mx-lg-4">
+              <div class="flex-1 Font-Book">Land Unit Converter</div>
+            </div>
+          </div>
+
+          <!-- Rows -->
+          <div class="d-flex py-1 px-3 mx-2 mx-lg-4">
+            <a href="#" class="flex-1">Square Meter to Gaj</a>
+            <a href="#" class="flex-1 ps-3">Square Feet to Killa</a>
+          </div>
+          <div class="d-flex py-1 px-3 mx-2 mx-lg-4">
+            <a href="#" class="flex-1">Square Feet to Gaj</a>
+            <a href="#" class="flex-1 ps-3">Square Meter to Chatak</a>
+          </div>
+          <div class="d-flex py-1 px-3 mx-2 mx-lg-4">
+            <a href="#" class="flex-1">Square Meter to Katha</a>
+            <a href="#" class="flex-1 ps-3">Square Feet to Chatak</a>
+          </div>
+          <div class="d-flex py-1 px-3 mx-2 mx-lg-4">
+            <a href="#" class="flex-1">Square Feet to Katha</a>
+            <a href="#" class="flex-1 ps-3">Square Meter to Murabba</a>
+          </div>
+          <div class="d-flex py-1 px-3 mx-2 mx-lg-4">
+            <a href="#" class="flex-1">Square Meter to Killa</a>
+            <a href="#" class="flex-1 ps-3">Square Feet to Murab</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="mt-5 py-4 py-md-5 bg-light-blue">
+  <div class="container py-lg-4">
+    <div class="col-12">
+      <h2 class="h2 animate-style-1 Font-Medium color-blue text-left">How to convert Square Meter to Square Feet?</h2>
+      <p>The process to <strong class="Font-Book">convert Square meter to Square Feet (Sqm to Sqft)</strong> is quite simple. To convert Square Meter to Square Feet, you have to multiply the unit with 10.764. For example, if you want to <strong class="Font-Book">convert 5 Square meter to Square Feet,</strong> You have to multiply 5 with 10.764.</p>
+      <p>Therefore, 5 Square Meter= 5x10.764= 53.82 Square Feet</p>
+      <p>If you want to convert <strong class="Font-Book">Square meter to Square Feet,</strong> Here are some popular metrices related with the 1 Square Meter.</p>
+    </div>
+    <div class="col-12 col-lg-7">
+      <div class="d-flex flex-column pb-2 border bg-white br-15 mt-3">
+          <!-- Header -->
+          <div class="w-100 bg-dark-blue text-white mb-2">
+            <div class="d-flex py-2 px-3 mx-2 mx-lg-4">
+              <div class="flex-1 Font-Book">1 Sq m</div>
+              <div class="flex-1 Font-Book">10.764 sq ft</div>
+            </div>
+          </div>
+
+          <!-- Rows -->
+          <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+            <div class="flex-1">1 Sq m</div>
+            <div class="flex-1">1550 inches</div>
+          </div>
+          <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+            <div class="flex-1">1 Sq m</div>
+            <div class="flex-1">1000000 sq mm</div>
+          </div>
+          <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+            <div class="flex-1">1 Sq m</div>
+            <div class="flex-1">0.000001 sq km</div>
+          </div>
+          <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+            <div class="flex-1">1 Sq m</div>
+            <div class="flex-1">1.196 sq gaj</div>
+          </div>
+          <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+            <div class="flex-1">1 Sq m</div>
+            <div class="flex-1">10000 sq cm</div>
+          </div>
+          <div class="d-flex py-2 px-3 mx-2 mx-lg-4">
+            <div class="flex-1">1 Sq m</div>
+            <div class="flex-1">0.0001 hectare</div>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="py-4 py-md-5 bg-white">
+  <div class="container py-lg-4">
+    <div class="col-12">
+      <h2 class="h2 animate-style-1 Font-Medium color-blue text-left">Square Meter to Square Feet (Sqm to Sqft) Formula and Example</h2>
+      <p>The <strong class="Font-Book">Square Meter to Square Feet conversion formula</strong> is simple and can be done through the following formula-</p>
+      <div class="h2 Font-Medium br-15 bg-light-blue d-inline-flex px-4 py-3">ft2 = m2 X 10.763914692</div>
+      <p>Here are a few Square Meter to Square Feet conversion examples</p>
+    </div>
+    <div class="col-12 col-lg-7">
+      <div class="d-flex flex-column pb-2 border bg-white br-15 mt-3">
+          <!-- Header -->
+          <div class="w-100 bg-dark-blue text-white mb-2">
+            <div class="d-flex py-2 px-3 mx-2 mx-lg-4">
+              <div class="flex-2 Font-Book">Square Meter</div>
+              <div class="flex-1 ps-2 Font-Book">Square Feet</div>
+            </div>
+          </div>
+
+          <!-- Rows -->
+          <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+            <div class="flex-2">110 Square Meter is equal to 10* 10.764</div>
+            <div class="flex-1 ps-2">107.693 Square Feet</div>
+          </div>
+          <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+            <div class="flex-2">20 Square Meter is equal to 20* 10.764</div>
+            <div class="flex-1 ps-2">215.278 Square Feet</div>
+          </div>
+          <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+            <div class="flex-2">50 Square Meter is equal to 50* 10.764</div>
+            <div class="flex-1 ps-2">538.196 Square Feet</div>
+          </div>
+          <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+            <div class="flex-2">75 Square Meter is equal to 75* 10.764</div>
+            <div class="flex-1 ps-2">807.294 Square Feet</div>
+          </div>
+          <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+            <div class="flex-2">100 Square Meter is equal to 100* 10.764</div>
+            <div class="flex-1 ps-2">1076.391 Square Feet</div>
+          </div>
+          <div class="d-flex py-2 px-3 mx-2 mx-lg-4">
+            <div class="flex-2">1000 Square Meter is equal to 1000* 10.764</div>
+            <div class="flex-1 ps-2">10763.945 Square Feet</div>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="py-4 py-md-5 bg-light-blue">
+  <div class="container py-lg-4">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="h2 animate-style-1 Font-Medium color-blue text-left">About Square Meter</h2>
+        <p>Square Meter (sq m) is commonly denoted as the symbol m2. This is a globally used measurement to measure two-dimensional spaces and is widely used to measure areas of plots, rooms, and blocks of land. This is, in fact, one of the International System of Units measurements used to measure area.</p>
+        <p>One sq m denotes 1 m on both sides of the area (length and width). Here is how you can convey it graphically.</p>
+
+        <h2 class="h2 animate-style-1 Font-Medium color-blue text-left">The History of Square Meter</h2>
+        <p>Did you know that the name Meter is derived from the Greek word 'metron? Metron means 'a measure. The effort to standardize measuring systems has been in place since the late 1600s. In 1675, a researcher named Tito Livio Burattini wanted to call the length of a pendulum Meter' and standardize that value. However, it was soon proven that the length of the seconds' pendulum varied from country to country, and this idea was dropped. In 1983, the Conférence Générale des Poids et Mesures (CGPM) proposed a new definition, which is now being used widely.</p>
+        <p>According to it,</p>
+        <p class="Font-Book">1 Meter = the path length of light in vacuum travelled during a time interval of (1/299,792,458) of a second.</p>
+        <p>This is the definition that people are going by even today, with slight tweaks.</p>
+      </div>
+      <div class="col-12 col-lg-6">
+
+        <div class="d-flex flex-column pb-2 border bg-white br-15 mt-3 mb-3 mb-lg-0">
+          <!-- Header -->
+          <div class="w-100 bg-dark-blue text-white mb-2">
+            <div class="d-flex py-2 px-3 mx-2 mx-lg-4">
+              <div class="flex-2 Font-Book">1 Meter</div>
+              <div class="flex-1 ps-2 Font-Book">1 cm</div>
+            </div>
+          </div>
+
+          <!-- Rows -->
+          <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+            <div class="flex-2">1 Meter</div>
+            <div class="flex-1 ps-2">0.001 km</div>
+          </div>
+          <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+            <div class="flex-2">1 Meter</div>
+            <div class="flex-1 ps-2">1000 mm</div>
+          </div>
+          <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+            <div class="flex-2">1 Meter</div>
+            <div class="flex-1 ps-2">3.2 ft</div>
+          </div>
+          <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+            <div class="flex-2">1 Meter</div>
+            <div class="flex-1 ps-2">39.3 inch</div>
+          </div>
+          <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+            <div class="flex-2">1 Meter</div>
+            <div class="flex-1 ps-2">0.00062 mile</div>
+          </div>
+          <div class="d-flex py-2 px-3 mx-2 mx-lg-4">
+            <div class="flex-2">1 Meter</div>
+            <div class="flex-1 ps-2">0.001 hectare</div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-12 col-lg-6">
+        <h5 class="Font-Medium color-blue mt-3 px-3">Dimensions of Square Meter</h5>
+        <div class="d-flex flex-column pb-2 border bg-white br-15 mt-3">
+          <!-- Header -->
+          <div class="w-100 bg-dark-blue text-white mb-2">
+            <div class="d-flex py-2 px-3 mx-2 mx-lg-4">
+              <div class="flex-1 Font-Book">1 square meter</div>
+              <div class="flex-1 ps-2 Font-Book">1.20 sq yd</div>
+            </div>
+          </div>
+
+          <!-- Rows -->
+          <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+            <div class="flex-1">1 square meter</div>
+            <div class="flex-1 ps-2">10.76 sq ft</div>
+          </div>
+          <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+            <div class="flex-1">1 square meter</div>
+            <div class="flex-1 ps-2">0.00024710882 acre</div>
+          </div>
+          <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+            <div class="flex-1">1 square meter</div>
+            <div class="flex-1 ps-2">0.0001 Hectare</div>
+          </div>
+          <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+            <div class="flex-1">1 square meter</div>
+            <div class="flex-1 ps-2">0.00041668402 Ground</div>
+          </div>
+          <div class="d-flex py-2 px-3 mx-2 mx-lg-4">
+            <div class="flex-1">1 square meter</div>
+            <div class="flex-1 ps-2">0.0004 Bigha</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="py-4 py-md-5 bg-white">
+  <div class="container py-lg-4">
+    <div class="col-12">
+      <h2 class="h2 animate-style-1 Font-Medium color-blue text-left">About Square Feet</h2>
+      <p>Square feet, square foot or sq ft is also an international imperial unit used to measure real estate area. This is denoted by the symbol ft2. This unit of measurement is very commonly used in the United States and most of Asia, including India.  </p>
+      <p>Homeowners and real estate brokers usually refer to houses and plots with their sq ft size. So, for instance, a home could be mentioned as an 800 sq ft house in ads to make it easy for people to understand. </p>
+
+      <h2 class="h2 animate-style-1 Font-Medium color-blue text-left">The History of Square Feet</h2>
+      <p>The popular belief is that the foot was a measurement based on the average foot size of a man. This could be true because the concept of the foot as a unit to measure area is as old as the ancient Greek civilization, and people could have used their feet to measure sizes. </p>
+      <p>Another interesting yet doubtful fact about the origin of the word foot is that it was based on the foot size of King Henry I, whose feet measured 12 inches.</p>
+      <p>Let's quickly compare sq m and sq ft here.</p>
+    </div>
+    <div class="col-12 col-lg-7">
+      <h2 class="h2 animate-style-1 Font-Medium color-blue text-left">Dimensions of Square Feet</h2>
+      <div class="d-flex flex-column pb-2 border bg-white br-15 mt-3">
+          <!-- Header -->
+          <div class="w-100 bg-dark-blue text-white mb-2">
+            <div class="d-flex py-2 px-3 mx-2 mx-lg-4">
+              <div class="flex-1 Font-Book">1 sqft</div>
+              <div class="flex-1 ps-2 Font-Book">144 square inches</div>
+            </div>
+          </div>
+          <!-- Rows -->
+          <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+            <div class="flex-1">1 sqft</div>
+            <div class="flex-1 ps-2">0.11 square yards</div>
+          </div>
+          <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+            <div class="flex-1">1 sqft</div>
+            <div class="flex-1 ps-2">0.0929 square meters</div>
+          </div>
+          <div class="d-flex border-bottom py-2 px-3 mx-2 mx-lg-4">
+            <div class="flex-1">1 sqft</div>
+            <div class="flex-1 ps-2">0.00002295684113 Acre</div>
+          </div>
+          <div class="d-flex py-2 px-3 mx-2 mx-lg-4">
+            <div class="flex-1">1 sqft</div>
+            <div class="flex-1 ps-2">0.0009182736455 Guntha</div>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="py-4 py-md-5 bg-light-blue">
+  <div class="container py-lg-4">
+    <div class="col-12">
+      <h2 class="h2 animate-style-1 Font-Medium color-blue text-left mb-3">Frequently Asked Questions</h2>
+
+      <div class="accordion mt-4 mt-xl-0" id="SQMeterfaq">
+          <div class="accordion-item br-10 bg-white border-none box-shadow-1 mb-3">
+            <h2 class="accordion-header" id="faqOne">
+              <button class="accordion-button d-flex align-items-start box-shadow-none bg-white w-100 fs-20 text-dark Font-Medium mb-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                How many Square Feet in Square Meter?
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="faqOne" data-bs-parent="#SQMeterfaq">
+              <div class="accordion-body pt-0">
+                1 Square Meter = 10.763914692 Square Feet.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item br-10 bg-white border-none box-shadow-1 mb-3">
+            <h2 class="accordion-header" id="faqTwo">
+              <button class="accordion-button d-flex align-items-start box-shadow-none bg-white w-100 fs-20 text-dark Font-Medium mb-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                How many Square Meter in Square Feet?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="faqTwo" data-bs-parent="#SQMeterfaq">
+              <div class="accordion-body pt-0">
+                1 Square Feet = 0.092903 Square Meter. To convert more, use Square Feet to Square Meter Calculator
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item br-10 bg-white border-none box-shadow-1 mb-3">
+            <h2 class="accordion-header" id="faqThree">
+              <button class="accordion-button d-flex align-items-start box-shadow-none bg-white w-100 fs-20 text-dark Font-Medium mb-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                How many Square Feet in 1 Square Meter?
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="faqThree" data-bs-parent="#SQMeterfaq">
+              <div class="accordion-body pt-0">
+                1 Square Meter = 10.763914692 Square Feet.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item br-10 bg-white border-none box-shadow-1 mb-3">
+            <h2 class="accordion-header" id="faqFour">
+              <button class="accordion-button d-flex align-items-start box-shadow-none bg-white w-100 fs-20 text-dark Font-Medium mb-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                How many Square Feet in 10 Square Meter?
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="faqFour" data-bs-parent="#SQMeterfaq">
+              <div class="accordion-body pt-0">
+                10 Square Meter = 107.63914692 Square Feet.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item br-10 bg-white border-none box-shadow-1 mb-3">
+            <h2 class="accordion-header" id="faqFive">
+              <button class="accordion-button d-flex align-items-start box-shadow-none bg-white w-100 fs-20 text-dark Font-Medium mb-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                How many Square Feet in 100 Square Meter?
+              </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="faqFive" data-bs-parent="#SQMeterfaq">
+              <div class="accordion-body pt-0">
+                100 Square Meter = 1076.3914692 Square Feet.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item br-10 bg-white border-none box-shadow-1 mb-3">
+            <h2 class="accordion-header" id="faqSix">
+              <button class="accordion-button d-flex align-items-start box-shadow-none bg-white w-100 fs-20 text-dark Font-Medium mb-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                Which are globally accepted land measurement units?
+              </button>
+            </h2>
+            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="faqSix" data-bs-parent="#SQMeterfaq">
+              <div class="accordion-body pt-0">
+                The globally accepted land measurement units are Square feet (sq ft), Square yard, Square meter (sq m), Acre, and Hectare.
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+    </div>
+  </div>
+</section>
+
+
+<section class="py-5">
+  <div class="container-xl">
+    <div class="row">
+      <div class="col-12 my-lg-3">
+        <div class="w-100 border-top border-2 pt-5"></div>
+      </div>
+
+
+      <div class="col-12 d-flex justify-content-start align-items-center">
+        <div class="nav switch-btn-outer list-details-switch-btn left">
+          <div class="switch-btn-inner active" data-btn-pos="left" id="tab-1-btn" data-bs-toggle="pill" data-bs-target="#tab-1" type="button" role="tab" aria-controls="tab-1" aria-selected="true">Buying</div>
+          <div class="switch-btn-inner" data-btn-pos="right" id="tab-2-btn" data-bs-toggle="pill" data-bs-target="#tab-2" type="button" role="tab" aria-controls="tab-2" aria-selected="false">Lease</div>
+        </div>
+      </div>
+      <div class="col-12 tab-content">  
+        <div class="w-100 text-start plot-list-outer buy-plot-group tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1-btn">
+          <div class="w-100 text-start text-md-start fw-7 mb-3 mt-4 mt-lg-5">Buy Plots in Lonavala</div>
+          <ul class="plot-list buy-plots-lonavala">
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Plots for sale in Lonavala</a></li>
+          </ul>
+          <div class="show-li d-inline-flex justify-content-start align-items-center fs-14 fw-7 buy-plots-lonavala-show-more" onclick="showExtraLi('.buy-plots-lonavala')">
+            <span class="pe-2">Show More</span><img src="img/down-arrow.png" class="show-more-arrow">
+          </div>
+        </div>
+        <div class="w-100 text-start plot-list-outer lease-plot-group tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab-2-btn">
+          <div class="w-100 text-start text-md-start fw-7 mb-3 mt-4 mt-lg-5">Lease Plots in Lonavala</div>
+          <ul class="plot-list lease-plots-lonavala">
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+            <li class="extra-li pb-1"><a class="text-decoration-none" href="#">Flats for lease in Lonavala</a></li>
+          </ul>
+          <div class="show-li d-inline-flex justify-content-start align-items-center fs-14 fw-7 lease-plots-lonavala-show-more" onclick="showExtraLi('.lease-plots-lonavala')">
+            <span class="pe-2">Show More</span><img src="img/down-arrow.png" class="show-more-arrow">
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+
+<a class="floating-wp" href="#">
+  <img src="img/whatsapp.png" class="floating-wp-icon">
+</a>
+
+<footer class="footer-bottom mt-5 pt-5 pb-4 mt-lg-5 pt-lg-5 pb-lg-4 footer-outer-bg">
+  <div class="container-xl">
+    <div class="row pb-5">
+      <div class="col-12 col-lg-6 col-md-6">
+        <img class="footer-logo pb-4" src="img/verified-plots-logo-white.png" alt="verified-plots-logo">
+        <h6 class="pb-3 text-white">Verified Plots Real Estate Service Pvt Ltd</h6>
+        <div class="d-flex mb-4 mb-lg-0">
+          <a href="#"><img class="ft-logo ml-0" src="img/facebook.png" alt="facebook-logo"></a>
+          <a href="#"><img class="ft-logo" src="img/twitter.png" alt="twitter-logo"></a>
+          <a href="#"><img class="ft-logo" src="img/instagram.png" alt="instagram-logo"></a>
+          <a href="#"><img class="ft-logo" src="img/pinterest-logo.png" alt="pinterest-logo"></a>
+          <a href="#"><img class="ft-logo" src="img/google.png" alt="google-logo"></a>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6 col-md-6">
+        <div class="row">
+          <div class="col-6">
+            <h6 class="pb-2 text-white">Company</h6>
+            <a href="#" class="ft-links">About Us</a>
+            <a href="#" class="ft-links">For Landlords</a>
+            <a href="#" class="ft-links">Partner Us</a>
+            <a href="#" class="ft-links">Contact Us</a>
+          </div>
+          <div class="col-6">
+            <h6 class="pb-2 text-white">Support</h6>
+            <a href="#" class="ft-links">Help</a>
+            <a href="#" class="ft-links">Terms of Use</a>
+            <a href="#" class="ft-links">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-100 border-top pt-4 border-light-grey"></div>
+    <div class="row d-flex flex-wrap">
+      <div class="col-12 col-lg-6 col-md-3 d-flex justify-content-start align-items-center order-2 order-md-1 mt-4 mt-md-0">
+        <h5 class="mb-ms-0 mb-md-0 mb-3">
+          <a href="#" class="ft-links mb-0 ms-3 ms-md-0 mt-0">Copyright &copy; 2024 - All</a>
+        </h5>
+      </div>
+      <div class="col-12 col-lg-6 col-md-9 order-1 order-md-2">
+        <div class="d-flex flex-column flex-sm-row">
+          <h6 class="text-white d-flex align-items-center me-sm-4 ms-3 ms-md-0 mb-md-0 mb-2">Subscribe</h6>
+          <div class="search-holder shadow-0 w-100 d-flex justify-content-center align-items-center p-1">
+            <div class="search-inner d-flex justify-content-start align-items-center w-100 bg-light-grey py-2 px-3">
+              <!-- <img src="img/search-icon.png" class="search-icon d-none d-sm-block"> -->
+              <input type="text" placeholder="Your Email" class="main-search text-white ms-sm-2 fs-16">
+            </div>
+            <div class="btn btn-primary btn-round fs-16 search-btn d-flex align-items-center ps-3 pe-3 px-sm-3 ms-sm-4">
+              <!-- <img src="img/search-icon-white.png" class="search-icon d-sm-none"> -->
+              <span class="d-sm-inline">Submit</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+$(document).ready(function () {
+  // 1 Square Meter equal to below
+  const conversionRates = {
+    "Guntha": 0.009884,
+    "Square Inch": 1550.003100,
+    "Hectare": 0.000100,
+    "Ground": 0.004926,
+    "Square Mile": 0.0000003861,
+    "Bigha": 0.000399,
+    "Square Karam": 0.355832,
+    "Square Kilometer": 0.000001,
+    "Murabba": 0.000010,
+    "Decimal": 0.024713,
+    "Lessa": 0.158147,
+    "Cent": 0.024716,
+    "Biswa Kacha": 0.008000,
+    "Marla": 0.039537,
+    "Chatak": 0.239198,
+    "Dhur": 2.989975,
+    "Biswa": 0.007973,
+    "Acre": 0.000247,
+    "Square Meter": 1,
+    "Square Yard": 1.195991,
+    "Kanal": 0.001977,
+    "Gaj": 1.207584,
+    "Killa": 0.000247,
+    "Pura": 0.000099,
+    "Katha": 0.007909,
+    "Square Feet": 10.763915,
+    "Square Centimeter": 10000
+  };
+
+  function convertUnits() {
+    const units = parseFloat($("#units").val());
+    const fromUnit = $("#square-meter-list").val();
+    const toUnit = $("#square-feet-list").val();
+
+    if (isNaN(units) || units <= 0) {
+      $("#unit-covert-value").text("0");
+      return;
+    }
+
+    // Convert from any unit to Square Meter, then to target unit
+    const fromRate = conversionRates[fromUnit];
+    const toRate = conversionRates[toUnit];
+
+    const valueInSqm = units / fromRate; 
+    const finalValue = valueInSqm * toRate;
+
+    $("#unit-covert-value").text(finalValue.toFixed(6));
+    $("#unit-count-name").text(`${units} ${fromUnit} =`);
+    $("#unit-name").text(toUnit);
+  }
+
+  // Trigger conversion on changes
+  $("#units, #square-meter-list, #square-feet-list").on("input change", convertUnits);
+});
+$("#unit-switch").on("click", function () {
+  const fromSelected = $("#square-meter-list").val();
+  const toSelected = $("#square-feet-list").val();
+
+  // Swap their values
+  $("#square-meter-list").val(toSelected);
+  $("#square-feet-list").val(fromSelected);
+
+  // Trigger recalculation
+  $("#units").trigger("input");
+});
+</script>
+
+</body>
+</html>

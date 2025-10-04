@@ -69,11 +69,11 @@
   </div>
 </header>
 
-<section class="header-top-space">
-    <div class="container pt-4 pt-lg-5">
+<section class="header-top-space px-3 px-xxl-0">
+    <div class="container-xxl pt-4 pt-lg-5">
         <div class="row loan-calculator-banner br-15">
             <div class="col-12 d-flex flex-column p-4 px-lg-5 py-lg-5">
-              <h2 class="h1 animate-style-1 text-white text-left mb-4">Financing made possible for <br> every Plots buyer</h2>
+              <h2 class="h1 animate-style-1 Font-Medium text-white text-left mb-4">Financing made possible for <br> every Plots buyer</h2>
               <div class="d-flex flex-column flex-md-row mb-4">
                 <div class="d-flex justify-content-start align-items-center mb-3 mb-md-0 me-md-5">
                   <img src="img/booking-20.svg" class="LC-banner-icon me-3">
@@ -93,95 +93,164 @@
         <div class="row px-lg-4">
           <div class="col-12 px-4 px-lg-5">
             <div class="row bg-light-blue br-15 px-3 py-4 p-md-5">
-              <div class="col-12 col-lg-7 d-flex flex-column pe-lg-5">
-                
-                <h4 class="color-blue fw-6 mb-1 mb-md-4">Plot Loan Calculator</h4>
-                <h2 class="h1 color-blue fw-7 mb-0">
-                  <span>₹</span>
-                  <span>18,170</span>
-                  <small class="fs-20">per month</small>
-                </h2>
-                
-                <div class="d-flex flex-column flex-md-row mb-3">
-                  <svg id="halfCircle" class="d-block w-100 h-auto" style="max-width: 200px;"></svg>
-                  <div class="flex-1 ms-md-5 pt-4">
-                    <div class="d-flex justify-content-start align-items-center mb-2">
-                      <svg width="16" height="16" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="10" cy="10" r="10" fill="#1FBE54" />
-                      </svg>
-                      <div class="d-flex flex-1 justify-content-between ps-2 color-blue Font-Book">
-                        <span>Principal Loan Amount :</span>
-                        <span>25,00,000 rs</span>  
-                      </div>
-                    </div>
-                    <div class="d-flex justify-content-start align-items-center mb-2 border-bottom border-dark pb-2">
-                      <svg width="16" height="16" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="10" cy="10" r="10" fill="#0B752E" />
-                      </svg>
-                      <div class="d-flex flex-1 justify-content-between ps-2 color-blue Font-Book">
-                        <span>Total Interest Payable :</span>
-                        <span>6,00,000 rs</span>  
-                      </div>
-                    </div>
-                    <div class="d-flex justify-content-start align-items-center">
-                      <svg class="invisible" width="16" height="16" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="10" cy="10" r="10" fill="#0B752E" />
-                      </svg>
-                      <div class="d-flex flex-1 justify-content-between ps-2 color-blue Font-Medium mb-0">
-                        <span>Total Amount Payable :</span>
-                        <span>31,00,000 rs</span>  
-                      </div>
+
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-12 col-lg-6 col-xl-8 d-flex flex-column pe-xxl-5">
+                    <h4 class="color-blue fw-6 mb-1 mb-md-4">Plot Loan Calculator</h4>
+                  </div>
+                  <div class="col-12 col-lg-6 col-xl-4">
+                    <div class="nav switch-btn-outer bg-white left w-100 mb-2 mb-md-4 mt-2">
+                      <div class="switch-btn-inner active" data-btn-pos="left" id="schedule-btn" data-bs-toggle="pill" data-bs-target="#schedule" type="button" role="tab" aria-controls="schedule" aria-selected="true">EMI</div>
+                      <div class="switch-btn-inner" data-btn-pos="right" id="book-btn" data-bs-toggle="pill" data-bs-target="#book" type="button" role="tab" aria-controls="book" aria-selected="false">Loan Estimate</div>
                     </div>
                   </div>
                 </div>
-                <p><strong class="Font-Medium">Disclaimer:</strong> Applicable rate of interest can vary subject to credit profile. Loan approval is at the sole discretion of the finance partner.</p>
-
-              </div>
-
-              <div class="col-12 col-lg-5">
-
-                <div class="nav switch-btn-outer bg-white left w-100 mb-2 mb-md-4 mt-2">
-                  <div class="switch-btn-inner active" data-btn-pos="left" id="schedule-btn" data-bs-toggle="pill" data-bs-target="#schedule" type="button" role="tab" aria-controls="schedule" aria-selected="true">EMI</div>
-                  <div class="switch-btn-inner" data-btn-pos="right" id="book-btn" data-bs-toggle="pill" data-bs-target="#book" type="button" role="tab" aria-controls="book" aria-selected="false">Loan Estimate</div>
-                </div>
+                
 
                 <div class="tab-content mb-1">
-                  <div class="tab-pane px-3 px-lg-4 fade show active" id="schedule" role="tabpanel" aria-labelledby="schedule-btn">
-                    <!-- Loan Amount Slider -->
-                    <div class="loan-slider slider-wrapper EMI-Range w-100 pt-3" data-min="10000" data-max="50000" data-gap="1000">
-                      <div class="Font-Medium fs-20 mb-2">Loan Amount</div>
-                      <div class="slider">
-                        <div class="progress"></div>
+                  <div class="tab-pane fade show active" id="schedule" role="tabpanel" aria-labelledby="schedule-btn">
+                    <div class="row">
+                      <div class="col-12 col-lg-6 col-xl-8 d-flex flex-column pe-xxl-5">
+                        <h2 class="h1 color-blue fw-7 mb-0 mt-3 mt-lg-0">
+                          <span>₹</span>
+                          <span>18,170</span>
+                          <small class="fs-20">per month</small>
+                        </h2>
+                        <div class="d-flex flex-column flex-xl-row mb-3">
+                          <svg id="halfCircle" class="d-block w-100 h-auto" style="max-width: 200px;"></svg>
+                          <div class="flex-1 ms-xl-5 pt-4">
+                            <div class="d-flex justify-content-start align-items-center mb-2">
+                              <svg width="16" height="16" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="10" cy="10" r="10" fill="#1FBE54" />
+                              </svg>
+                              <div class="d-flex flex-1 justify-content-between ps-2 color-blue Font-Book">
+                                <span>Principal Loan Amount :</span>
+                                <span>25,00,000 rs</span>  
+                              </div>
+                            </div>
+                            <div class="d-flex justify-content-start align-items-center mb-2 border-bottom border-dark pb-2">
+                              <svg width="16" height="16" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="10" cy="10" r="10" fill="#0B752E" />
+                              </svg>
+                              <div class="d-flex flex-1 justify-content-between ps-2 color-blue Font-Book">
+                                <span>Total Interest Payable :</span>
+                                <span>6,00,000 rs</span>  
+                              </div>
+                            </div>
+                            <div class="d-flex justify-content-start align-items-center">
+                              <svg class="invisible" width="16" height="16" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="10" cy="10" r="10" fill="#0B752E" />
+                              </svg>
+                              <div class="d-flex flex-1 justify-content-between ps-2 color-blue Font-Medium mb-0">
+                                <span>Total Amount Payable :</span>
+                                <span>31,00,000 rs</span>  
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p class="mb-0"><strong class="Font-Medium">Disclaimer:</strong> Applicable rate of interest can vary subject to credit profile. Loan approval is at the sole discretion of the finance partner.</p>
                       </div>
-                      <div class="range-input">
-                        <input type="range" min="10000" max="50000" value="10000" class="min-range" />
-                        <input type="range" min="10000" max="50000" value="50000" class="max-range" />
-                      </div>
-                      <div class="price-input mt-2">
-                        <input type="number" value="10000" class="min-input text-start ms-0 border-0" />
-                        <input type="number" value="50000" class="max-input text-end border-0" />
-                      </div>
-                    </div>
+                      <div class="col-12 col-lg-6 col-xl-4">
+                        <!-- Loan Amount Slider -->
+                        <div class="loan-slider slider-wrapper EMI-Range w-100 pt-3" data-min="10000" data-max="50000" data-gap="1000">
+                          <div class="Font-Medium fs-16 mb-2">Loan Amount</div>
+                          <div class="slider">
+                            <div class="progress"></div>
+                          </div>
+                          <div class="range-input">
+                            <input type="range" min="10000" max="50000" value="10000" class="min-range" />
+                            <input type="range" min="10000" max="50000" value="50000" class="max-range" />
+                          </div>
+                          <div class="price-input mt-2">
+                            <input type="number" value="10000" class="min-input text-start ms-0 border-0" />
+                            <input type="number" value="50000" class="max-input text-end border-0" />
+                          </div>
+                        </div>
 
-                    <!-- Interest Amount Slider -->
-                    <div class="loan-slider slider-wrapper EMI-Range w-100 pt-3" data-min="12" data-max="48" data-gap="1">
-                      <div class="Font-Medium fs-20 mb-2">Interest Amount</div>
-                      <div class="slider">
-                        <div class="progress"></div>
+                        <!-- Interest Amount Slider -->
+                        <div class="loan-slider slider-wrapper EMI-Range w-100 pt-3" data-min="12" data-max="48" data-gap="1">
+                          <div class="Font-Medium fs-16 mb-2">Duration of Month</div>
+                          <div class="slider">
+                            <div class="progress"></div>
+                          </div>
+                          <div class="range-input">
+                            <input type="range" min="12" max="48" value="12" class="min-range" />
+                            <input type="range" min="12" max="48" value="48" class="max-range" />
+                          </div>
+                          <div class="price-input mt-2">
+                            <input type="number" value="12" class="min-input text-start ms-0 border-0" />
+                            <input type="number" value="48" class="max-input text-end border-0" />
+                          </div>
+                        </div>
                       </div>
-                      <div class="range-input">
-                        <input type="range" min="12" max="48" value="12" class="min-range" />
-                        <input type="range" min="12" max="48" value="48" class="max-range" />
-                      </div>
-                      <div class="price-input mt-2">
-                        <input type="number" value="12" class="min-input text-start ms-0 border-0" />
-                        <input type="number" value="48" class="max-input text-end border-0" />
-                      </div>
+
                     </div>
                   </div>
+
+
+
                   <div class="tab-pane px-0 fade" id="book" role="tabpanel" aria-labelledby="book-btn">
-                    <div class="bg-white p-3 br-15">
-                      Loam Estimate
+                    <div class="row">
+                      <div class="col-12 col-lg-6 col-xl-8 d-flex flex-column pe-xxl-5">
+                        <h2 class="h1 color-blue fw-7 mb-3 mb-lg-4 mt-3 mt-lg-0">
+                          <span>₹</span>
+                          <span>18,170</span>
+                          <small class="fs-20">max loan amount</small>
+                        </h2>
+                        <div class="color-blue">
+                          <p class="Font-Book fs-16 mb-0">Max EMI</p>
+                          <p class="Font-Medium fs-20"><span>₹</span>19,499/-</p>
+                        </div>
+                        <p class="mb-0"><strong class="Font-Medium">Disclaimer:</strong> Applicable rate of interest can vary subject to credit profile. Loan approval is at the sole discretion of the finance partner.</p>
+                      </div>
+                      <div class="col-12 col-lg-6 col-xl-4 bg-white br-15 p-4 mt-3 mt-lg-0">
+                        <div class="mb-3 d-flex">
+                          
+                          <div class="flex-1 form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="employmentType" id="salaried" value="Salaried" checked>
+                            <label class="form-check-label Font-Medium fs-16" for="salaried">Salaried</label>
+                          </div>
+
+                          <div class="flex-1 form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="employmentType" id="selfEmployed" value="Self-Employed">
+                            <label class="form-check-label Font-Medium fs-16" for="selfEmployed">Self-Employed</label>
+                          </div>
+                        </div>
+
+                        <div class="d-flex gap-3 mb-3">
+                          <div class="flex-1">
+                            <label for="monthly-income" class="form-label fs-14 Font-Book color-blue mb-0">Monthly Income</label>
+                            <input type="number" class="form-control box-shadow-1" id="monthly-income">
+                          </div>
+                          <div class="flex-1">
+                            <label for="running-emi" class="form-label fs-14 Font-Book color-blue mb-0">Already Running EMI</label>
+                            <input type="number" class="form-control box-shadow-1" id="running-emi">
+                          </div>
+                        </div>
+                        <!-- Interest Amount Slider -->
+                        <div class="loan-slider slider-wrapper EMI-Range bg-white w-100 pt-3" data-min="12" data-max="54" data-gap="1">
+                          <div class="Font-Medium fs-16 mb-2">Duration of Loan</div>
+                          <div class="slider">
+                            <div class="progress"></div>
+                          </div>
+                          <div class="range-input">
+                            <input type="range" min="12" max="54" value="12" class="min-range" />
+                            <input type="range" min="12" max="54" value="54" class="max-range" />
+                          </div>
+                          <div class="price-input mt-2">
+                            <input type="number" value="12" class="min-input text-start ms-0 border-0" />
+                            <input type="number" value="54" class="max-input text-end border-0" />
+                          </div>
+                        </div>
+
+                        <div class="d-flex mt-3 mt-lg-4">
+                          <div class="flex-1 text-start fs-16 color-blue Font-Book">Interest Rate <sup class="fs-12">*</sup></div>
+                          <div class="flex-1 text-end"><span class="p-2 border fs-16 color-blue Font-Book br-15 bg-light-blue">13%</span></div>
+                        </div>
+
+
+                      </div>
                     </div>
                   </div>
                 </div>
