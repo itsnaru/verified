@@ -88,6 +88,11 @@ $(document).ready(function(){
     $(this).addClass('active');
   })
 
+  $('#Sqm-Sqft-load-more').click(function(){
+    $(this).addClass('d-none')
+    $('.Sqm-Sqft-load-more').removeClass('d-none')
+  })
+
 })
 
 
